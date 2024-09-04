@@ -1,8 +1,12 @@
-//
-//  SignupViewController.swift
-//  KillerGramV1
-//
-//  Created by 현석의 맥북 on 9/3/24.
-//
-
 import Foundation
+import UIKit
+import Then
+import SnapKit
+
+class SignupViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .BACK
+    }
+}
