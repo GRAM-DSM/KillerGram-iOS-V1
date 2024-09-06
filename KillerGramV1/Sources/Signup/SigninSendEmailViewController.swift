@@ -1,9 +1,9 @@
 import Foundation
 import UIKit
-import Then
 import SnapKit
+import Then
 
-class SignupViewController: UIViewController {
+class SigninSendEmailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

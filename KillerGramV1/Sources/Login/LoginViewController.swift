@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
         $0.image = .logo
     }
     
-    private let emailTextField = UITextField().then {
+    let emailTextField = UITextField().then {
         $0.attributedPlaceholder = NSAttributedString(string: "이메일을 입력해 주세요", attributes: [.foregroundColor: UIColor.GRAY_800])
         $0.backgroundColor = .GRAY_1000
         $0.layer.cornerRadius = 8
