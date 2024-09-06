@@ -8,6 +8,7 @@ import RxCocoa
 class LoginViewController: UIViewController {
     private let disposeBag = DisposeBag()
     private let viewModel = LoginViewModel()
+    
     private let logoImageVIew = UIImageView().then {
         $0.image = .logo
     }
@@ -49,8 +50,24 @@ class LoginViewController: UIViewController {
                 password: self.passwordTextField.textfield.text!
             ) {
                 switch $0 {
-                case "isEmpty":
-                    self.emailTextField.errorGenerate(error: "빈칸이 있습니다")
+                case "email is empty":
+                    self.emailTextField.errorGenerate(error: "이메일을 입력해 주세요")
+                    
+                case "email error":
+                    self.emailTextField.errorGenerate(error: "이메일 형식이 잘못되었습니다")
+                    
+                case "email check ok":
+                    self.emailTextField.errorGenerate(error: "")
+                    
+                case "password is empty":
+                    self.passwordTextField.errorGenerate(error: "비밀번호를 입력해 주세요")
+                    
+                case "password error":
+                    self.passwordTextField.errorGenerate(error: "비밀번호 형식이 잘못되었습니다")
+                
+                case "password check ok":
+                    self.passwordTextField.errorGenerate(error: "")
+                    
                 default:
                     return
                 }
@@ -79,12 +96,10 @@ class LoginViewController: UIViewController {
             $0.top.equalTo(view.safeAreaLayoutGuide).inset(130)
         }
         emailTextField.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
             $0.top.equalTo(logoImageVIew.snp.bottom).offset(60)
             $0.left.right.equalToSuperview()
         }
         passwordTextField.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
             $0.top.equalTo(emailTextField.snp.bottom)
             $0.left.right.equalToSuperview()
         }

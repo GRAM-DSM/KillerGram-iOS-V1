@@ -54,6 +54,14 @@ class KGTextField: UIStackView {
             self.textfield.layer.borderColor = UIColor.SYSTEM.cgColor
             self.textfield.layer.borderWidth = 1
         })
+        if errorLabel.text == "" {
+            UIView.animate(withDuration: 0.2, delay: 0, options: .transitionCrossDissolve, animations: {
+                self.errorLabel.layoutIfNeeded()
+                self.textfield.layer.borderColor = UIColor.GRAY_1000.cgColor
+                self.textfield.layer.borderWidth = 1
+                self.errorLabel.isHidden = true
+            })
+        }
     }
 
 }

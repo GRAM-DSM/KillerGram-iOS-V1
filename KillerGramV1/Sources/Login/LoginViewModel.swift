@@ -7,15 +7,33 @@ final class LoginViewModel {
     var passworderrorheight: NSLayoutConstraint!
     
     func loginButtonDidTap(email: String, password: String, result: @escaping (String) -> Void) {
-        if email.isEmpty || password.isEmpty {
-            result("isEmpty")
-            return
-        }
+//        if email.isEmpty || password.isEmpty {
+//            result("isEmpty")
+//            return
+//        }
 
         if self.isValidEmail(testStr: email) {
-            print("check ok")
+            result("email check ok")
+            print("email check")
         } else {
-            print(" error")
+            if email.isEmpty {
+                result("email is empty")
+            }
+            else {
+                result("email error")
+            }
+        }
+        
+        if self.isValidPassword(pw: password) {
+            result("password check ok")
+            print("password check")
+        } else {
+            if password.isEmpty {
+                result("password is empty")
+            }
+            else {
+                result("password error")
+            }
         }
     }
 
@@ -40,7 +58,7 @@ final class LoginViewModel {
     
     private func isValidPassword(pw: String?) -> Bool{
         if let hasPassword = pw{
-            if hasPassword.count < 8{
+            if hasPassword.count < 8 || hasPassword.count > 16{
                 return false
             }
         }
