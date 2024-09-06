@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		672D80A52C8AD303005E7062 /* KGTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D80A42C8AD303005E7062 /* KGTextField.swift */; };
+		672D80A82C8AD4E9005E7062 /* KGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D80A72C8AD4E9005E7062 /* KGButton.swift */; };
+		672D80AA2C8AD58D005E7062 /* KGButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D80A92C8AD58D005E7062 /* KGButtonStyle.swift */; };
 		90374B982C85E96700F0F7BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90374B972C85E96700F0F7BC /* AppDelegate.swift */; };
 		90374B9A2C85E96700F0F7BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90374B992C85E96700F0F7BC /* SceneDelegate.swift */; };
 		90374BA12C85E96700F0F7BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90374BA02C85E96700F0F7BC /* Assets.xcassets */; };
@@ -32,15 +35,12 @@
 		9077EBC52C8716DE0044ED9E /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9077EBC32C8716DE0044ED9E /* Pretendard-SemiBold.otf */; };
 		9077EBC62C8716DE0044ED9E /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9077EBC42C8716DE0044ED9E /* Pretendard-Regular.otf */; };
 		90B527662C89BE48006752AD /* SigninSendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B527652C89BE48006752AD /* SigninSendEmailViewController.swift */; };
-		90B527682C89BF62006752AD /* GrayRoundNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B527672C89BF62006752AD /* GrayRoundNextButton.swift */; };
-		90B5276A2C89BF7A006752AD /* MainRoundNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B527692C89BF7A006752AD /* MainRoundNextButton.swift */; };
-		90B5276C2C89BF96006752AD /* GrayNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B5276B2C89BF96006752AD /* GrayNextButton.swift */; };
-		90B5276E2C89C22A006752AD /* MainNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B5276D2C89C22A006752AD /* MainNextButton.swift */; };
-		90B527702C89C399006752AD /* SecondaryRoundNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B5276F2C89C399006752AD /* SecondaryRoundNextButton.swift */; };
-		90B527722C89C3AC006752AD /* SecondaryNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B527712C89C3AC006752AD /* SecondaryNextButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		672D80A42C8AD303005E7062 /* KGTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGTextField.swift; sourceTree = "<group>"; };
+		672D80A72C8AD4E9005E7062 /* KGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGButton.swift; sourceTree = "<group>"; };
+		672D80A92C8AD58D005E7062 /* KGButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGButtonStyle.swift; sourceTree = "<group>"; };
 		90374B942C85E96700F0F7BC /* KillerGramV1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KillerGramV1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90374B972C85E96700F0F7BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90374B992C85E96700F0F7BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,12 +56,6 @@
 		9077EBC32C8716DE0044ED9E /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		9077EBC42C8716DE0044ED9E /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		90B527652C89BE48006752AD /* SigninSendEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninSendEmailViewController.swift; sourceTree = "<group>"; };
-		90B527672C89BF62006752AD /* GrayRoundNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayRoundNextButton.swift; sourceTree = "<group>"; };
-		90B527692C89BF7A006752AD /* MainRoundNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRoundNextButton.swift; sourceTree = "<group>"; };
-		90B5276B2C89BF96006752AD /* GrayNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayNextButton.swift; sourceTree = "<group>"; };
-		90B5276D2C89C22A006752AD /* MainNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNextButton.swift; sourceTree = "<group>"; };
-		90B5276F2C89C399006752AD /* SecondaryRoundNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryRoundNextButton.swift; sourceTree = "<group>"; };
-		90B527712C89C3AC006752AD /* SecondaryNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryNextButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +81,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		672D80A32C8AD2F7005E7062 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				672D80A42C8AD303005E7062 /* KGTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		672D80A62C8AD4D5005E7062 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				672D80A72C8AD4E9005E7062 /* KGButton.swift */,
+				672D80A92C8AD58D005E7062 /* KGButtonStyle.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		90374B8B2C85E96700F0F7BC = {
 			isa = PBXGroup;
 			children = (
@@ -110,7 +121,6 @@
 				90374BCB2C86FBD700F0F7BC /* App */,
 				90374BCC2C86FBDF00F0F7BC /* Resources */,
 				90374BCE2C86FBF800F0F7BC /* Support */,
-				90374BD72C86FEB500F0F7BC /* Service */,
 				90374BCD2C86FBEA00F0F7BC /* Sources */,
 			);
 			path = KillerGramV1;
@@ -170,47 +180,12 @@
 			path = Signup;
 			sourceTree = "<group>";
 		};
-		90374BD72C86FEB500F0F7BC /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				90374BD82C86FEC100F0F7BC /* Model */,
-				90374BDB2C86FEE900F0F7BC /* Header */,
-				90374BD92C86FEC800F0F7BC /* API */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		90374BD82C86FEC100F0F7BC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		90374BD92C86FEC800F0F7BC /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		90374BDB2C86FEE900F0F7BC /* Header */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Header;
-			sourceTree = "<group>";
-		};
 		9077EBC12C87158A0044ED9E /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				672D80A62C8AD4D5005E7062 /* Button */,
+				672D80A32C8AD2F7005E7062 /* TextField */,
 				9077EBC72C8717C20044ED9E /* Font */,
-				90B527672C89BF62006752AD /* GrayRoundNextButton.swift */,
-				90B527692C89BF7A006752AD /* MainRoundNextButton.swift */,
-				90B5276B2C89BF96006752AD /* GrayNextButton.swift */,
-				90B5276D2C89C22A006752AD /* MainNextButton.swift */,
-				90B5276F2C89C399006752AD /* SecondaryRoundNextButton.swift */,
-				90B527712C89C3AC006752AD /* SecondaryNextButton.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -327,19 +302,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				904D88202C871817007EEE16 /* PretendardFontStyle.swift in Sources */,
-				90B5276C2C89BF96006752AD /* GrayNextButton.swift in Sources */,
-				90B527702C89C399006752AD /* SecondaryRoundNextButton.swift in Sources */,
+				672D80AA2C8AD58D005E7062 /* KGButtonStyle.swift in Sources */,
 				904D88242C871A71007EEE16 /* KillerGramFontStyle.swift in Sources */,
+				672D80A82C8AD4E9005E7062 /* KGButton.swift in Sources */,
 				90374BC82C86810100F0F7BC /* LoginViewController.swift in Sources */,
 				90374BD42C86FC7C00F0F7BC /* SignupViewModel.swift in Sources */,
-				90B5276A2C89BF7A006752AD /* MainRoundNextButton.swift in Sources */,
 				90374B982C85E96700F0F7BC /* AppDelegate.swift in Sources */,
 				90B527662C89BE48006752AD /* SigninSendEmailViewController.swift in Sources */,
-				90B527682C89BF62006752AD /* GrayRoundNextButton.swift in Sources */,
 				90374BD12C86FC4400F0F7BC /* LoginViewModel.swift in Sources */,
+				672D80A52C8AD303005E7062 /* KGTextField.swift in Sources */,
 				90374B9A2C85E96700F0F7BC /* SceneDelegate.swift in Sources */,
-				90B527722C89C3AC006752AD /* SecondaryNextButton.swift in Sources */,
-				90B5276E2C89C22A006752AD /* MainNextButton.swift in Sources */,
 				904D88222C871875007EEE16 /* KillerGramFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

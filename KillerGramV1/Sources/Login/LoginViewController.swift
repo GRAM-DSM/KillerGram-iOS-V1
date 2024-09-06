@@ -12,36 +12,18 @@ class LoginViewController: UIViewController {
         $0.image = .logo
     }
     
-    let emailTextField = UITextField().then {
-        $0.attributedPlaceholder = NSAttributedString(string: "이메일을 입력해 주세요", attributes: [.foregroundColor: UIColor.GRAY_800])
-        $0.backgroundColor = .GRAY_1000
-        $0.layer.cornerRadius = 8
-        $0.textColor = .WHITE
-        $0.leftPadding()
-        $0.font = .killerGramFont(.regular, style: .m3)
-    }
+    let emailTextField = KGTextField(placeholder: "이메일을 입력해 주세요")
     
     private let middleView = UIView().then {
         $0.backgroundColor = .GRAY_900
     }
     
-    private let passwordTextField = UITextField().then {
-        $0.attributedPlaceholder = NSAttributedString(string: "비밀번호을 입력해 주세요", attributes: [.foregroundColor: UIColor.GRAY_800])
-        $0.backgroundColor = .GRAY_1000
-        $0.layer.cornerRadius = 8
-        $0.textColor = .WHITE
-        $0.leftPadding()
-        $0.font = .killerGramFont(.regular, style: .m3)
-    }
+    private let passwordTextField = KGTextField(placeholder: "비밀번호을 입력해 주세요")
     
-    private let loginButtton = UIButton().then {
-        $0.setTitle("로그인", for: .normal)
-        $0.backgroundColor = .MAIN
-        $0.setTitleColor(.SECONDARY, for: .normal)
-        $0.layer.cornerRadius = 8
-        $0.titleLabel?.font = .killerGramFont(.semibold, style: .m3)
+    private let loginButtton = KGButton(style: .round, colorStyle: .green).then {
+        $0.setText(text: "로그인")
     }
-    
+
     private let signinButton = UIButton().then {
         $0.setTitle("회원가입", for: .normal)
         $0.backgroundColor = .clear
@@ -62,12 +44,25 @@ class LoginViewController: UIViewController {
         setLayout()
         
         self.loginButtton.rx.tap.subscribe(onNext: {
-            self.viewModel.loginButtonDidTap()
+            self.viewModel.loginButtonDidTap(
+                email: self.emailTextField.textfield.text!,
+                password: self.passwordTextField.textfield.text!
+            ) {
+                switch $0 {
+                case "isEmpty":
+                    self.emailTextField.errorGenerate(error: "빈칸이 있습니다")
+                default:
+                    return
+                }
+            }
         })
         .disposed(by: disposeBag)
         
         self.signinButton.rx.tap.subscribe(onNext: {
-            self.viewModel.signinButtonDidTap()
+            self.navigationController?.pushViewController(
+                SigninSendEmailViewController(),
+                animated: true
+            )
         })
         .disposed(by: disposeBag)
     }
@@ -86,20 +81,16 @@ class LoginViewController: UIViewController {
         emailTextField.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(logoImageVIew.snp.bottom).offset(60)
-            $0.width.equalToSuperview().inset(24)
-            $0.height.equalTo(56)
+            $0.left.right.equalToSuperview()
         }
         passwordTextField.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(emailTextField.snp.bottom).offset(16)
-            $0.width.equalToSuperview().inset(24)
-            $0.height.equalTo(56)
+            $0.top.equalTo(emailTextField.snp.bottom)
+            $0.left.right.equalToSuperview()
         }
         loginButtton.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.top.equalTo(passwordTextField.snp.bottom).offset(24)
-            $0.width.equalToSuperview().inset(24)
-            $0.height.equalTo(56)
+            $0.top.equalTo(passwordTextField.snp.bottom).offset(16)
+            $0.left.trailing.equalToSuperview().inset(24)
         }
         signinButton.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(115.5)
@@ -116,15 +107,5 @@ class LoginViewController: UIViewController {
             $0.top.equalTo(loginButtton.snp.bottom).offset(24)
             $0.leading.equalTo(middleView.snp.trailing).offset(16)
         }
-    }
-}
-
-private extension UITextField {
-    func leftPadding() {
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: self.frame.height))
-        
-        self.leftView = paddingView
-        
-        self.leftViewMode = ViewMode.always
     }
 }
