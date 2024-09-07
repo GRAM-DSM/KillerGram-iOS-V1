@@ -4,6 +4,15 @@ import Then
 
 class KGTextField: UIStackView {
     var placeholder: String = ""
+    var explain: String = ""
+    
+    let explainLabel = UILabel().then {
+        $0.text = ""
+        $0.textColor = .GRAY_800
+        $0.font = .killerGramFont(.regular, style: .label)
+        $0.isHidden = true
+    }
+    
     let textfield = UITextField().then {
         $0.backgroundColor = .GRAY_1000
         $0.layer.cornerRadius = 8
@@ -19,7 +28,8 @@ class KGTextField: UIStackView {
         $0.isHidden = true
     }
 
-    init(placeholder: String) {
+    init(explain: String,placeholder: String) {
+        explainLabel.attributedText = NSAttributedString(string: explain)
         textfield.attributedPlaceholder = NSAttributedString(
             string: placeholder,
             attributes: [.foregroundColor: UIColor.GRAY_800]
@@ -37,6 +47,7 @@ class KGTextField: UIStackView {
 
     override func layoutSubviews() {
         [
+            explainLabel,
             textfield,
             errorLabel
         ].forEach(self.addArrangedSubview(_:))
@@ -54,6 +65,7 @@ class KGTextField: UIStackView {
             self.textfield.layer.borderColor = UIColor.SYSTEM.cgColor
             self.textfield.layer.borderWidth = 1
         })
+        
         if errorLabel.text == "" {
             UIView.animate(withDuration: 0.2, delay: 0, options: .transitionCrossDissolve, animations: {
                 self.errorLabel.layoutIfNeeded()
@@ -63,7 +75,6 @@ class KGTextField: UIStackView {
             })
         }
     }
-
 }
 
 

@@ -13,13 +13,13 @@ class LoginViewController: UIViewController {
         $0.image = .logo
     }
     
-    let emailTextField = KGTextField(placeholder: "이메일을 입력해 주세요")
+    let emailTextField = KGTextField(explain: "", placeholder: "이메일을 입력해 주세요")
     
     private let middleView = UIView().then {
         $0.backgroundColor = .GRAY_900
     }
     
-    private let passwordTextField = KGTextField(placeholder: "비밀번호을 입력해 주세요")
+    private let passwordTextField = KGTextField(explain: "", placeholder: "비밀번호을 입력해 주세요")
     
     private let loginButtton = KGButton(style: .round, colorStyle: .green).then {
         $0.setText(text: "로그인")
@@ -37,10 +37,16 @@ class LoginViewController: UIViewController {
         $0.setTitleColor(.GRAY_700, for: .normal)
         $0.titleLabel?.font = .killerGramFont(.regular, style: .label)
     }
+    
+    let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .BACK
+        backBarButtonItem.tintColor = .WHITE
+        self.navigationItem.backBarButtonItem = backBarButtonItem
+        
         addView()
         setLayout()
         

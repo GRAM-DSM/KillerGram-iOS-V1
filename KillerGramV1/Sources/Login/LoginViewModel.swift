@@ -7,10 +7,6 @@ final class LoginViewModel {
     var passworderrorheight: NSLayoutConstraint!
     
     func loginButtonDidTap(email: String, password: String, result: @escaping (String) -> Void) {
-//        if email.isEmpty || password.isEmpty {
-//            result("isEmpty")
-//            return
-//        }
 
         if self.isValidEmail(testStr: email) {
             result("email check ok")
