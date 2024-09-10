@@ -30,12 +30,14 @@
 		90374BC62C85F34A00F0F7BC /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 90374BC52C85F34A00F0F7BC /* RxRelay */; };
 		90374BC82C86810100F0F7BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90374BC72C86810100F0F7BC /* LoginViewController.swift */; };
 		90374BD12C86FC4400F0F7BC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90374BD02C86FC4400F0F7BC /* LoginViewModel.swift */; };
-		90374BD42C86FC7C00F0F7BC /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90374BD32C86FC7C00F0F7BC /* SignupViewModel.swift */; };
+		90374BD42C86FC7C00F0F7BC /* SignupSendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90374BD32C86FC7C00F0F7BC /* SignupSendViewModel.swift */; };
 		904D88202C871817007EEE16 /* PretendardFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D881F2C871817007EEE16 /* PretendardFontStyle.swift */; };
 		904D88222C871875007EEE16 /* KillerGramFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D88212C871875007EEE16 /* KillerGramFont.swift */; };
 		904D88242C871A71007EEE16 /* KillerGramFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D88232C871A71007EEE16 /* KillerGramFontStyle.swift */; };
 		9077EBC52C8716DE0044ED9E /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9077EBC32C8716DE0044ED9E /* Pretendard-SemiBold.otf */; };
 		9077EBC62C8716DE0044ED9E /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9077EBC42C8716DE0044ED9E /* Pretendard-Regular.otf */; };
+		9099ADD02C903A0400FCA3C8 /* UIButton+setUnderLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9099ADCF2C903A0400FCA3C8 /* UIButton+setUnderLine.swift */; };
+		9099ADD32C904CA500FCA3C8 /* SigninCheckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9099ADD22C904CA500FCA3C8 /* SigninCheckViewModel.swift */; };
 		90B527662C89BE48006752AD /* SigninSendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B527652C89BE48006752AD /* SigninSendEmailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,12 +55,14 @@
 		90374BA52C85E96700F0F7BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90374BC72C86810100F0F7BC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		90374BD02C86FC4400F0F7BC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		90374BD32C86FC7C00F0F7BC /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		90374BD32C86FC7C00F0F7BC /* SignupSendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupSendViewModel.swift; sourceTree = "<group>"; };
 		904D881F2C871817007EEE16 /* PretendardFontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PretendardFontStyle.swift; sourceTree = "<group>"; };
 		904D88212C871875007EEE16 /* KillerGramFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KillerGramFont.swift; sourceTree = "<group>"; };
 		904D88232C871A71007EEE16 /* KillerGramFontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KillerGramFontStyle.swift; sourceTree = "<group>"; };
 		9077EBC32C8716DE0044ED9E /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		9077EBC42C8716DE0044ED9E /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		9099ADCF2C903A0400FCA3C8 /* UIButton+setUnderLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+setUnderLine.swift"; sourceTree = "<group>"; };
+		9099ADD22C904CA500FCA3C8 /* SigninCheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninCheckViewModel.swift; sourceTree = "<group>"; };
 		90B527652C89BE48006752AD /* SigninSendEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninSendEmailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,13 +114,13 @@
 			path = Label;
 			sourceTree = "<group>";
 		};
-		902D5AEB2C8B1DBA0077AAC2 /* Email */ = {
+		902D5AEB2C8B1DBA0077AAC2 /* SendEmail */ = {
 			isa = PBXGroup;
 			children = (
 				90B527652C89BE48006752AD /* SigninSendEmailViewController.swift */,
-				902D5AEC2C8B1DDC0077AAC2 /* SigninCheckEmailViewController.swift */,
+				90374BD32C86FC7C00F0F7BC /* SignupSendViewModel.swift */,
 			);
-			path = Email;
+			path = SendEmail;
 			sourceTree = "<group>";
 		};
 		90374B8B2C85E96700F0F7BC = {
@@ -195,8 +199,8 @@
 		90374BD22C86FC7100F0F7BC /* Signup */ = {
 			isa = PBXGroup;
 			children = (
-				902D5AEB2C8B1DBA0077AAC2 /* Email */,
-				90374BD32C86FC7C00F0F7BC /* SignupViewModel.swift */,
+				9099ADD12C904C8D00FCA3C8 /* CheckEmail */,
+				902D5AEB2C8B1DBA0077AAC2 /* SendEmail */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -204,6 +208,7 @@
 		9077EBC12C87158A0044ED9E /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				9099ADCE2C9039EF00FCA3C8 /* Extension */,
 				902D5AE82C8B09440077AAC2 /* Label */,
 				672D80A62C8AD4D5005E7062 /* Button */,
 				672D80A32C8AD2F7005E7062 /* TextField */,
@@ -229,6 +234,23 @@
 				904D88232C871A71007EEE16 /* KillerGramFontStyle.swift */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		9099ADCE2C9039EF00FCA3C8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9099ADCF2C903A0400FCA3C8 /* UIButton+setUnderLine.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		9099ADD12C904C8D00FCA3C8 /* CheckEmail */ = {
+			isa = PBXGroup;
+			children = (
+				902D5AEC2C8B1DDC0077AAC2 /* SigninCheckEmailViewController.swift */,
+				9099ADD22C904CA500FCA3C8 /* SigninCheckViewModel.swift */,
+			);
+			path = CheckEmail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,12 +345,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9099ADD02C903A0400FCA3C8 /* UIButton+setUnderLine.swift in Sources */,
 				904D88202C871817007EEE16 /* PretendardFontStyle.swift in Sources */,
 				672D80AA2C8AD58D005E7062 /* KGButtonStyle.swift in Sources */,
 				904D88242C871A71007EEE16 /* KillerGramFontStyle.swift in Sources */,
 				672D80A82C8AD4E9005E7062 /* KGButton.swift in Sources */,
 				90374BC82C86810100F0F7BC /* LoginViewController.swift in Sources */,
-				90374BD42C86FC7C00F0F7BC /* SignupViewModel.swift in Sources */,
+				90374BD42C86FC7C00F0F7BC /* SignupSendViewModel.swift in Sources */,
+				9099ADD32C904CA500FCA3C8 /* SigninCheckViewModel.swift in Sources */,
 				90374B982C85E96700F0F7BC /* AppDelegate.swift in Sources */,
 				90B527662C89BE48006752AD /* SigninSendEmailViewController.swift in Sources */,
 				902D5AED2C8B1DDC0077AAC2 /* SigninCheckEmailViewController.swift in Sources */,

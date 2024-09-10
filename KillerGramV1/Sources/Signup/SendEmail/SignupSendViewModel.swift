@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-final class SignupViewModel {
+final class SignupSendViewModel {
     var emailerrorheight: NSLayoutConstraint!
     
     var passworderrorheight: NSLayoutConstraint!
@@ -39,6 +39,7 @@ final class SignupViewModel {
         
         return true
     }
+    
 }
 
 

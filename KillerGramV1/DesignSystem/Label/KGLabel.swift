@@ -24,7 +24,7 @@ class KGLabel: UIStackView {
         super.init(frame: .zero)
         self.axis = .vertical
         self.spacing = 8
-        self.layoutMargins = .init(top: 20, left: 24, bottom: 52, right: 24)
+        self.layoutMargins = .init(top: 20, left: 24, bottom: 20, right: 24)
         self.isLayoutMarginsRelativeArrangement = true
     }
     
