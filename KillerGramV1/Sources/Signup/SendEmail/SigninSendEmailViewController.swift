@@ -11,7 +11,7 @@ class SigninSendEmailViewController: UIViewController {
     
     private let titleLabel = KGLabel(title: "이메일을 입력해 주세요", explain: "이메일로 인증번호를 전송해 드릴게요")
     
-    private let emailTextField = KGTextField(explain: "이메일", placeholder: "이메일을 입력해주세요").then {
+    private let emailTextField = KGTextField(explain: "이메일", placeholder: "이메일을 입력해 주세요").then {
         $0.explainLabel.isHidden = false
     }
     

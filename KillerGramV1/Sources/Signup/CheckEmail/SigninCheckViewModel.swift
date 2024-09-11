@@ -1,35 +1,30 @@
-import UIKit
+// SigninCheckViewModel.swift
+
+import Foundation
+import RxSwift
+import RxCocoa
 
 final class SigninCheckViewModel {
-    let checkViewController = SigninCheckEmailViewController()
-    var limitTime: Int = 300
-
-    func timerStart() {
-        checkViewController.timerLabel.isHidden = false
-        setTime()
+    let timerText = BehaviorRelay<String>(value: "5:00")
+    private var limitTime: Int = 300
+    private var timer: Timer?
+    
+    func startTimer() {
+        
+        timer?.invalidate()
+        limitTime = 300
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
     
-    @objc func setTime() {
-        secToTime(sec: limitTime)
+    @objc private func updateTime() {
+        guard limitTime > 0 else {
+            timer?.invalidate()
+            timer = nil
+            return
+        }
         limitTime -= 1
-    }
-    
-    func secToTime(sec: Int) {
-        let minute = (sec % 3600) / 60
-        let second = (sec % 3600) % 6
-        
-        if second < 10 {
-            checkViewController.timerLabel.text = String(minute) + ":" + "0" + String(second)
-        } else {
-            checkViewController.timerLabel.text = String(minute) + ":" + String(second)
-        }
-        
-        if limitTime != 0 {
-            checkViewController.perform(#selector(setTime), with: nil, afterDelay: 1)
-        }
-        else if limitTime == 0 {
-            checkViewController.timerLabel.isHidden = true
-        }
+        let minutes = limitTime / 60
+        let seconds = limitTime % 60
+        timerText.accept(String(format: "%d:%02d", minutes, seconds))
     }
 }
-
