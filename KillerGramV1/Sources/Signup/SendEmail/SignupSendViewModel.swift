@@ -2,9 +2,9 @@ import Foundation
 import UIKit
 
 final class SignupSendViewModel {
-    var emailerrorheight: NSLayoutConstraint!
+    private var emailerrorheight: NSLayoutConstraint!
     
-    var passworderrorheight: NSLayoutConstraint!
+    private var passworderrorheight: NSLayoutConstraint!
     
     func nextButtonDidTap(email: String, result: @escaping (String) -> Void) {
         

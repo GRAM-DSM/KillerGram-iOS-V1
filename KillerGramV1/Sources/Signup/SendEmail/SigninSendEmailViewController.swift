@@ -19,7 +19,7 @@ class SigninSendEmailViewController: UIViewController {
         $0.setText(text: "다음")
     }
     
-    let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+    private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()

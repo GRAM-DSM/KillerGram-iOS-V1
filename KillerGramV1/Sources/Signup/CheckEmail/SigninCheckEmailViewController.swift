@@ -30,6 +30,10 @@ class SigninCheckEmailViewController: UIViewController {
         $0.setUnderline(font: .killerGramFont(.regular, style: .label), fgColor: .GRAY_400)
     }
     
+    private let checkButton = KGButton(style: .round, colorStyle: .green).then {
+        $0.setText(text: "인증")
+    }
+    
     private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     
     
@@ -40,6 +44,10 @@ class SigninCheckEmailViewController: UIViewController {
         addView()
         setLayout()
         bindViewModel()
+        
+        self.checkButton.rx.tap.subscribe(onNext: {
+            self.navigationController?.pushViewController(SetPasswordViewController(), animated: true)
+        })
         
         
         self.resendButton.rx.tap.subscribe(onNext: {
@@ -54,15 +62,16 @@ class SigninCheckEmailViewController: UIViewController {
         viewModel.startTimer()
     }
     
-    func addView() {
+    private func addView() {
         [
             titleLabel,
             checkTextField,
             timerLabel,
-            resendButton
+            resendButton,
+            checkButton
         ].forEach{view.addSubview($0)}
     }
-    func setLayout() {
+    private func setLayout() {
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()
@@ -78,6 +87,10 @@ class SigninCheckEmailViewController: UIViewController {
         resendButton.snp.makeConstraints {
             $0.trailing.equalToSuperview().inset(24)
             $0.top.equalTo(checkTextField.snp.bottom).offset(16)
+        }
+        checkButton.snp.makeConstraints {
+            $0.top.equalTo(resendButton.snp.bottom).offset(349)
+            $0.leading.trailing.equalToSuperview().inset(24)
         }
     }
     

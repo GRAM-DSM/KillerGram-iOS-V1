@@ -34,6 +34,8 @@
 		904D88202C871817007EEE16 /* PretendardFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D881F2C871817007EEE16 /* PretendardFontStyle.swift */; };
 		904D88222C871875007EEE16 /* KillerGramFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D88212C871875007EEE16 /* KillerGramFont.swift */; };
 		904D88242C871A71007EEE16 /* KillerGramFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D88232C871A71007EEE16 /* KillerGramFontStyle.swift */; };
+		90750F7D2C91A19B00B291A6 /* SetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90750F7C2C91A19B00B291A6 /* SetPasswordViewController.swift */; };
+		90750F7F2C91A1A900B291A6 /* SetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90750F7E2C91A1A900B291A6 /* SetPasswordViewModel.swift */; };
 		9077EBC52C8716DE0044ED9E /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9077EBC32C8716DE0044ED9E /* Pretendard-SemiBold.otf */; };
 		9077EBC62C8716DE0044ED9E /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9077EBC42C8716DE0044ED9E /* Pretendard-Regular.otf */; };
 		9099ADD02C903A0400FCA3C8 /* UIButton+setUnderLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9099ADCF2C903A0400FCA3C8 /* UIButton+setUnderLine.swift */; };
@@ -59,6 +61,8 @@
 		904D881F2C871817007EEE16 /* PretendardFontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PretendardFontStyle.swift; sourceTree = "<group>"; };
 		904D88212C871875007EEE16 /* KillerGramFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KillerGramFont.swift; sourceTree = "<group>"; };
 		904D88232C871A71007EEE16 /* KillerGramFontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KillerGramFontStyle.swift; sourceTree = "<group>"; };
+		90750F7C2C91A19B00B291A6 /* SetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewController.swift; sourceTree = "<group>"; };
+		90750F7E2C91A1A900B291A6 /* SetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewModel.swift; sourceTree = "<group>"; };
 		9077EBC32C8716DE0044ED9E /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		9077EBC42C8716DE0044ED9E /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		9099ADCF2C903A0400FCA3C8 /* UIButton+setUnderLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+setUnderLine.swift"; sourceTree = "<group>"; };
@@ -199,10 +203,20 @@
 		90374BD22C86FC7100F0F7BC /* Signup */ = {
 			isa = PBXGroup;
 			children = (
+				90750F7B2C91A17200B291A6 /* Password */,
 				9099ADD12C904C8D00FCA3C8 /* CheckEmail */,
 				902D5AEB2C8B1DBA0077AAC2 /* SendEmail */,
 			);
 			path = Signup;
+			sourceTree = "<group>";
+		};
+		90750F7B2C91A17200B291A6 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				90750F7C2C91A19B00B291A6 /* SetPasswordViewController.swift */,
+				90750F7E2C91A1A900B291A6 /* SetPasswordViewModel.swift */,
+			);
+			path = Password;
 			sourceTree = "<group>";
 		};
 		9077EBC12C87158A0044ED9E /* DesignSystem */ = {
@@ -355,9 +369,11 @@
 				9099ADD32C904CA500FCA3C8 /* SigninCheckViewModel.swift in Sources */,
 				90374B982C85E96700F0F7BC /* AppDelegate.swift in Sources */,
 				90B527662C89BE48006752AD /* SigninSendEmailViewController.swift in Sources */,
+				90750F7D2C91A19B00B291A6 /* SetPasswordViewController.swift in Sources */,
 				902D5AED2C8B1DDC0077AAC2 /* SigninCheckEmailViewController.swift in Sources */,
 				90374BD12C86FC4400F0F7BC /* LoginViewModel.swift in Sources */,
 				672D80A52C8AD303005E7062 /* KGTextField.swift in Sources */,
+				90750F7F2C91A1A900B291A6 /* SetPasswordViewModel.swift in Sources */,
 				902D5AEA2C8B09850077AAC2 /* KGLabel.swift in Sources */,
 				90374B9A2C85E96700F0F7BC /* SceneDelegate.swift in Sources */,
 				904D88222C871875007EEE16 /* KillerGramFont.swift in Sources */,

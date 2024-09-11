@@ -2,9 +2,9 @@ import Foundation
 import UIKit
 
 final class LoginViewModel {
-    var emailerrorheight: NSLayoutConstraint!
+    private var emailerrorheight: NSLayoutConstraint!
     
-    var passworderrorheight: NSLayoutConstraint!
+    private var passworderrorheight: NSLayoutConstraint!
     
     func loginButtonDidTap(email: String, password: String, result: @escaping (String) -> Void) {
 
@@ -54,7 +54,7 @@ final class LoginViewModel {
     
     private func isValidPassword(pw: String?) -> Bool{
         if let hasPassword = pw{
-            if hasPassword.count < 8 || hasPassword.count > 16{
+            if hasPassword.count < 8 || hasPassword.count > 12{
                 return false
             }
         }

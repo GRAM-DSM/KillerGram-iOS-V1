@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
         $0.titleLabel?.font = .killerGramFont(.regular, style: .label)
     }
     
-    let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+    private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     
 
     override func viewDidLoad() {
