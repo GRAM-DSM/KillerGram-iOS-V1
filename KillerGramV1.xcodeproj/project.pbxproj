@@ -5,6 +5,7 @@
 	};
 	objectVersion = 56;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		672D80A52C8AD303005E7062 /* KGTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D80A42C8AD303005E7062 /* KGTextField.swift */; };
 		672D80A82C8AD4E9005E7062 /* KGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D80A72C8AD4E9005E7062 /* KGButton.swift */; };
@@ -22,11 +23,6 @@
 		90374BB72C85F34400F0F7BC /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 90374BB62C85F34400F0F7BC /* Moya */; };
 		90374BB92C85F34400F0F7BC /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 90374BB82C85F34400F0F7BC /* ReactiveMoya */; };
 		90374BBB2C85F34400F0F7BC /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 90374BBA2C85F34400F0F7BC /* RxMoya */; };
-		90374BBE2C85F34A00F0F7BC /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 90374BBD2C85F34A00F0F7BC /* RxBlocking */; };
-		90374BC02C85F34A00F0F7BC /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 90374BBF2C85F34A00F0F7BC /* RxBlocking-Dynamic */; };
-		90374BC22C85F34A00F0F7BC /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 90374BC12C85F34A00F0F7BC /* RxCocoa */; };
-		90374BC42C85F34A00F0F7BC /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 90374BC32C85F34A00F0F7BC /* RxCocoa-Dynamic */; };
-		90374BC62C85F34A00F0F7BC /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 90374BC52C85F34A00F0F7BC /* RxRelay */; };
 		90374BC82C86810100F0F7BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90374BC72C86810100F0F7BC /* LoginViewController.swift */; };
 		90374BD12C86FC4400F0F7BC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90374BD02C86FC4400F0F7BC /* LoginViewModel.swift */; };
 		90374BD42C86FC7C00F0F7BC /* SignupSendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90374BD32C86FC7C00F0F7BC /* SignupSendViewModel.swift */; };
@@ -44,14 +40,16 @@
 		90750F7F2C91A1A900B291A6 /* SetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90750F7E2C91A1A900B291A6 /* SetPasswordViewModel.swift */; };
 		9077EBC52C8716DE0044ED9E /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9077EBC32C8716DE0044ED9E /* Pretendard-SemiBold.otf */; };
 		9077EBC62C8716DE0044ED9E /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9077EBC42C8716DE0044ED9E /* Pretendard-Regular.otf */; };
-		908C9C9B2C92F15900F4B3BA /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C9C9A2C92F15900F4B3BA /* LevelViewController.swift */; };
-		908C9C9D2C92F16400F4B3BA /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C9C9C2C92F16400F4B3BA /* LevelViewModel.swift */; };
 		908C9CA32C93000000F4B3BA /* FindPasswordSendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C9CA22C93000000F4B3BA /* FindPasswordSendEmailViewController.swift */; };
 		908C9CA52C93000B00F4B3BA /* FindPasswordSendEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C9CA42C93000B00F4B3BA /* FindPasswordSendEmailViewModel.swift */; };
 		9099ADD02C903A0400FCA3C8 /* UIButton+setUnderLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9099ADCF2C903A0400FCA3C8 /* UIButton+setUnderLine.swift */; };
 		9099ADD32C904CA500FCA3C8 /* SigninCheckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9099ADD22C904CA500FCA3C8 /* SigninCheckViewModel.swift */; };
 		90B527662C89BE48006752AD /* SigninSendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B527652C89BE48006752AD /* SigninSendEmailViewController.swift */; };
+		90F632772C9314A7000B1D99 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 90F632762C9314A7000B1D99 /* RxCocoa */; };
+		90F632792C9314A7000B1D99 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 90F632782C9314A7000B1D99 /* RxRelay */; };
+		90F6327B2C9314A7000B1D99 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 90F6327A2C9314A7000B1D99 /* RxSwift */; };
 /* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		672D80A42C8AD303005E7062 /* KGTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGTextField.swift; sourceTree = "<group>"; };
 		672D80A72C8AD4E9005E7062 /* KGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGButton.swift; sourceTree = "<group>"; };
@@ -81,35 +79,33 @@
 		90750F7E2C91A1A900B291A6 /* SetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewModel.swift; sourceTree = "<group>"; };
 		9077EBC32C8716DE0044ED9E /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		9077EBC42C8716DE0044ED9E /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
-		908C9C9A2C92F15900F4B3BA /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
-		908C9C9C2C92F16400F4B3BA /* LevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
 		908C9CA22C93000000F4B3BA /* FindPasswordSendEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordSendEmailViewController.swift; sourceTree = "<group>"; };
 		908C9CA42C93000B00F4B3BA /* FindPasswordSendEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordSendEmailViewModel.swift; sourceTree = "<group>"; };
 		9099ADCF2C903A0400FCA3C8 /* UIButton+setUnderLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+setUnderLine.swift"; sourceTree = "<group>"; };
 		9099ADD22C904CA500FCA3C8 /* SigninCheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninCheckViewModel.swift; sourceTree = "<group>"; };
 		90B527652C89BE48006752AD /* SigninSendEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninSendEmailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		90374B912C85E96700F0F7BC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90F632792C9314A7000B1D99 /* RxRelay in Frameworks */,
 				90374BAD2C85E98C00F0F7BC /* SnapKit in Frameworks */,
+				90F6327B2C9314A7000B1D99 /* RxSwift in Frameworks */,
 				90374BB22C85E99300F0F7BC /* Then in Frameworks */,
-				90374BC22C85F34A00F0F7BC /* RxCocoa in Frameworks */,
 				90374BB52C85F34400F0F7BC /* CombineMoya in Frameworks */,
 				90374BB72C85F34400F0F7BC /* Moya in Frameworks */,
 				90374BBB2C85F34400F0F7BC /* RxMoya in Frameworks */,
-				90374BC62C85F34A00F0F7BC /* RxRelay in Frameworks */,
-				90374BBE2C85F34A00F0F7BC /* RxBlocking in Frameworks */,
-				90374BC02C85F34A00F0F7BC /* RxBlocking-Dynamic in Frameworks */,
 				90374BAF2C85E98C00F0F7BC /* SnapKit-Dynamic in Frameworks */,
+				90F632772C9314A7000B1D99 /* RxCocoa in Frameworks */,
 				90374BB92C85F34400F0F7BC /* ReactiveMoya in Frameworks */,
-				90374BC42C85F34A00F0F7BC /* RxCocoa-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
 		672D80A32C8AD2F7005E7062 /* TextField */ = {
 			isa = PBXGroup;
@@ -241,7 +237,6 @@
 		9048AA9D2C91DBAF0073AEFF /* Info */ = {
 			isa = PBXGroup;
 			children = (
-				908C9C992C92F14600F4B3BA /* Level */,
 				906C9AF22C92C2D500E0E9A9 /* Gender */,
 				9048AAA32C92B7170073AEFF /* StudentNumber */,
 				9048AA9E2C91DBC10073AEFF /* Name */,
@@ -317,15 +312,6 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		908C9C992C92F14600F4B3BA /* Level */ = {
-			isa = PBXGroup;
-			children = (
-				908C9C9A2C92F15900F4B3BA /* LevelViewController.swift */,
-				908C9C9C2C92F16400F4B3BA /* LevelViewModel.swift */,
-			);
-			path = Level;
-			sourceTree = "<group>";
-		};
 		908C9CA02C92FF4B00F4B3BA /* FIndPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +355,7 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
 /* Begin PBXNativeTarget section */
 		90374B932C85E96700F0F7BC /* KillerGramV1 */ = {
 			isa = PBXNativeTarget;
@@ -391,17 +378,16 @@
 				90374BB62C85F34400F0F7BC /* Moya */,
 				90374BB82C85F34400F0F7BC /* ReactiveMoya */,
 				90374BBA2C85F34400F0F7BC /* RxMoya */,
-				90374BBD2C85F34A00F0F7BC /* RxBlocking */,
-				90374BBF2C85F34A00F0F7BC /* RxBlocking-Dynamic */,
-				90374BC12C85F34A00F0F7BC /* RxCocoa */,
-				90374BC32C85F34A00F0F7BC /* RxCocoa-Dynamic */,
-				90374BC52C85F34A00F0F7BC /* RxRelay */,
+				90F632762C9314A7000B1D99 /* RxCocoa */,
+				90F632782C9314A7000B1D99 /* RxRelay */,
+				90F6327A2C9314A7000B1D99 /* RxSwift */,
 			);
 			productName = KillerGramV1;
 			productReference = 90374B942C85E96700F0F7BC /* KillerGramV1.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
+
 /* Begin PBXProject section */
 		90374B8C2C85E96700F0F7BC /* Project object */ = {
 			isa = PBXProject;
@@ -428,7 +414,7 @@
 				90374BAB2C85E98C00F0F7BC /* XCRemoteSwiftPackageReference "SnapKit" */,
 				90374BB02C85E99300F0F7BC /* XCRemoteSwiftPackageReference "Then" */,
 				90374BB32C85F34400F0F7BC /* XCRemoteSwiftPackageReference "Moya" */,
-				90374BBC2C85F34A00F0F7BC /* XCRemoteSwiftPackageReference "RxSwift" */,
+				90F632752C9314A7000B1D99 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 90374B952C85E96700F0F7BC /* Products */;
 			projectDirPath = "";
@@ -438,6 +424,7 @@
 			);
 		};
 /* End PBXProject section */
+
 /* Begin PBXResourcesBuildPhase section */
 		90374B922C85E96700F0F7BC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -451,6 +438,7 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		90374B902C85E96700F0F7BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -459,7 +447,6 @@
 				9099ADD02C903A0400FCA3C8 /* UIButton+setUnderLine.swift in Sources */,
 				904D88202C871817007EEE16 /* PretendardFontStyle.swift in Sources */,
 				672D80AA2C8AD58D005E7062 /* KGButtonStyle.swift in Sources */,
-				908C9C9B2C92F15900F4B3BA /* LevelViewController.swift in Sources */,
 				904D88242C871A71007EEE16 /* KillerGramFontStyle.swift in Sources */,
 				908C9CA32C93000000F4B3BA /* FindPasswordSendEmailViewController.swift in Sources */,
 				672D80A82C8AD4E9005E7062 /* KGButton.swift in Sources */,
@@ -469,7 +456,6 @@
 				90374BD42C86FC7C00F0F7BC /* SignupSendViewModel.swift in Sources */,
 				906C9AF42C92C30400E0E9A9 /* GenderViewController.swift in Sources */,
 				9099ADD32C904CA500FCA3C8 /* SigninCheckViewModel.swift in Sources */,
-				908C9C9D2C92F16400F4B3BA /* LevelViewModel.swift in Sources */,
 				90374B982C85E96700F0F7BC /* AppDelegate.swift in Sources */,
 				908C9CA52C93000B00F4B3BA /* FindPasswordSendEmailViewModel.swift in Sources */,
 				90B527662C89BE48006752AD /* SigninSendEmailViewController.swift in Sources */,
@@ -489,6 +475,7 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
 /* Begin PBXVariantGroup section */
 		90374BA22C85E96700F0F7BC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -499,6 +486,7 @@
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		90374BA62C85E96700F0F7BC /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -675,6 +663,7 @@
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
+
 /* Begin XCConfigurationList section */
 		90374B8F2C85E96700F0F7BC /* Build configuration list for PBXProject "KillerGramV1" */ = {
 			isa = XCConfigurationList;
@@ -695,6 +684,7 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		90374BAB2C85E98C00F0F7BC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -720,7 +710,7 @@
 				minimumVersion = 15.0.3;
 			};
 		};
-		90374BBC2C85F34A00F0F7BC /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		90F632752C9314A7000B1D99 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
 			requirement = {
@@ -729,6 +719,7 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		90374BAC2C85E98C00F0F7BC /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -765,30 +756,20 @@
 			package = 90374BB32C85F34400F0F7BC /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = RxMoya;
 		};
-		90374BBD2C85F34A00F0F7BC /* RxBlocking */ = {
+		90F632762C9314A7000B1D99 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 90374BBC2C85F34A00F0F7BC /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxBlocking;
-		};
-		90374BBF2C85F34A00F0F7BC /* RxBlocking-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 90374BBC2C85F34A00F0F7BC /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = "RxBlocking-Dynamic";
-		};
-		90374BC12C85F34A00F0F7BC /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 90374BBC2C85F34A00F0F7BC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 90F632752C9314A7000B1D99 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
-		90374BC32C85F34A00F0F7BC /* RxCocoa-Dynamic */ = {
+		90F632782C9314A7000B1D99 /* RxRelay */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 90374BBC2C85F34A00F0F7BC /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = "RxCocoa-Dynamic";
-		};
-		90374BC52C85F34A00F0F7BC /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 90374BBC2C85F34A00F0F7BC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 90F632752C9314A7000B1D99 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxRelay;
+		};
+		90F6327A2C9314A7000B1D99 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90F632752C9314A7000B1D99 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
