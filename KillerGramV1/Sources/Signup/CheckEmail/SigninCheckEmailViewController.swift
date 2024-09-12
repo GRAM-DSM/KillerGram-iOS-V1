@@ -89,7 +89,7 @@ class SigninCheckEmailViewController: UIViewController {
             $0.top.equalTo(checkTextField.snp.bottom).offset(16)
         }
         checkButton.snp.makeConstraints {
-            $0.top.equalTo(resendButton.snp.bottom).offset(349)
+            $0.bottom.equalToSuperview().inset(60)
             $0.leading.trailing.equalToSuperview().inset(24)
         }
     }

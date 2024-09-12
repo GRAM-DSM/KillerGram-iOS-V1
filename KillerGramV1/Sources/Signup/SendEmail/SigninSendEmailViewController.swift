@@ -69,7 +69,7 @@ class SigninSendEmailViewController: UIViewController {
             $0.leading.trailing.equalToSuperview()
         }
         nextButton.snp.makeConstraints {
-            $0.top.equalTo(emailTextField.snp.bottom).offset(385)
+            $0.bottom.equalToSuperview().inset(60)
             $0.leading.trailing.equalToSuperview().inset(24)
         }
     }

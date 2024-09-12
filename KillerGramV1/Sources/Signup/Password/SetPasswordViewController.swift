@@ -19,12 +19,22 @@ class SetPasswordViewController: UIViewController {
     }
     
     
+    private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
         view.backgroundColor = .BACK
+        backBarButtonItem.tintColor = .WHITE
+        self.navigationItem.backBarButtonItem = backBarButtonItem
         addView()
         setLayout()
+        
+        
+        self.nextButton.rx.tap.subscribe(onNext: {
+            self.navigationController?.pushViewController(FillNameViewController(), animated: true)
+        })
     }
     
     private func addView() {
@@ -50,7 +60,7 @@ class SetPasswordViewController: UIViewController {
             $0.leading.trailing.equalToSuperview()
         }
         nextButton.snp.makeConstraints {
-            $0.top.equalTo(checkpasswordTextField).offset(400)
+            $0.bottom.equalToSuperview().inset(60)
             $0.leading.trailing.equalToSuperview().inset(24)
         }
     }
