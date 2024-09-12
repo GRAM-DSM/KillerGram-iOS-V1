@@ -48,6 +48,8 @@
 		90F632772C9314A7000B1D99 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 90F632762C9314A7000B1D99 /* RxCocoa */; };
 		90F632792C9314A7000B1D99 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 90F632782C9314A7000B1D99 /* RxRelay */; };
 		90F6327B2C9314A7000B1D99 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 90F6327A2C9314A7000B1D99 /* RxSwift */; };
+		90F6327E2C93169F000B1D99 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6327D2C93169F000B1D99 /* LevelViewController.swift */; };
+		90F632802C9316A8000B1D99 /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6327F2C9316A8000B1D99 /* LevelViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +86,8 @@
 		9099ADCF2C903A0400FCA3C8 /* UIButton+setUnderLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+setUnderLine.swift"; sourceTree = "<group>"; };
 		9099ADD22C904CA500FCA3C8 /* SigninCheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninCheckViewModel.swift; sourceTree = "<group>"; };
 		90B527652C89BE48006752AD /* SigninSendEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninSendEmailViewController.swift; sourceTree = "<group>"; };
+		90F6327D2C93169F000B1D99 /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
+		90F6327F2C9316A8000B1D99 /* LevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +241,7 @@
 		9048AA9D2C91DBAF0073AEFF /* Info */ = {
 			isa = PBXGroup;
 			children = (
+				90F6327C2C931691000B1D99 /* Level */,
 				906C9AF22C92C2D500E0E9A9 /* Gender */,
 				9048AAA32C92B7170073AEFF /* StudentNumber */,
 				9048AA9E2C91DBC10073AEFF /* Name */,
@@ -354,6 +359,15 @@
 			path = CheckEmail;
 			sourceTree = "<group>";
 		};
+		90F6327C2C931691000B1D99 /* Level */ = {
+			isa = PBXGroup;
+			children = (
+				90F6327D2C93169F000B1D99 /* LevelViewController.swift */,
+				90F6327F2C9316A8000B1D99 /* LevelViewModel.swift */,
+			);
+			path = Level;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -445,8 +459,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9099ADD02C903A0400FCA3C8 /* UIButton+setUnderLine.swift in Sources */,
+				90F632802C9316A8000B1D99 /* LevelViewModel.swift in Sources */,
 				904D88202C871817007EEE16 /* PretendardFontStyle.swift in Sources */,
 				672D80AA2C8AD58D005E7062 /* KGButtonStyle.swift in Sources */,
+				90F6327E2C93169F000B1D99 /* LevelViewController.swift in Sources */,
 				904D88242C871A71007EEE16 /* KillerGramFontStyle.swift in Sources */,
 				908C9CA32C93000000F4B3BA /* FindPasswordSendEmailViewController.swift in Sources */,
 				672D80A82C8AD4E9005E7062 /* KGButton.swift in Sources */,

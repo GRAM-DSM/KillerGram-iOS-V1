@@ -32,11 +32,15 @@ class GenderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .BACK
+        backBarButtonItem.tintColor = .WHITE
         self.navigationItem.backBarButtonItem = backBarButtonItem
         self.navigationItem.title = "정보입력"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.killerGramFont(.semibold, style: .m2), .foregroundColor: UIColor.WHITE]
         addView()
         setLayout()
+        self.nextButton.rx.tap.subscribe(onNext: {
+            self.navigationController?.pushViewController(LevelViewController(), animated: true)
+        })
     }
     func addView() {
         [
