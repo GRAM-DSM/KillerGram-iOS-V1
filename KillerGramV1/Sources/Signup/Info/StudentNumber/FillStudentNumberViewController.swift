@@ -28,7 +28,7 @@ class FillStudentNumberViewController: UIViewController {
         
         self.nextButton.rx.tap.subscribe(onNext: {
             self.navigationController?.pushViewController(GenderViewController(), animated: true)
-        }).disposed(by: disposeBag)
+        })
         addView()
         setLayout()
     }

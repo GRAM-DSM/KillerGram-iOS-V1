@@ -45,10 +45,13 @@
 		90750F7F2C91A1A900B291A6 /* SetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90750F7E2C91A1A900B291A6 /* SetPasswordViewModel.swift */; };
 		9077EBC52C8716DE0044ED9E /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9077EBC32C8716DE0044ED9E /* Pretendard-SemiBold.otf */; };
 		9077EBC62C8716DE0044ED9E /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9077EBC42C8716DE0044ED9E /* Pretendard-Regular.otf */; };
+<<<<<<< HEAD
 		908C9C9B2C92F15900F4B3BA /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C9C9A2C92F15900F4B3BA /* LevelViewController.swift */; };
 		908C9C9D2C92F16400F4B3BA /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C9C9C2C92F16400F4B3BA /* LevelViewModel.swift */; };
 		908C9CA32C93000000F4B3BA /* FindPasswordSendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C9CA22C93000000F4B3BA /* FindPasswordSendEmailViewController.swift */; };
 		908C9CA52C93000B00F4B3BA /* FindPasswordSendEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C9CA42C93000B00F4B3BA /* FindPasswordSendEmailViewModel.swift */; };
+=======
+>>>>>>> parent of f209d96 (Signup 퍼블리싱 완료)
 		9099ADD02C903A0400FCA3C8 /* UIButton+setUnderLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9099ADCF2C903A0400FCA3C8 /* UIButton+setUnderLine.swift */; };
 		9099ADD32C904CA500FCA3C8 /* SigninCheckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9099ADD22C904CA500FCA3C8 /* SigninCheckViewModel.swift */; };
 		90B527662C89BE48006752AD /* SigninSendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B527652C89BE48006752AD /* SigninSendEmailViewController.swift */; };
@@ -83,10 +86,13 @@
 		90750F7E2C91A1A900B291A6 /* SetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewModel.swift; sourceTree = "<group>"; };
 		9077EBC32C8716DE0044ED9E /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		9077EBC42C8716DE0044ED9E /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		908C9C9A2C92F15900F4B3BA /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
 		908C9C9C2C92F16400F4B3BA /* LevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
 		908C9CA22C93000000F4B3BA /* FindPasswordSendEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordSendEmailViewController.swift; sourceTree = "<group>"; };
 		908C9CA42C93000B00F4B3BA /* FindPasswordSendEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordSendEmailViewModel.swift; sourceTree = "<group>"; };
+=======
+>>>>>>> parent of f209d96 (Signup 퍼블리싱 완료)
 		9099ADCF2C903A0400FCA3C8 /* UIButton+setUnderLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+setUnderLine.swift"; sourceTree = "<group>"; };
 		9099ADD22C904CA500FCA3C8 /* SigninCheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninCheckViewModel.swift; sourceTree = "<group>"; };
 		90B527652C89BE48006752AD /* SigninSendEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninSendEmailViewController.swift; sourceTree = "<group>"; };
@@ -199,7 +205,6 @@
 		90374BCD2C86FBEA00F0F7BC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				908C9CA02C92FF4B00F4B3BA /* FIndPassword */,
 				90374BD22C86FC7100F0F7BC /* Signup */,
 				90374BCF2C86FC3A00F0F7BC /* Login */,
 			);
@@ -245,7 +250,6 @@
 		9048AA9D2C91DBAF0073AEFF /* Info */ = {
 			isa = PBXGroup;
 			children = (
-				908C9C992C92F14600F4B3BA /* Level */,
 				906C9AF22C92C2D500E0E9A9 /* Gender */,
 				9048AAA32C92B7170073AEFF /* StudentNumber */,
 				9048AA9E2C91DBC10073AEFF /* Name */,
@@ -321,6 +325,7 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		908C9C992C92F14600F4B3BA /* Level */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +360,8 @@
 			path = CheckEmail;
 			sourceTree = "<group>";
 		};
+=======
+>>>>>>> parent of f209d96 (Signup 퍼블리싱 완료)
 		9099ADCE2C9039EF00FCA3C8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -467,7 +474,6 @@
 				9099ADD02C903A0400FCA3C8 /* UIButton+setUnderLine.swift in Sources */,
 				904D88202C871817007EEE16 /* PretendardFontStyle.swift in Sources */,
 				672D80AA2C8AD58D005E7062 /* KGButtonStyle.swift in Sources */,
-				908C9C9B2C92F15900F4B3BA /* LevelViewController.swift in Sources */,
 				904D88242C871A71007EEE16 /* KillerGramFontStyle.swift in Sources */,
 				908C9CA32C93000000F4B3BA /* FindPasswordSendEmailViewController.swift in Sources */,
 				672D80A82C8AD4E9005E7062 /* KGButton.swift in Sources */,
@@ -477,7 +483,6 @@
 				90374BD42C86FC7C00F0F7BC /* SignupSendViewModel.swift in Sources */,
 				906C9AF42C92C30400E0E9A9 /* GenderViewController.swift in Sources */,
 				9099ADD32C904CA500FCA3C8 /* SigninCheckViewModel.swift in Sources */,
-				908C9C9D2C92F16400F4B3BA /* LevelViewModel.swift in Sources */,
 				90374B982C85E96700F0F7BC /* AppDelegate.swift in Sources */,
 				908C9CA52C93000B00F4B3BA /* FindPasswordSendEmailViewModel.swift in Sources */,
 				90B527662C89BE48006752AD /* SigninSendEmailViewController.swift in Sources */,

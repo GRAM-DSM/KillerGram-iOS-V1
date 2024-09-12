@@ -18,7 +18,6 @@ class GenderViewController: UIViewController {
     }
     
     private let femaleImage = UIImageView().then {
-        
         $0.backgroundColor = .GRAY_1100
         $0.image = .female
         $0.layer.cornerRadius = 8
@@ -38,10 +37,6 @@ class GenderViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.killerGramFont(.semibold, style: .m2), .foregroundColor: UIColor.WHITE]
         addView()
         setLayout()
-        
-        self.nextButton.rx.tap.subscribe(onNext: {
-            self.navigationController?.pushViewController(LevelViewController(), animated: true)
-        }).disposed(by: disposeBag)
     }
     func addView() {
         [
