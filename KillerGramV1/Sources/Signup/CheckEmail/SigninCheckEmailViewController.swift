@@ -6,7 +6,6 @@ import RxCocoa
 
 class SigninCheckEmailViewController: UIViewController {
     private let disposeBag = DisposeBag()
-    
     private let viewModel = SigninCheckViewModel()
     
     private let buttonString = NSAttributedString(string: "인증번호 재전송")

@@ -39,6 +39,8 @@
 		904D88202C871817007EEE16 /* PretendardFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D881F2C871817007EEE16 /* PretendardFontStyle.swift */; };
 		904D88222C871875007EEE16 /* KillerGramFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D88212C871875007EEE16 /* KillerGramFont.swift */; };
 		904D88242C871A71007EEE16 /* KillerGramFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D88232C871A71007EEE16 /* KillerGramFontStyle.swift */; };
+		906C9AF42C92C30400E0E9A9 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906C9AF32C92C30400E0E9A9 /* GenderViewController.swift */; };
+		906C9AF62C92C30C00E0E9A9 /* GenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906C9AF52C92C30C00E0E9A9 /* GenderViewModel.swift */; };
 		90750F7D2C91A19B00B291A6 /* SetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90750F7C2C91A19B00B291A6 /* SetPasswordViewController.swift */; };
 		90750F7F2C91A1A900B291A6 /* SetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90750F7E2C91A1A900B291A6 /* SetPasswordViewModel.swift */; };
 		9077EBC52C8716DE0044ED9E /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9077EBC32C8716DE0044ED9E /* Pretendard-SemiBold.otf */; };
@@ -71,6 +73,8 @@
 		904D881F2C871817007EEE16 /* PretendardFontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PretendardFontStyle.swift; sourceTree = "<group>"; };
 		904D88212C871875007EEE16 /* KillerGramFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KillerGramFont.swift; sourceTree = "<group>"; };
 		904D88232C871A71007EEE16 /* KillerGramFontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KillerGramFontStyle.swift; sourceTree = "<group>"; };
+		906C9AF32C92C30400E0E9A9 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
+		906C9AF52C92C30C00E0E9A9 /* GenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewModel.swift; sourceTree = "<group>"; };
 		90750F7C2C91A19B00B291A6 /* SetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewController.swift; sourceTree = "<group>"; };
 		90750F7E2C91A1A900B291A6 /* SetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewModel.swift; sourceTree = "<group>"; };
 		9077EBC32C8716DE0044ED9E /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 		9048AA9D2C91DBAF0073AEFF /* Info */ = {
 			isa = PBXGroup;
 			children = (
+				906C9AF22C92C2D500E0E9A9 /* Gender */,
 				9048AAA32C92B7170073AEFF /* StudentNumber */,
 				9048AA9E2C91DBC10073AEFF /* Name */,
 			);
@@ -254,6 +259,15 @@
 				9048AAA62C92B7950073AEFF /* FillStudentNumberViewModel.swift */,
 			);
 			path = StudentNumber;
+			sourceTree = "<group>";
+		};
+		906C9AF22C92C2D500E0E9A9 /* Gender */ = {
+			isa = PBXGroup;
+			children = (
+				906C9AF32C92C30400E0E9A9 /* GenderViewController.swift */,
+				906C9AF52C92C30C00E0E9A9 /* GenderViewModel.swift */,
+			);
+			path = Gender;
 			sourceTree = "<group>";
 		};
 		90750F7B2C91A17200B291A6 /* Password */ = {
@@ -415,6 +429,7 @@
 				9048AAA02C91DBCD0073AEFF /* FillNameViewController.swift in Sources */,
 				90374BC82C86810100F0F7BC /* LoginViewController.swift in Sources */,
 				90374BD42C86FC7C00F0F7BC /* SignupSendViewModel.swift in Sources */,
+				906C9AF42C92C30400E0E9A9 /* GenderViewController.swift in Sources */,
 				9099ADD32C904CA500FCA3C8 /* SigninCheckViewModel.swift in Sources */,
 				90374B982C85E96700F0F7BC /* AppDelegate.swift in Sources */,
 				90B527662C89BE48006752AD /* SigninSendEmailViewController.swift in Sources */,
@@ -423,6 +438,7 @@
 				902D5AED2C8B1DDC0077AAC2 /* SigninCheckEmailViewController.swift in Sources */,
 				90374BD12C86FC4400F0F7BC /* LoginViewModel.swift in Sources */,
 				672D80A52C8AD303005E7062 /* KGTextField.swift in Sources */,
+				906C9AF62C92C30C00E0E9A9 /* GenderViewModel.swift in Sources */,
 				9048AAA52C92B7830073AEFF /* FillStudentNumberViewController.swift in Sources */,
 				9048AA9C2C91D6FE0073AEFF /* KGStepBar.swift in Sources */,
 				90750F7F2C91A1A900B291A6 /* SetPasswordViewModel.swift in Sources */,
@@ -596,8 +612,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B857CRCG9V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KillerGramV1/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -611,6 +629,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonseog.KillerGramV1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
