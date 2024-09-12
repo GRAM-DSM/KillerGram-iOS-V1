@@ -34,7 +34,7 @@ class SetPasswordViewController: UIViewController {
         
         self.nextButton.rx.tap.subscribe(onNext: {
             self.navigationController?.pushViewController(FillNameViewController(), animated: true)
-        })
+        }).disposed(by: disposeBag)
     }
     
     private func addView() {

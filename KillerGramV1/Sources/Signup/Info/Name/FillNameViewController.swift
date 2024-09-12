@@ -8,7 +8,7 @@ class FillNameViewController: UIViewController {
     private let viewModel = FillNameViewModel()
     private let disposeBag = DisposeBag()
     
-    let titleLabel = KGLabel(title: "이름을 입력헤 주세요", explain: "원할한 서비스를 위해 이름을 입력해 주세요")
+    let titleLabel = KGLabel(title: "이름을 입력해 주세요", explain: "원할한 서비스를 위해 이름을 입력해 주세요")
     
     let nameTextField = KGTextField(explain: "이름", placeholder: "이름을 입력해 주세요")
     
@@ -31,7 +31,7 @@ class FillNameViewController: UIViewController {
         
         self.nextButton.rx.tap.subscribe(onNext: {
             self.navigationController?.pushViewController(FillStudentNumberViewController(), animated: true)
-        })
+        }).disposed(by: disposeBag)
     }
     
     func addView() {
