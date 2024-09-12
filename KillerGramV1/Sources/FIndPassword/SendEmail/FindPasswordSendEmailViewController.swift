@@ -5,7 +5,7 @@ import Then
 import RxSwift
 import RxCocoa
 
-class SigninSendEmailViewController: UIViewController {
+class FindPasswordSendEmailViewController: UIViewController {
     private let disposeBag = DisposeBag()
     private let viewModel = SignupSendViewModel()
     
