@@ -9,7 +9,7 @@ class FindPasswordSendEmailViewController: UIViewController {
     private let disposeBag = DisposeBag()
     private let viewModel = SignupSendViewModel()
     
-    private let titleLabel = KGLabel(title: "이메일을 입력해 주세요", explain: "이메일로 인증번호를 전송해 드릴게요")
+    private let titleLabel = KGLabel(title: "이메일을 입력해 주세요", explain: "회원가입 할 때 사용하신 이메일을 입력해 주세요")
     
     private let emailTextField = KGTextField(explain: "이메일", placeholder: "이메일을 입력해 주세요")
     

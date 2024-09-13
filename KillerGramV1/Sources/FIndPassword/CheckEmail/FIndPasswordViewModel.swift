@@ -1,8 +1,7 @@
 import Foundation
 import RxRelay
 
-
-final class SigninCheckViewModel {
+final class FIndPasswordViewModel {
     let timerText = BehaviorRelay<String>(value: "5:00")
     private var limitTime: Int = 300
     private var timer: Timer?

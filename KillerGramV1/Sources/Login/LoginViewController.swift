@@ -5,8 +5,7 @@ import Then
 import RxSwift
 import RxCocoa
 
-class LoginViewController: UIViewController {
-    private let disposeBag = DisposeBag()
+class LoginViewController: BaseViewController {
     private let viewModel = LoginViewModel()
     
     private let logoImageVIew = UIImageView().then {
@@ -41,15 +40,10 @@ class LoginViewController: UIViewController {
     private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .BACK
+    override func attribute() {
         self.navigationItem.hidesBackButton = true
         backBarButtonItem.tintColor = .WHITE
         self.navigationItem.backBarButtonItem = backBarButtonItem
-        
-        addView()
-        setLayout()
         
         self.loginButtton.rx.tap.subscribe(onNext: {
             self.viewModel.loginButtonDidTap(
@@ -89,15 +83,19 @@ class LoginViewController: UIViewController {
             )
         })
         .disposed(by: disposeBag)
+        
+        self.findPasswordButton.rx.tap.subscribe(onNext: {
+            self.navigationController?.pushViewController(FindPasswordSendEmailViewController(), animated: true)
+        })
     }
     
-    private func addView() {
+    override func addView() {
         [
             logoImageVIew, emailTextField, passwordTextField, loginButtton, signinButton, middleView, findPasswordButton
         ].forEach{view.addSubview($0)}
     }
     
-    private func setLayout() {
+    override func setLayout() {
         logoImageVIew.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(view.safeAreaLayoutGuide).inset(130)

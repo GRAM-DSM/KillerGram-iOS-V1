@@ -40,9 +40,9 @@ class GenderViewController: UIViewController {
         setLayout()
         self.nextButton.rx.tap.subscribe(onNext: {
             self.navigationController?.pushViewController(LevelViewController(), animated: true)
-        })
+        }).disposed(by: disposeBag)
     }
-    func addView() {
+    private func addView() {
         [
             titleLabel,
             maleImage,
@@ -51,7 +51,7 @@ class GenderViewController: UIViewController {
         ].forEach{view.addSubview($0)}
     }
     
-    func setLayout() {
+    private func setLayout() {
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()

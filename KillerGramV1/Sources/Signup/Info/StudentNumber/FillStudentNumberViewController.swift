@@ -34,7 +34,7 @@ class FillStudentNumberViewController: UIViewController {
         setLayout()
     }
     
-    func addView() {
+    private func addView() {
         [
             titleLabel,
             studentNumberTextField,
@@ -42,7 +42,7 @@ class FillStudentNumberViewController: UIViewController {
         ].forEach{view.addSubview($0)}
     }
     
-    func setLayout() {
+    private func setLayout() {
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()

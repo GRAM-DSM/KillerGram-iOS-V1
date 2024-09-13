@@ -24,7 +24,7 @@ class LevelViewController: UIViewController {
         
         self.completeButton.rx.tap.subscribe(onNext: {
             self.navigationController?.pushViewController(LoginViewController(), animated: true)
-        })
+        }).disposed(by: disposeBag)
     }
     private func addView() {
         [

@@ -16,8 +16,6 @@
 		90374B9A2C85E96700F0F7BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90374B992C85E96700F0F7BC /* SceneDelegate.swift */; };
 		90374BA12C85E96700F0F7BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90374BA02C85E96700F0F7BC /* Assets.xcassets */; };
 		90374BA42C85E96700F0F7BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90374BA22C85E96700F0F7BC /* LaunchScreen.storyboard */; };
-		90374BAD2C85E98C00F0F7BC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 90374BAC2C85E98C00F0F7BC /* SnapKit */; };
-		90374BAF2C85E98C00F0F7BC /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 90374BAE2C85E98C00F0F7BC /* SnapKit-Dynamic */; };
 		90374BB22C85E99300F0F7BC /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 90374BB12C85E99300F0F7BC /* Then */; };
 		90374BB52C85F34400F0F7BC /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 90374BB42C85F34400F0F7BC /* CombineMoya */; };
 		90374BB72C85F34400F0F7BC /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 90374BB62C85F34400F0F7BC /* Moya */; };
@@ -50,6 +48,10 @@
 		90F6327B2C9314A7000B1D99 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 90F6327A2C9314A7000B1D99 /* RxSwift */; };
 		90F6327E2C93169F000B1D99 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6327D2C93169F000B1D99 /* LevelViewController.swift */; };
 		90F632802C9316A8000B1D99 /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6327F2C9316A8000B1D99 /* LevelViewModel.swift */; };
+		90F632822C931DDF000B1D99 /* FindPasswordCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632812C931DDF000B1D99 /* FindPasswordCheckViewController.swift */; };
+		90F632842C931DF3000B1D99 /* FIndPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632832C931DF3000B1D99 /* FIndPasswordViewModel.swift */; };
+		90F632872C932743000B1D99 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 90F632862C932743000B1D99 /* SnapKit */; };
+		90F6328A2C9328FD000B1D99 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632892C9328FD000B1D99 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,9 @@
 		90B527652C89BE48006752AD /* SigninSendEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninSendEmailViewController.swift; sourceTree = "<group>"; };
 		90F6327D2C93169F000B1D99 /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
 		90F6327F2C9316A8000B1D99 /* LevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
+		90F632812C931DDF000B1D99 /* FindPasswordCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordCheckViewController.swift; sourceTree = "<group>"; };
+		90F632832C931DF3000B1D99 /* FIndPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIndPasswordViewModel.swift; sourceTree = "<group>"; };
+		90F632892C9328FD000B1D99 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,13 +101,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				90F632792C9314A7000B1D99 /* RxRelay in Frameworks */,
-				90374BAD2C85E98C00F0F7BC /* SnapKit in Frameworks */,
 				90F6327B2C9314A7000B1D99 /* RxSwift in Frameworks */,
 				90374BB22C85E99300F0F7BC /* Then in Frameworks */,
 				90374BB52C85F34400F0F7BC /* CombineMoya in Frameworks */,
 				90374BB72C85F34400F0F7BC /* Moya in Frameworks */,
 				90374BBB2C85F34400F0F7BC /* RxMoya in Frameworks */,
-				90374BAF2C85E98C00F0F7BC /* SnapKit-Dynamic in Frameworks */,
+				90F632872C932743000B1D99 /* SnapKit in Frameworks */,
 				90F632772C9314A7000B1D99 /* RxCocoa in Frameworks */,
 				90374BB92C85F34400F0F7BC /* ReactiveMoya in Frameworks */,
 			);
@@ -195,6 +199,7 @@
 		90374BCD2C86FBEA00F0F7BC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				90F632882C9328E4000B1D99 /* Base */,
 				908C9CA02C92FF4B00F4B3BA /* FIndPassword */,
 				90374BD22C86FC7100F0F7BC /* Signup */,
 				90374BCF2C86FC3A00F0F7BC /* Login */,
@@ -338,6 +343,8 @@
 		908C9CA62C93012C00F4B3BA /* CheckEmail */ = {
 			isa = PBXGroup;
 			children = (
+				90F632812C931DDF000B1D99 /* FindPasswordCheckViewController.swift */,
+				90F632832C931DF3000B1D99 /* FIndPasswordViewModel.swift */,
 			);
 			path = CheckEmail;
 			sourceTree = "<group>";
@@ -368,6 +375,14 @@
 			path = Level;
 			sourceTree = "<group>";
 		};
+		90F632882C9328E4000B1D99 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				90F632892C9328FD000B1D99 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -385,8 +400,6 @@
 			);
 			name = KillerGramV1;
 			packageProductDependencies = (
-				90374BAC2C85E98C00F0F7BC /* SnapKit */,
-				90374BAE2C85E98C00F0F7BC /* SnapKit-Dynamic */,
 				90374BB12C85E99300F0F7BC /* Then */,
 				90374BB42C85F34400F0F7BC /* CombineMoya */,
 				90374BB62C85F34400F0F7BC /* Moya */,
@@ -395,6 +408,7 @@
 				90F632762C9314A7000B1D99 /* RxCocoa */,
 				90F632782C9314A7000B1D99 /* RxRelay */,
 				90F6327A2C9314A7000B1D99 /* RxSwift */,
+				90F632862C932743000B1D99 /* SnapKit */,
 			);
 			productName = KillerGramV1;
 			productReference = 90374B942C85E96700F0F7BC /* KillerGramV1.app */;
@@ -425,10 +439,10 @@
 			);
 			mainGroup = 90374B8B2C85E96700F0F7BC;
 			packageReferences = (
-				90374BAB2C85E98C00F0F7BC /* XCRemoteSwiftPackageReference "SnapKit" */,
 				90374BB02C85E99300F0F7BC /* XCRemoteSwiftPackageReference "Then" */,
 				90374BB32C85F34400F0F7BC /* XCRemoteSwiftPackageReference "Moya" */,
 				90F632752C9314A7000B1D99 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				90F632852C932743000B1D99 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 90374B952C85E96700F0F7BC /* Products */;
 			projectDirPath = "";
@@ -461,14 +475,17 @@
 				9099ADD02C903A0400FCA3C8 /* UIButton+setUnderLine.swift in Sources */,
 				90F632802C9316A8000B1D99 /* LevelViewModel.swift in Sources */,
 				904D88202C871817007EEE16 /* PretendardFontStyle.swift in Sources */,
+				90F632822C931DDF000B1D99 /* FindPasswordCheckViewController.swift in Sources */,
 				672D80AA2C8AD58D005E7062 /* KGButtonStyle.swift in Sources */,
 				90F6327E2C93169F000B1D99 /* LevelViewController.swift in Sources */,
 				904D88242C871A71007EEE16 /* KillerGramFontStyle.swift in Sources */,
 				908C9CA32C93000000F4B3BA /* FindPasswordSendEmailViewController.swift in Sources */,
 				672D80A82C8AD4E9005E7062 /* KGButton.swift in Sources */,
 				9048AAA22C91DBF10073AEFF /* FillNameViewModel.swift in Sources */,
+				90F632842C931DF3000B1D99 /* FIndPasswordViewModel.swift in Sources */,
 				9048AAA02C91DBCD0073AEFF /* FillNameViewController.swift in Sources */,
 				90374BC82C86810100F0F7BC /* LoginViewController.swift in Sources */,
+				90F6328A2C9328FD000B1D99 /* BaseViewController.swift in Sources */,
 				90374BD42C86FC7C00F0F7BC /* SignupSendViewModel.swift in Sources */,
 				906C9AF42C92C30400E0E9A9 /* GenderViewController.swift in Sources */,
 				9099ADD32C904CA500FCA3C8 /* SigninCheckViewModel.swift in Sources */,
@@ -630,12 +647,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B857CRCG9V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KillerGramV1/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -664,6 +683,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -702,14 +722,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		90374BAB2C85E98C00F0F7BC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.7.1;
-			};
-		};
 		90374BB02C85E99300F0F7BC /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then";
@@ -734,19 +746,17 @@
 				minimumVersion = 6.7.1;
 			};
 		};
+		90F632852C932743000B1D99 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		90374BAC2C85E98C00F0F7BC /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 90374BAB2C85E98C00F0F7BC /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		90374BAE2C85E98C00F0F7BC /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 90374BAB2C85E98C00F0F7BC /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
 		90374BB12C85E99300F0F7BC /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 90374BB02C85E99300F0F7BC /* XCRemoteSwiftPackageReference "Then" */;
@@ -786,6 +796,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 90F632752C9314A7000B1D99 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		90F632862C932743000B1D99 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90F632852C932743000B1D99 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
