@@ -35,12 +35,13 @@ class FindPasswordCheckViewController: BaseViewController {
     private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
 
     override func attribute() {
-        self.checkButton.rx.tap.subscribe(
-            onNext: {
-                self.navigationController?.pushViewController(SetPasswordViewController(), animated: true)
-            }
-        )
-        .disposed(by: disposeBag)
+        checkTextField.textfield.keyboardType = .numberPad
+//        self.checkButton.rx.tap.subscribe(
+//            onNext: {
+//                self.navigationController?.pushViewController(SetPasswordViewController(), animated: true)
+//            }
+//        )
+//        .disposed(by: disposeBag)
 
         self.resendButton.rx.tap.subscribe(onNext: {
             self.timerLabel.text = "5:00"

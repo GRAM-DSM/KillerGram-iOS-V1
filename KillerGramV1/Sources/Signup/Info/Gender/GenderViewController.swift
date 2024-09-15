@@ -5,8 +5,7 @@ import RxSwift
 import RxCocoa
 
 
-class GenderViewController: UIViewController {
-    private let disposeBag = DisposeBag()
+class GenderViewController: BaseViewController {
     private let viewModel = SigninCheckViewModel()
     
     private let titleLabel = KGLabel(title: "성별을 알려주세요", explain: "원활한 서비스를 위해 성별을 알려주세요")
@@ -28,10 +27,8 @@ class GenderViewController: UIViewController {
     }
     
     private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .BACK
+    
+    override func attribute() {
         backBarButtonItem.tintColor = .WHITE
         self.navigationItem.backBarButtonItem = backBarButtonItem
         self.navigationItem.title = "정보입력"
@@ -42,7 +39,8 @@ class GenderViewController: UIViewController {
             self.navigationController?.pushViewController(LevelViewController(), animated: true)
         }).disposed(by: disposeBag)
     }
-    private func addView() {
+    
+    override func addView() {
         [
             titleLabel,
             maleImage,
@@ -51,7 +49,7 @@ class GenderViewController: UIViewController {
         ].forEach{view.addSubview($0)}
     }
     
-    private func setLayout() {
+    override func setLayout() {
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()

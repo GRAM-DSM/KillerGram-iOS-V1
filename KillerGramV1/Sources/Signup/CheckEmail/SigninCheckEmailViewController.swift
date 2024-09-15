@@ -4,8 +4,7 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class SigninCheckEmailViewController: UIViewController {
-    private let disposeBag = DisposeBag()
+class SigninCheckEmailViewController: BaseViewController {
     private let viewModel = SigninCheckViewModel()
     
     private let buttonString = NSAttributedString(string: "인증번호 재전송")
@@ -37,17 +36,13 @@ class SigninCheckEmailViewController: UIViewController {
     
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .BACK
-        addView()
-        setLayout()
-        bindViewModel()
+    
+    override func attribute() {
+        checkTextField.textfield.keyboardType = .numberPad
         
         self.checkButton.rx.tap.subscribe(onNext: {
             self.navigationController?.pushViewController(SetPasswordViewController(), animated: true)
-        })
-        
+        }).disposed(by: disposeBag)
         
         self.resendButton.rx.tap.subscribe(onNext: {
             self.timerLabel.text = "5:00"
@@ -61,7 +56,13 @@ class SigninCheckEmailViewController: UIViewController {
         viewModel.startTimer()
     }
     
-    private func addView() {
+    override func bind() {
+        viewModel.timerText
+            .bind(to: timerLabel.rx.text)
+            .disposed(by: disposeBag)
+    }
+    
+    override func addView() {
         [
             titleLabel,
             checkTextField,
@@ -70,7 +71,8 @@ class SigninCheckEmailViewController: UIViewController {
             checkButton
         ].forEach{view.addSubview($0)}
     }
-    private func setLayout() {
+    
+    override func setLayout() {
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()
@@ -92,12 +94,6 @@ class SigninCheckEmailViewController: UIViewController {
             $0.leading.trailing.equalToSuperview().inset(24)
         }
     }
-    
-    private func bindViewModel() {
-            viewModel.timerText
-                .bind(to: timerLabel.rx.text)
-                .disposed(by: disposeBag)
-        }
 }
 
 

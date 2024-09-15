@@ -4,9 +4,7 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class SetPasswordViewController: UIViewController {
-    private let viewModel = SetPasswordViewModel()
-    private let disposeBag = DisposeBag()
+class SetPasswordViewController: BaseViewController {
     
     private let titleLabel = KGLabel(title: "비밀번호를 입력해 주세요", explain: "비밀번호는 영어와 숫자를 조합해 만들어 주세요")
     
@@ -22,22 +20,21 @@ class SetPasswordViewController: UIViewController {
     private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override func attribute() {
+        passwordTextField.textfield.keyboardType = .asciiCapable
+        checkpasswordTextField.textfield.keyboardType = .asciiCapable
+        
         self.navigationItem.hidesBackButton = true
-        view.backgroundColor = .BACK
         backBarButtonItem.tintColor = .WHITE
         self.navigationItem.backBarButtonItem = backBarButtonItem
-        addView()
-        setLayout()
-        
         
         self.nextButton.rx.tap.subscribe(onNext: {
             self.navigationController?.pushViewController(FillNameViewController(), animated: true)
-        })
+        }).disposed(by: disposeBag)
     }
     
-    private func addView() {
+    override func addView() {
         [
             titleLabel,
             passwordTextField,
@@ -46,7 +43,7 @@ class SetPasswordViewController: UIViewController {
         ].forEach{view.addSubview($0)}
     }
     
-    private func setLayout() {
+    override func setLayout() {
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()

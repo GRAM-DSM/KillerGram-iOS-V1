@@ -5,8 +5,7 @@ import Then
 import RxSwift
 import RxCocoa
 
-class FindPasswordSendEmailViewController: UIViewController {
-    private let disposeBag = DisposeBag()
+class FindPasswordSendEmailViewController: BaseViewController {
     private let viewModel = SignupSendViewModel()
     
     private let titleLabel = KGLabel(title: "이메일을 입력해 주세요", explain: "회원가입 할 때 사용하신 이메일을 입력해 주세요")
@@ -19,11 +18,9 @@ class FindPasswordSendEmailViewController: UIViewController {
     
     private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .BACK
-        addView()
-        setLayout()
+    override func attribute() {
+        emailTextField.textfield.keyboardType = .emailAddress
+        
         backBarButtonItem.tintColor = .WHITE
         self.navigationItem.backBarButtonItem = backBarButtonItem
         
@@ -40,7 +37,7 @@ class FindPasswordSendEmailViewController: UIViewController {
                 case "email check ok":
                     self.emailTextField.errorGenerate(error: "")
                     self.navigationController?.pushViewController(SigninCheckEmailViewController(), animated: true)
-
+                    
                 default:
                     return
                 }
@@ -49,7 +46,7 @@ class FindPasswordSendEmailViewController: UIViewController {
         .disposed(by: disposeBag)
     }
     
-    private func addView() {
+    override func addView() {
         [
             titleLabel,
             emailTextField,
@@ -57,7 +54,7 @@ class FindPasswordSendEmailViewController: UIViewController {
         ].forEach{view.addSubview($0)}
     }
     
-    private func setLayout() {
+    override func setLayout() {
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()

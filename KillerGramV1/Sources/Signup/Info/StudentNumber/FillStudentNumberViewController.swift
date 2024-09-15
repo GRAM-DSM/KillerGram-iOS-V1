@@ -4,8 +4,7 @@ import Then
 import RxSwift
 import RxCocoa
 
-class FillStudentNumberViewController: UIViewController {
-    private let disposeBag = DisposeBag()
+class FillStudentNumberViewController: BaseViewController {
     private let viewModel = SigninCheckViewModel()
     
     private let titleLabel = KGLabel(title: "학번을 입력해 주세요", explain: "원활한 서비스를 위해 학번을 입력해 주세요")
@@ -17,11 +16,10 @@ class FillStudentNumberViewController: UIViewController {
     }
     
     private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
-
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .BACK
+    override func attribute() {
+        studentNumberTextField.textfield.keyboardType = .numberPad
+        
         backBarButtonItem.tintColor = .WHITE
         self.navigationItem.backBarButtonItem = backBarButtonItem
         self.navigationItem.title = "정보입력"
@@ -30,11 +28,8 @@ class FillStudentNumberViewController: UIViewController {
         self.nextButton.rx.tap.subscribe(onNext: {
             self.navigationController?.pushViewController(GenderViewController(), animated: true)
         })
-        addView()
-        setLayout()
     }
-    
-    private func addView() {
+    override func addView() {
         [
             titleLabel,
             studentNumberTextField,
@@ -42,7 +37,7 @@ class FillStudentNumberViewController: UIViewController {
         ].forEach{view.addSubview($0)}
     }
     
-    private func setLayout() {
+    override func setLayout() {
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()
