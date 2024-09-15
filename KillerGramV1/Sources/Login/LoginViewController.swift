@@ -43,7 +43,7 @@ class LoginViewController: BaseViewController {
 
     override func attribute() {
         emailTextField.textfield.keyboardType = .emailAddress
-        passwordTextField.textfield.keyboardType = .numberPad
+        passwordTextField.textfield.keyboardType = .asciiCapable
         
         self.navigationItem.hidesBackButton = true
         backBarButtonItem.tintColor = .WHITE

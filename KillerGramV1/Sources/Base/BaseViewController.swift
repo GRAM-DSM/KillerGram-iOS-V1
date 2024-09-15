@@ -16,6 +16,10 @@ public class BaseViewController: UIViewController {
         addView()
         setLayout()
     }
+    
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            view.endEditing(true)
+        }
 
     public func addView() {}
     public func setLayout() {}
