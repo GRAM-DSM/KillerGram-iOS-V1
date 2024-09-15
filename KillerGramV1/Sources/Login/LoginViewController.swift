@@ -6,6 +6,7 @@ import RxSwift
 import RxCocoa
 
 class LoginViewController: BaseViewController {
+    
     private let viewModel = LoginViewModel()
     
     private let logoImageVIew = UIImageView().then {
@@ -75,6 +76,10 @@ class LoginViewController: BaseViewController {
                     
                 default:
                     return
+                }
+                
+                if self.emailTextField.errorLabel.isHidden == true && self.passwordTextField.errorLabel.isHidden == true {
+                    self.navigationController?.pushViewController(MainViewController(), animated: true)
                 }
             }
         })

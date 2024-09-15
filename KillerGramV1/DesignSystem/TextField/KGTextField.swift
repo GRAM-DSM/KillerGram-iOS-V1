@@ -66,8 +66,7 @@ class KGTextField: UIStackView {
                 self.textfield.layer.borderWidth = 1
                 self.errorLabel.isHidden = true
             })
-        }
-        else {
+        } else {
             self.errorLabel.isHidden = false
             UIView.animate(withDuration: 0.2, delay: 0, options: .transitionCrossDissolve, animations: {
                 self.errorLabel.layoutIfNeeded()
