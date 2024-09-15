@@ -36,7 +36,7 @@ class FindPasswordSendEmailViewController: BaseViewController {
                     
                 case "email check ok":
                     self.emailTextField.errorGenerate(error: "")
-                    self.navigationController?.pushViewController(SigninCheckEmailViewController(), animated: true)
+                    self.navigationController?.pushViewController(FindPasswordCheckViewController(), animated: true)
                     
                 default:
                     return

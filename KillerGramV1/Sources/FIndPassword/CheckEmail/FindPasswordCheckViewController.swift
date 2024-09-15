@@ -5,7 +5,7 @@ import RxSwift
 import RxCocoa
 
 class FindPasswordCheckViewController: BaseViewController {
-    private let viewModel = SigninCheckViewModel()
+    private let viewModel = FindPasswordCheckViewModel()
     
     private let buttonString = NSAttributedString(string: "인증번호 재전송")
     
@@ -36,12 +36,12 @@ class FindPasswordCheckViewController: BaseViewController {
 
     override func attribute() {
         checkTextField.textfield.keyboardType = .numberPad
-//        self.checkButton.rx.tap.subscribe(
-//            onNext: {
-//                self.navigationController?.pushViewController(SetPasswordViewController(), animated: true)
-//            }
-//        )
-//        .disposed(by: disposeBag)
+        self.checkButton.rx.tap.subscribe(
+            onNext: {
+                self.navigationController?.pushViewController(SetNewPasswordViewController(), animated: true)
+            }
+        )
+        .disposed(by: disposeBag)
 
         self.resendButton.rx.tap.subscribe(onNext: {
             self.timerLabel.text = "5:00"

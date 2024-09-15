@@ -49,9 +49,13 @@
 		90F6327E2C93169F000B1D99 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6327D2C93169F000B1D99 /* LevelViewController.swift */; };
 		90F632802C9316A8000B1D99 /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6327F2C9316A8000B1D99 /* LevelViewModel.swift */; };
 		90F632822C931DDF000B1D99 /* FindPasswordCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632812C931DDF000B1D99 /* FindPasswordCheckViewController.swift */; };
-		90F632842C931DF3000B1D99 /* FIndPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632832C931DF3000B1D99 /* FIndPasswordViewModel.swift */; };
+		90F632842C931DF3000B1D99 /* FindPasswordCheckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632832C931DF3000B1D99 /* FindPasswordCheckViewModel.swift */; };
 		90F632872C932743000B1D99 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 90F632862C932743000B1D99 /* SnapKit */; };
 		90F6328A2C9328FD000B1D99 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632892C9328FD000B1D99 /* BaseViewController.swift */; };
+		90F6328F2C96CC37000B1D99 /* SetNewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6328E2C96CC37000B1D99 /* SetNewPasswordViewController.swift */; };
+		90F632912C96CC47000B1D99 /* SetNewPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632902C96CC47000B1D99 /* SetNewPasswordViewModel.swift */; };
+		90F632952C96D242000B1D99 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632942C96D242000B1D99 /* MainViewController.swift */; };
+		90F632972C96D24C000B1D99 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632962C96D24C000B1D99 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,8 +95,12 @@
 		90F6327D2C93169F000B1D99 /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
 		90F6327F2C9316A8000B1D99 /* LevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
 		90F632812C931DDF000B1D99 /* FindPasswordCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordCheckViewController.swift; sourceTree = "<group>"; };
-		90F632832C931DF3000B1D99 /* FIndPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIndPasswordViewModel.swift; sourceTree = "<group>"; };
+		90F632832C931DF3000B1D99 /* FindPasswordCheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordCheckViewModel.swift; sourceTree = "<group>"; };
 		90F632892C9328FD000B1D99 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		90F6328E2C96CC37000B1D99 /* SetNewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNewPasswordViewController.swift; sourceTree = "<group>"; };
+		90F632902C96CC47000B1D99 /* SetNewPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNewPasswordViewModel.swift; sourceTree = "<group>"; };
+		90F632942C96D242000B1D99 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		90F632962C96D24C000B1D99 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +207,7 @@
 		90374BCD2C86FBEA00F0F7BC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				90F632922C96D210000B1D99 /* Main */,
 				90F632882C9328E4000B1D99 /* Base */,
 				908C9CA02C92FF4B00F4B3BA /* FIndPassword */,
 				90374BD22C86FC7100F0F7BC /* Signup */,
@@ -325,6 +334,7 @@
 		908C9CA02C92FF4B00F4B3BA /* FIndPassword */ = {
 			isa = PBXGroup;
 			children = (
+				90F6328D2C96CC18000B1D99 /* NewPassword */,
 				908C9CA62C93012C00F4B3BA /* CheckEmail */,
 				908C9CA12C92FFCE00F4B3BA /* SendEmail */,
 			);
@@ -344,7 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				90F632812C931DDF000B1D99 /* FindPasswordCheckViewController.swift */,
-				90F632832C931DF3000B1D99 /* FIndPasswordViewModel.swift */,
+				90F632832C931DF3000B1D99 /* FindPasswordCheckViewModel.swift */,
 			);
 			path = CheckEmail;
 			sourceTree = "<group>";
@@ -381,6 +391,32 @@
 				90F632892C9328FD000B1D99 /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		90F6328D2C96CC18000B1D99 /* NewPassword */ = {
+			isa = PBXGroup;
+			children = (
+				90F6328E2C96CC37000B1D99 /* SetNewPasswordViewController.swift */,
+				90F632902C96CC47000B1D99 /* SetNewPasswordViewModel.swift */,
+			);
+			path = NewPassword;
+			sourceTree = "<group>";
+		};
+		90F632922C96D210000B1D99 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				90F632932C96D232000B1D99 /* Main */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		90F632932C96D232000B1D99 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				90F632942C96D242000B1D99 /* MainViewController.swift */,
+				90F632962C96D24C000B1D99 /* MainViewModel.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,11 +516,13 @@
 				90F6327E2C93169F000B1D99 /* LevelViewController.swift in Sources */,
 				904D88242C871A71007EEE16 /* KillerGramFontStyle.swift in Sources */,
 				908C9CA32C93000000F4B3BA /* FindPasswordSendEmailViewController.swift in Sources */,
+				90F6328F2C96CC37000B1D99 /* SetNewPasswordViewController.swift in Sources */,
 				672D80A82C8AD4E9005E7062 /* KGButton.swift in Sources */,
 				9048AAA22C91DBF10073AEFF /* FillNameViewModel.swift in Sources */,
-				90F632842C931DF3000B1D99 /* FIndPasswordViewModel.swift in Sources */,
+				90F632842C931DF3000B1D99 /* FindPasswordCheckViewModel.swift in Sources */,
 				9048AAA02C91DBCD0073AEFF /* FillNameViewController.swift in Sources */,
 				90374BC82C86810100F0F7BC /* LoginViewController.swift in Sources */,
+				90F632952C96D242000B1D99 /* MainViewController.swift in Sources */,
 				90F6328A2C9328FD000B1D99 /* BaseViewController.swift in Sources */,
 				90374BD42C86FC7C00F0F7BC /* SignupSendViewModel.swift in Sources */,
 				906C9AF42C92C30400E0E9A9 /* GenderViewController.swift in Sources */,
@@ -504,6 +542,8 @@
 				902D5AEA2C8B09850077AAC2 /* KGLabel.swift in Sources */,
 				90374B9A2C85E96700F0F7BC /* SceneDelegate.swift in Sources */,
 				904D88222C871875007EEE16 /* KillerGramFont.swift in Sources */,
+				90F632912C96CC47000B1D99 /* SetNewPasswordViewModel.swift in Sources */,
+				90F632972C96D24C000B1D99 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
