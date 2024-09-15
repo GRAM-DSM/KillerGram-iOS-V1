@@ -95,7 +95,7 @@ class LoginViewController: BaseViewController {
         
         self.findPasswordButton.rx.tap.subscribe(onNext: {
             self.navigationController?.pushViewController(FindPasswordSendEmailViewController(), animated: true)
-        })
+        }).disposed(by: disposeBag)
     }
     
     override func addView() {
