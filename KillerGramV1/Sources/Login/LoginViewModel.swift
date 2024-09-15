@@ -9,14 +9,16 @@ final class LoginViewModel {
     func loginButtonDidTap(email: String, password: String, result: @escaping (String) -> Void) {
 
         if self.isValidEmail(testStr: email) {
+            print("email check ok")
             result("email check ok")
-            print("email check")
         } else {
             if email.isEmpty {
                 result("email is empty")
+                print("email is empty")
             }
             else {
                 result("email error")
+                print("email error")
             }
         }
         
@@ -26,9 +28,11 @@ final class LoginViewModel {
         } else {
             if password.isEmpty {
                 result("password is empty")
+                print("password is empty")
             }
             else {
                 result("password error")
+                print("password error")
             }
         }
     }
