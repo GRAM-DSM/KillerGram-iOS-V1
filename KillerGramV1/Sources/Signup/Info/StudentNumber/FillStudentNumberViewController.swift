@@ -5,7 +5,7 @@ import RxSwift
 import RxCocoa
 
 class FillStudentNumberViewController: BaseViewController {
-    private let viewModel = SigninCheckViewModel()
+    private let viewModel = FillNameViewModel()
     
     private let titleLabel = KGLabel(title: "학번을 입력해 주세요", explain: "원활한 서비스를 위해 학번을 입력해 주세요")
     
