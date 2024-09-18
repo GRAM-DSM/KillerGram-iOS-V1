@@ -41,7 +41,23 @@ class SigninCheckEmailViewController: BaseViewController {
         checkTextField.textfield.keyboardType = .numberPad
         
         self.checkButton.rx.tap.subscribe(onNext: {
-            self.navigationController?.pushViewController(SetPasswordViewController(), animated: true)
+                self.viewModel.checkButtonDidTap(
+                    password: self.checkTextField.textfield.text!
+                ) {
+                    switch $0 {
+                    case "password is empty":
+                        self.checkTextField.errorGenerate(error: "인증번호를 입력해 주세요")
+                        
+                    case "password error":
+                        self.checkTextField.errorGenerate(error: "인증번호가 틀렸습니다")
+                        
+                    case "password check ok":
+                        self.checkTextField.errorGenerate(error: "")
+                        self.navigationController?.pushViewController(SetPasswordViewController(), animated: true)
+                    default:
+                        return
+                    }
+                }
         }).disposed(by: disposeBag)
         
         self.resendButton.rx.tap.subscribe(onNext: {
