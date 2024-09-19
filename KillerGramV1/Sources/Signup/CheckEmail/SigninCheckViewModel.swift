@@ -26,13 +26,13 @@ final class SigninCheckViewModel {
         timerText.accept(String(format: "%d:%02d", minutes, seconds))
     }
     
-    func checkButtonDidTap(password: String, result: @escaping (String) -> Void) {
+    func checkButtonDidTap(check: String, result: @escaping (String) -> Void) {
         
-        if self.isValidPassword(pw: password) {
+        if self.isValidCheck(pw: check) {
             result("password check ok")
             print("password check")
         } else {
-            if password.isEmpty {
+            if check.isEmpty {
                 result("password is empty")
                 print("password is empty")
             }
@@ -43,7 +43,7 @@ final class SigninCheckViewModel {
         }
     }
     
-    private func isValidPassword(pw: String?) -> Bool{
+    private func isValidCheck(pw: String?) -> Bool{
         if let hasPassword = pw{
             if hasPassword.count != 4 {
                 return false

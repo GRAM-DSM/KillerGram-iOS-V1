@@ -42,7 +42,7 @@ class SigninCheckEmailViewController: BaseViewController {
         
         self.checkButton.rx.tap.subscribe(onNext: {
                 self.viewModel.checkButtonDidTap(
-                    password: self.checkTextField.textfield.text!
+                    check: self.checkTextField.textfield.text!
                 ) {
                     switch $0 {
                     case "password is empty":
