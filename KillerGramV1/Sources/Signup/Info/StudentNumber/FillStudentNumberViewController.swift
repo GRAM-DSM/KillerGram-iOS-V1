@@ -5,7 +5,7 @@ import RxSwift
 import RxCocoa
 
 class FillStudentNumberViewController: BaseViewController {
-    private let viewModel = FillNameViewModel()
+    private let viewModel = FillStudentNumberViewModel()
     
     private let titleLabel = KGLabel(title: "학번을 입력해 주세요", explain: "원활한 서비스를 위해 학번을 입력해 주세요")
     
@@ -26,7 +26,21 @@ class FillStudentNumberViewController: BaseViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.killerGramFont(.semibold, style: .m2), .foregroundColor: UIColor.WHITE]
         
         self.nextButton.rx.tap.subscribe(onNext: {
-            self.navigationController?.pushViewController(GenderViewController(), animated: true)
+            self.viewModel.nextButtonDidTap(
+                number: self.studentNumberTextField.textfield.text!
+            ) {
+                switch $0 {
+                case "StudentNumber is empty":
+                    self.studentNumberTextField.errorGenerate(error: "학번을 입력해 주세요")
+                case "StudentNumber error":
+                    self.studentNumberTextField.errorGenerate(error: "학번이 잘못되었습니다")
+                case "StudentNumber check ok":
+                    self.studentNumberTextField.errorGenerate(error: "")
+                    self.navigationController?.pushViewController(GenderViewController(), animated: true)
+                default:
+                    return
+                }
+            }
         }).disposed(by: disposeBag)
     }
     override func addView() {
