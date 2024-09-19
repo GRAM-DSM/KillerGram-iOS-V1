@@ -9,32 +9,52 @@ class LevelViewController: BaseViewController {
     
     private let titleLabel = KGLabel(title: "운동 실력을 알려주세요", explain: "평소 운동을 좋아하고 잘하시는지 알려주세요")
     
-    private let highButton = UIButton().then {
+    let highButton = UIButton().then {
         $0.layer.cornerRadius = 8
         $0.backgroundColor = .GRAY_1100
         $0.setTitleColor(.GRAY_500, for: .normal)
+        $0.layer.borderWidth = 1
         $0.contentHorizontalAlignment = .left
         $0.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
     }
     
-    private let middleButton = UIButton().then {
+    let middleButton = UIButton().then {
         $0.layer.cornerRadius = 8
         $0.backgroundColor = .GRAY_1100
         $0.setTitleColor(.GRAY_500, for: .normal)
+        $0.layer.borderWidth = 1
         $0.contentHorizontalAlignment = .left
         $0.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
     }
     
-    private let lowButton = UIButton().then {
+    let lowButton = UIButton().then {
         $0.layer.cornerRadius = 8
         $0.backgroundColor = .GRAY_1100
         $0.setTitleColor(.GRAY_500, for: .normal)
+        $0.layer.borderWidth = 1
         $0.contentHorizontalAlignment = .left
         $0.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
     }
     
     private let completeButton = KGButton(style: .round, colorStyle: .green).then {
         $0.setText(text: "완료")
+    }
+    
+    private func highButtonDidTap() {
+        highButton.layer.borderColor = UIColor.MAIN.cgColor
+        middleButton.layer.borderColor = UIColor.GRAY_1100.cgColor
+        lowButton.layer.borderColor = UIColor.GRAY_1100.cgColor
+    }
+    private func middleButtonDidTap() {
+        middleButton.layer.borderColor = UIColor.MAIN.cgColor
+        highButton.layer.borderColor = UIColor.GRAY_1100.cgColor
+        lowButton.layer.borderColor = UIColor.GRAY_1100.cgColor
+
+    }
+    private func lowButtonDidTap() {
+        lowButton.layer.borderColor = UIColor.MAIN.cgColor
+        highButton.layer.borderColor = UIColor.GRAY_1100.cgColor
+        middleButton.layer.borderColor = UIColor.GRAY_1100.cgColor
     }
     
     override func attribute() {
@@ -45,7 +65,19 @@ class LevelViewController: BaseViewController {
         highButton.setAttributedTitle(viewModel.highAttributedstr, for: .normal)
         middleButton.setAttributedTitle(viewModel.middleAttributedstr, for: .normal)
         lowButton.setAttributedTitle(viewModel.lowAttributedstr, for: .normal)
-
+        
+        
+        self.highButton.rx.tap.subscribe(onNext: {
+            self.highButtonDidTap()
+        }).disposed(by: disposeBag)
+        
+        self.middleButton.rx.tap.subscribe(onNext: {
+            self.middleButtonDidTap()
+        }).disposed(by: disposeBag)
+        
+        self.lowButton.rx.tap.subscribe(onNext: {
+            self.lowButtonDidTap()
+        }).disposed(by: disposeBag)
         
         self.completeButton.rx.tap.subscribe(onNext: {
             self.navigationController?.pushViewController(LoginViewController(), animated: true)
