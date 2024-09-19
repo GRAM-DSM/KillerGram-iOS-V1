@@ -24,4 +24,31 @@ final class FindPasswordCheckViewModel {
         let seconds = limitTime % 60
         timerText.accept(String(format: "%d:%02d", minutes, seconds))
     }
+    
+    func checkButtonDidTap(check: String, result: @escaping (String) -> Void) {
+        
+        if self.isValidCheck(pw: check) {
+            result("password check ok")
+            print("password check")
+        } else {
+            if check.isEmpty {
+                result("password is empty")
+                print("password is empty")
+            }
+            else {
+                result("password error")
+                print("password error")
+            }
+        }
+    }
+    
+    private func isValidCheck(pw: String?) -> Bool{
+        if let hasPassword = pw{
+            if hasPassword.count != 4 {
+                return false
+            }
+        }
+        
+        return true
+    }
 }

@@ -42,8 +42,7 @@ class FindPasswordSendEmailViewController: BaseViewController {
                     return
                 }
             }
-        })
-        .disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
     }
     
     override func addView() {

@@ -38,10 +38,24 @@ class FindPasswordCheckViewController: BaseViewController {
         checkTextField.textfield.keyboardType = .numberPad
         self.checkButton.rx.tap.subscribe(
             onNext: {
-                self.navigationController?.pushViewController(SetNewPasswordViewController(), animated: true)
-            }
-        )
-        .disposed(by: disposeBag)
+                self.viewModel.checkButtonDidTap(
+                    check: self.checkTextField.textfield.text!
+                ) {
+                    switch $0 {
+                    case "password is empty":
+                        self.checkTextField.errorGenerate(error: "인증번호를 입력해 주세요")
+                        
+                    case "password error":
+                        self.checkTextField.errorGenerate(error: "인증번호가 틀렸습니다")
+                        
+                    case "password check ok":
+                        self.checkTextField.errorGenerate(error: "")
+                        self.navigationController?.pushViewController(SetNewPasswordViewController(), animated: true)
+                    default:
+                        return
+                    }
+                }
+            }).disposed(by: disposeBag)
 
         self.resendButton.rx.tap.subscribe(onNext: {
             self.timerLabel.text = "5:00"

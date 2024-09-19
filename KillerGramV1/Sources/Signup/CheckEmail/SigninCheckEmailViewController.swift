@@ -63,8 +63,7 @@ class SigninCheckEmailViewController: BaseViewController {
         self.resendButton.rx.tap.subscribe(onNext: {
             self.timerLabel.text = "5:00"
             self.viewModel.startTimer()
-        })
-        .disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
     }
     
     override func viewDidAppear(_ animated: Bool) {

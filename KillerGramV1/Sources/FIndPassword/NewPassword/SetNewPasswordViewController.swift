@@ -6,7 +6,7 @@ import RxSwift
 
 
 class SetNewPasswordViewController: BaseViewController {
-    private let viewModel = FindPasswordCheckViewModel()
+    private let viewModel = SetNewPasswordViewModel()
     
     private let titleLabel = KGLabel(title: "새 비밀번호를 입력해 주세요", explain: "비밀번호는 영어와 숫자를 조합해 만들어 주세요")
     
@@ -21,8 +21,27 @@ class SetNewPasswordViewController: BaseViewController {
     override func attribute() {
         self.navigationItem.hidesBackButton = true
         
-        self.nextButton.rx.tap.subscribe(onNext: {
-            self.navigationController?.pushViewController(LoginViewController(), animated: true)
+        self.viewModel.checkButtonDidTap(
+            password: self.checkPasswordTextField.textfield.text!
+        ) {
+            switch $0 {
+            case "password is empty":
+                self.checkPasswordTextField.errorGenerate(error: "비밀번호를 다시 입력해 주세요")
+                
+            case "password check ok":
+                if self.newPasswordTextField.textfield.text != self.checkPasswordTextField.textfield.text {
+                    self.checkPasswordTextField.errorGenerate(error: "비밀번호가 일치하지 않습니다")
+                }
+                else {
+                    self.checkPasswordTextField.errorGenerate(error: "")
+                }
+            default:
+                return
+            }
+            
+            if self.newPasswordTextField.errorLabel.isHidden == true && self.checkPasswordTextField.errorLabel.isHidden == true && self.newPasswordTextField.textfield.text == self.checkPasswordTextField.textfield.text {
+                self.navigationController?.pushViewController(FillNameViewController(), animated: true)
+            }
         }).disposed(by: disposeBag)
     }
     
