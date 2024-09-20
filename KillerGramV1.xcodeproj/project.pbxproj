@@ -51,6 +51,8 @@
 		90BB6C5E2C9D8D320074DC9A /* HealthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BB6C5D2C9D8D320074DC9A /* HealthViewModel.swift */; };
 		90BB6C612C9D8D570074DC9A /* BaseballViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BB6C602C9D8D570074DC9A /* BaseballViewController.swift */; };
 		90BB6C632C9D8D6E0074DC9A /* BaseballViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BB6C622C9D8D6E0074DC9A /* BaseballViewModel.swift */; };
+		90BB6C662C9D8D910074DC9A /* SoccerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BB6C652C9D8D910074DC9A /* SoccerViewController.swift */; };
+		90BB6C682C9D8D9A0074DC9A /* SoccerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BB6C672C9D8D9A0074DC9A /* SoccerViewModel.swift */; };
 		90F632772C9314A7000B1D99 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 90F632762C9314A7000B1D99 /* RxCocoa */; };
 		90F632792C9314A7000B1D99 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 90F632782C9314A7000B1D99 /* RxRelay */; };
 		90F6327B2C9314A7000B1D99 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 90F6327A2C9314A7000B1D99 /* RxSwift */; };
@@ -112,6 +114,8 @@
 		90BB6C5D2C9D8D320074DC9A /* HealthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthViewModel.swift; sourceTree = "<group>"; };
 		90BB6C602C9D8D570074DC9A /* BaseballViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseballViewController.swift; sourceTree = "<group>"; };
 		90BB6C622C9D8D6E0074DC9A /* BaseballViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseballViewModel.swift; sourceTree = "<group>"; };
+		90BB6C652C9D8D910074DC9A /* SoccerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoccerViewController.swift; sourceTree = "<group>"; };
+		90BB6C672C9D8D9A0074DC9A /* SoccerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoccerViewModel.swift; sourceTree = "<group>"; };
 		90F6327D2C93169F000B1D99 /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
 		90F6327F2C9316A8000B1D99 /* LevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
 		90F632812C931DDF000B1D99 /* FindPasswordCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordCheckViewController.swift; sourceTree = "<group>"; };
@@ -439,6 +443,15 @@
 			path = Baseball;
 			sourceTree = "<group>";
 		};
+		90BB6C642C9D8D830074DC9A /* Soccer */ = {
+			isa = PBXGroup;
+			children = (
+				90BB6C652C9D8D910074DC9A /* SoccerViewController.swift */,
+				90BB6C672C9D8D9A0074DC9A /* SoccerViewModel.swift */,
+			);
+			path = Soccer;
+			sourceTree = "<group>";
+		};
 		90F6327C2C931691000B1D99 /* Level */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +481,7 @@
 		90F632922C96D210000B1D99 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				90BB6C642C9D8D830074DC9A /* Soccer */,
 				90BB6C5F2C9D8D430074DC9A /* Baseball */,
 				90BB6C5A2C9D8D1C0074DC9A /* Health */,
 				90BB6C552C9D8CD80074DC9A /* Pingpong */,
@@ -623,12 +637,14 @@
 				90BB6C572C9D8CF90074DC9A /* PingpongViewController.swift in Sources */,
 				90F632822C931DDF000B1D99 /* FindPasswordCheckViewController.swift in Sources */,
 				672D80AA2C8AD58D005E7062 /* KGButtonStyle.swift in Sources */,
+				90BB6C682C9D8D9A0074DC9A /* SoccerViewModel.swift in Sources */,
 				90F6327E2C93169F000B1D99 /* LevelViewController.swift in Sources */,
 				90BB6C592C9D8D060074DC9A /* PingpongViewModel.swift in Sources */,
 				904D88242C871A71007EEE16 /* KillerGramFontStyle.swift in Sources */,
 				908C9CA32C93000000F4B3BA /* FindPasswordSendEmailViewController.swift in Sources */,
 				90F6328F2C96CC37000B1D99 /* SetNewPasswordViewController.swift in Sources */,
 				672D80A82C8AD4E9005E7062 /* KGButton.swift in Sources */,
+				90BB6C662C9D8D910074DC9A /* SoccerViewController.swift in Sources */,
 				9048AAA22C91DBF10073AEFF /* FillNameViewModel.swift in Sources */,
 				90BB6C522C9D80010074DC9A /* KGEverydaySprotsImageView.swift in Sources */,
 				90BB6C542C9D82F30074DC9A /* KGEverydatSprotsView.swift in Sources */,
