@@ -8,7 +8,7 @@ class KGMainTitleView: UIStackView {
     
     init() {
         super.init(frame: .zero)
-        self.axis = .vertical
+        self.axis = .horizontal
         self.spacing = 170
         self.layoutMargins = .init(top: 8, left: 12, bottom: 8, right: 12)
         self.isLayoutMarginsRelativeArrangement = true
