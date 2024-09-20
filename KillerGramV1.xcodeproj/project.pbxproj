@@ -45,6 +45,8 @@
 		90B527662C89BE48006752AD /* SigninSendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B527652C89BE48006752AD /* SigninSendEmailViewController.swift */; };
 		90BB6C522C9D80010074DC9A /* KGEverydaySprotsImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BB6C512C9D80010074DC9A /* KGEverydaySprotsImageView.swift */; };
 		90BB6C542C9D82F30074DC9A /* KGEverydatSprotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BB6C532C9D82F30074DC9A /* KGEverydatSprotsView.swift */; };
+		90BB6C572C9D8CF90074DC9A /* PingpongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BB6C562C9D8CF90074DC9A /* PingpongViewController.swift */; };
+		90BB6C592C9D8D060074DC9A /* PingpongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BB6C582C9D8D060074DC9A /* PingpongViewModel.swift */; };
 		90F632772C9314A7000B1D99 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 90F632762C9314A7000B1D99 /* RxCocoa */; };
 		90F632792C9314A7000B1D99 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 90F632782C9314A7000B1D99 /* RxRelay */; };
 		90F6327B2C9314A7000B1D99 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 90F6327A2C9314A7000B1D99 /* RxSwift */; };
@@ -100,6 +102,8 @@
 		90B527652C89BE48006752AD /* SigninSendEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninSendEmailViewController.swift; sourceTree = "<group>"; };
 		90BB6C512C9D80010074DC9A /* KGEverydaySprotsImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGEverydaySprotsImageView.swift; sourceTree = "<group>"; };
 		90BB6C532C9D82F30074DC9A /* KGEverydatSprotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGEverydatSprotsView.swift; sourceTree = "<group>"; };
+		90BB6C562C9D8CF90074DC9A /* PingpongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingpongViewController.swift; sourceTree = "<group>"; };
+		90BB6C582C9D8D060074DC9A /* PingpongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingpongViewModel.swift; sourceTree = "<group>"; };
 		90F6327D2C93169F000B1D99 /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
 		90F6327F2C9316A8000B1D99 /* LevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
 		90F632812C931DDF000B1D99 /* FindPasswordCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordCheckViewController.swift; sourceTree = "<group>"; };
@@ -400,6 +404,15 @@
 			path = EverydaySports;
 			sourceTree = "<group>";
 		};
+		90BB6C552C9D8CD80074DC9A /* Pingpong */ = {
+			isa = PBXGroup;
+			children = (
+				90BB6C562C9D8CF90074DC9A /* PingpongViewController.swift */,
+				90BB6C582C9D8D060074DC9A /* PingpongViewModel.swift */,
+			);
+			path = Pingpong;
+			sourceTree = "<group>";
+		};
 		90F6327C2C931691000B1D99 /* Level */ = {
 			isa = PBXGroup;
 			children = (
@@ -429,6 +442,7 @@
 		90F632922C96D210000B1D99 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				90BB6C552C9D8CD80074DC9A /* Pingpong */,
 				90F632932C96D232000B1D99 /* Main */,
 			);
 			path = Main;
@@ -578,9 +592,11 @@
 				90F6329A2C9D4B0E000B1D99 /* KGMainTitleView.swift in Sources */,
 				90F632802C9316A8000B1D99 /* LevelViewModel.swift in Sources */,
 				904D88202C871817007EEE16 /* PretendardFontStyle.swift in Sources */,
+				90BB6C572C9D8CF90074DC9A /* PingpongViewController.swift in Sources */,
 				90F632822C931DDF000B1D99 /* FindPasswordCheckViewController.swift in Sources */,
 				672D80AA2C8AD58D005E7062 /* KGButtonStyle.swift in Sources */,
 				90F6327E2C93169F000B1D99 /* LevelViewController.swift in Sources */,
+				90BB6C592C9D8D060074DC9A /* PingpongViewModel.swift in Sources */,
 				904D88242C871A71007EEE16 /* KillerGramFontStyle.swift in Sources */,
 				908C9CA32C93000000F4B3BA /* FindPasswordSendEmailViewController.swift in Sources */,
 				90F6328F2C96CC37000B1D99 /* SetNewPasswordViewController.swift in Sources */,
