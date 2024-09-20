@@ -1,8 +1,9 @@
-//
-//  BaseballViewController.swift
-//  KillerGramV1
-//
-//  Created by 현석의 맥북 on 9/20/24.
-//
+import UIKit
+import SnapKit
+import Then
+import RxSwift
+import RxCocoa
 
-import Foundation
+class BaseballViewController: BaseViewController {
+    
+}
