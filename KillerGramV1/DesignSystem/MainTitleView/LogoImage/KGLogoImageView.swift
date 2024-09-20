@@ -1,5 +1,6 @@
 import UIKit
 import Then
+import SnapKit
 
 class KGLogoImageView: UIStackView {
     private let KGLogoImage = UIImageView(frame: .zero).then {
@@ -20,5 +21,10 @@ class KGLogoImageView: UIStackView {
         [
             KGLogoImage
         ].forEach(self.addArrangedSubview(_:))
+        
+        KGLogoImage.snp.makeConstraints {
+            $0.width.equalTo(124)
+            $0.height.equalTo(16)
+        }
     }
 }
