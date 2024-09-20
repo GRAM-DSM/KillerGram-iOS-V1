@@ -59,7 +59,7 @@
 		90F6329A2C9D4B0E000B1D99 /* KGMainTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632992C9D4B0E000B1D99 /* KGMainTitleView.swift */; };
 		90F632A52C9D54AA000B1D99 /* KGSettingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632A42C9D54AA000B1D99 /* KGSettingImageView.swift */; };
 		90F632A72C9D54B8000B1D99 /* KGLogoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632A62C9D54B8000B1D99 /* KGLogoImageView.swift */; };
-		90F632AD2C9D5E1B000B1D99 /* KGTodaySprotsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632AC2C9D5E1B000B1D99 /* KGTodaySprotsImage.swift */; };
+		90F632AD2C9D5E1B000B1D99 /* KGTodaySprotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632AC2C9D5E1B000B1D99 /* KGTodaySprotsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,7 +108,7 @@
 		90F632992C9D4B0E000B1D99 /* KGMainTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGMainTitleView.swift; sourceTree = "<group>"; };
 		90F632A42C9D54AA000B1D99 /* KGSettingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGSettingImageView.swift; sourceTree = "<group>"; };
 		90F632A62C9D54B8000B1D99 /* KGLogoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGLogoImageView.swift; sourceTree = "<group>"; };
-		90F632AC2C9D5E1B000B1D99 /* KGTodaySprotsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGTodaySprotsImage.swift; sourceTree = "<group>"; };
+		90F632AC2C9D5E1B000B1D99 /* KGTodaySprotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGTodaySprotsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -466,7 +466,7 @@
 		90F632AB2C9D5DFA000B1D99 /* MainTodatSprots */ = {
 			isa = PBXGroup;
 			children = (
-				90F632AC2C9D5E1B000B1D99 /* KGTodaySprotsImage.swift */,
+				90F632AC2C9D5E1B000B1D99 /* KGTodaySprotsView.swift */,
 			);
 			path = MainTodatSprots;
 			sourceTree = "<group>";
@@ -574,7 +574,7 @@
 				9048AAA22C91DBF10073AEFF /* FillNameViewModel.swift in Sources */,
 				90F632842C931DF3000B1D99 /* FindPasswordCheckViewModel.swift in Sources */,
 				9048AAA02C91DBCD0073AEFF /* FillNameViewController.swift in Sources */,
-				90F632AD2C9D5E1B000B1D99 /* KGTodaySprotsImage.swift in Sources */,
+				90F632AD2C9D5E1B000B1D99 /* KGTodaySprotsView.swift in Sources */,
 				90374BC82C86810100F0F7BC /* LoginViewController.swift in Sources */,
 				90F632952C96D242000B1D99 /* MainViewController.swift in Sources */,
 				90F6328A2C9328FD000B1D99 /* BaseViewController.swift in Sources */,
