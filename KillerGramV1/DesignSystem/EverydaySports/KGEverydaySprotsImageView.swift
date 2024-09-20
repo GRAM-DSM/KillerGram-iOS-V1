@@ -2,7 +2,7 @@ import UIKit
 import Then
 import SnapKit
 
-class EverydaySprotsImageView: UIStackView {
+class KGEverydaySprotsImageView: UIStackView {
     var image: UIImage
     var title: String
     private let sportsImage = UIImageView(frame: .zero).then {

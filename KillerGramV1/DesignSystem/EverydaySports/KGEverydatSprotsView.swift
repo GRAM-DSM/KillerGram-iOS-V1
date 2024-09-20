@@ -2,14 +2,14 @@ import UIKit
 import SnapKit
 import Then
 
-class EverydatSprotsView: UIStackView {
-    private let pingpongImageView = EverydaySprotsImageView(image: .pingpong, title: "탁구")
+class KGEverydatSprotsView: UIStackView {
+    private let pingpongImageView = KGEverydaySprotsImageView(image: .pingpong, title: "탁구")
     
-    private let healthImageView = EverydaySprotsImageView(image: .health, title: "헬스")
+    private let healthImageView = KGEverydaySprotsImageView(image: .health, title: "헬스")
     
-    private let baseballImageView = EverydaySprotsImageView(image: .baseball, title: "야구")
+    private let baseballImageView = KGEverydaySprotsImageView(image: .baseball, title: "야구")
     
-    private let soccerImageView = EverydaySprotsImageView(image: .soccer, title: "축구")
+    private let soccerImageView = KGEverydaySprotsImageView(image: .soccer, title: "축구")
     
     init() {
         super.init(frame: .zero)

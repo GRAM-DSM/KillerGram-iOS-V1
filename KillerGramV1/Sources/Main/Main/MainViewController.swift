@@ -9,6 +9,8 @@ class MainViewController: BaseViewController {
     
     private let todaySprotsView = KGTodaySprotsView()
     
+    private let everydaySports = KGEverydatSprotsView()
+    
     override func attribute() {
         self.navigationItem.hidesBackButton = true
     }
@@ -21,7 +23,8 @@ class MainViewController: BaseViewController {
     override func addView() {
         [
             titleView,
-            todaySprotsView
+            todaySprotsView,
+            everydaySports
         ].forEach{view.addSubview($0)}
     }
     
@@ -32,6 +35,10 @@ class MainViewController: BaseViewController {
         }
         todaySprotsView.snp.makeConstraints {
             $0.top.equalTo(titleView.snp.bottom)
+            $0.leading.trailing.equalToSuperview()
+        }
+        everydaySports.snp.makeConstraints {
+            $0.top.equalTo(todaySprotsView.snp.bottom)
             $0.leading.trailing.equalToSuperview()
         }
     }
