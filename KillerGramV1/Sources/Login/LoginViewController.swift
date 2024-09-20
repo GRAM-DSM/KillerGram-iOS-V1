@@ -10,7 +10,7 @@ class LoginViewController: BaseViewController {
     private let viewModel = LoginViewModel()
     
     private let logoImageVIew = UIImageView().then {
-        $0.image = .logo
+        $0.image = .kgLogo
     }
     
     let emailTextField = KGTextField(explain: "", placeholder: "이메일을 입력해 주세요")
