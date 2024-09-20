@@ -7,6 +7,8 @@ import RxCocoa
 class MainViewController: BaseViewController {
     private let titleView = KGMainTitleView()
     
+    private let todaySprotsView = KGTodaySprotsView()
+    
     override func attribute() {
         self.navigationItem.hidesBackButton = true
     }
@@ -18,13 +20,18 @@ class MainViewController: BaseViewController {
     
     override func addView() {
         [
-            titleView
+            titleView,
+            todaySprotsView
         ].forEach{view.addSubview($0)}
     }
     
     override func setLayout() {
         titleView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.leading.trailing.equalToSuperview()
+        }
+        todaySprotsView.snp.makeConstraints {
+            $0.top.equalTo(titleView.snp.bottom)
             $0.leading.trailing.equalToSuperview()
         }
     }
