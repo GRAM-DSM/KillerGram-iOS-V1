@@ -17,6 +17,19 @@ class MainViewController: BaseViewController {
         self.navigationItem.hidesBackButton = true
     }
     
+    @objc func pingpongDidTap() {
+        
+    }
+    @objc func healthDidTap() {
+        
+    }
+    @objc func baseballDidTap() {
+        
+    }
+    @objc func soccerDidTap() {
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)

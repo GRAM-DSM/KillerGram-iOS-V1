@@ -35,5 +35,6 @@ class KGEverydatSprotsView: UIStackView {
         healthImageView.isUserInteractionEnabled = true
         baseballImageView.isUserInteractionEnabled = true
         soccerImageView.isUserInteractionEnabled = true
+        
     }
 }
