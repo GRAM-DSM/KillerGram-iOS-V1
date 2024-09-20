@@ -5,9 +5,7 @@ import RxSwift
 import RxCocoa
 
 class MainViewController: BaseViewController {
-    private let KGLogoImage = UIImageView(frame: .zero).then {
-        $0.image = .kgLogo
-    }
+    private let titleView = KGMainTitleView()
     
     override func attribute() {
         self.navigationItem.hidesBackButton = true
@@ -15,16 +13,14 @@ class MainViewController: BaseViewController {
     
     override func addView() {
         [
-            KGLogoImage
+            titleView
         ].forEach{view.addSubview($0)}
     }
     
     override func setLayout() {
-        KGLogoImage.snp.makeConstraints {
+        titleView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
-            $0.leading.equalToSuperview().inset(12)
-            $0.width.equalTo(124)
-            $0.height.equalTo(16)
+            $0.leading.trailing.equalToSuperview()
         }
     }
 }
