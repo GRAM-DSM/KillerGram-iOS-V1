@@ -82,8 +82,7 @@ class LoginViewController: BaseViewController {
                     self.navigationController?.pushViewController(MainViewController(), animated: true)
                 }
             }
-        })
-        .disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
         
         self.signinButton.rx.tap.subscribe(onNext: {
             self.navigationController?.pushViewController(
