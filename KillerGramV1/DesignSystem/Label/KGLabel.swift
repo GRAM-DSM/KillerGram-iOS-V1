@@ -7,12 +7,12 @@ class KGLabel: UIStackView {
     
     var title: String = ""
     var explain: String = ""
-    let titleLabel = UILabel().then {
+    private let titleLabel = UILabel().then {
         $0.font = .killerGramFont(.semibold, style: .h3)
         $0.textColor = .WHITE
     }
     
-    let explainLabel = UILabel().then {
+    private let explainLabel = UILabel().then {
         $0.text = ""
         $0.textColor = .GRAY_600
         $0.font = .killerGramFont(.regular, style: .m3)
