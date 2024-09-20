@@ -5,6 +5,8 @@ import RxSwift
 import RxCocoa
 
 class MainViewController: BaseViewController {
+    private let viewModel = MainViewModel()
+    
     private let titleView = KGMainTitleView()
     
     private let todaySprotsView = KGTodaySprotsView()
