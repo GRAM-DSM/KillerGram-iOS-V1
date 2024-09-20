@@ -64,23 +64,21 @@ class LoginViewController: BaseViewController {
                     
                 case "email check ok":
                     self.emailTextField.errorGenerate(error: "")
-
                 case "password is empty":
                     self.passwordTextField.errorGenerate(error: "비밀번호를 입력해 주세요")
                     
                 case "password error":
                     self.passwordTextField.errorGenerate(error: "비밀번호 형식이 잘못되었습니다")
-                
+                    
                 case "password check ok":
                     self.passwordTextField.errorGenerate(error: "")
                     
                 default:
                     return
                 }
-                
-                if self.emailTextField.errorLabel.isHidden == true && self.passwordTextField.errorLabel.isHidden == true {
-                    self.navigationController?.pushViewController(MainViewController(), animated: true)
-                }
+            }
+            if self.emailTextField.errorLabel.isHidden == true && self.passwordTextField.errorLabel.isHidden == true {
+                self.navigationController?.pushViewController(MainViewController(), animated: true)
             }
         }).disposed(by: disposeBag)
         

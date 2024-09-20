@@ -433,8 +433,6 @@
 			isa = PBXGroup;
 			children = (
 				90F632A82C9D54C2000B1D99 /* MainTitleView */,
-				90F632A32C9D5496000B1D99 /* SettingImage */,
-				90F632A22C9D5458000B1D99 /* LogoImage */,
 			);
 			path = MainTitleView;
 			sourceTree = "<group>";
@@ -458,6 +456,8 @@
 		90F632A82C9D54C2000B1D99 /* MainTitleView */ = {
 			isa = PBXGroup;
 			children = (
+				90F632A32C9D5496000B1D99 /* SettingImage */,
+				90F632A22C9D5458000B1D99 /* LogoImage */,
 				90F632992C9D4B0E000B1D99 /* KGMainTitleView.swift */,
 			);
 			path = MainTitleView;
