@@ -30,5 +30,10 @@ class KGEverydatSprotsView: UIStackView {
             baseballImageView,
             soccerImageView
         ].forEach(self.addArrangedSubview(_:))
+        
+        pingpongImageView.isUserInteractionEnabled = true
+        healthImageView.isUserInteractionEnabled = true
+        baseballImageView.isUserInteractionEnabled = true
+        soccerImageView.isUserInteractionEnabled = true
     }
 }
