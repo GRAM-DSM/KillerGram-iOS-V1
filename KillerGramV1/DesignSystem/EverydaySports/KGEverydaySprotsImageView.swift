@@ -5,10 +5,7 @@ import SnapKit
 class KGEverydaySprotsImageView: UIStackView {
     var image: UIImage
     var title: String
-    private let sportsImage = UIImageView(frame: .zero).then {
-        $0.backgroundColor = .GRAY_1100
-        $0.layer.cornerRadius = 8
-    }
+    private let sportsImage = UIImageView(frame: .zero)
     private let sportsTitle = UILabel().then {
         $0.font = .killerGramFont(.regular, style: .label)
     }

@@ -16,6 +16,7 @@ class KGEverydatSprotsView: UIStackView {
         self.axis = .horizontal
         self.spacing = 12.67
         self.layoutMargins = .init(top: 0, left: 24, bottom: 0, right: 24)
+        self.isLayoutMarginsRelativeArrangement = true
     }
     
     required init(coder: NSCoder) {
