@@ -57,6 +57,8 @@
 		90F632952C96D242000B1D99 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632942C96D242000B1D99 /* MainViewController.swift */; };
 		90F632972C96D24C000B1D99 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632962C96D24C000B1D99 /* MainViewModel.swift */; };
 		90F6329A2C9D4B0E000B1D99 /* MainTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632992C9D4B0E000B1D99 /* MainTitleView.swift */; };
+		90F6329E2C9D4CCA000B1D99 /* LogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6329D2C9D4CCA000B1D99 /* LogoImage.swift */; };
+		90F632A02C9D4CD3000B1D99 /* SettingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6329F2C9D4CD3000B1D99 /* SettingImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +105,8 @@
 		90F632942C96D242000B1D99 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		90F632962C96D24C000B1D99 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		90F632992C9D4B0E000B1D99 /* MainTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTitleView.swift; sourceTree = "<group>"; };
+		90F6329D2C9D4CCA000B1D99 /* LogoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImage.swift; sourceTree = "<group>"; };
+		90F6329F2C9D4CD3000B1D99 /* SettingImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,7 +308,7 @@
 		9077EBC12C87158A0044ED9E /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
-				90F632982C9D4AF8000B1D99 /* MainTitleVIew */,
+				90F632982C9D4AF8000B1D99 /* MainTitleView */,
 				9048AA9A2C91D5F70073AEFF /* StepBar */,
 				9099ADCE2C9039EF00FCA3C8 /* Extension */,
 				902D5AE82C8B09440077AAC2 /* Label */,
@@ -422,12 +426,30 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		90F632982C9D4AF8000B1D99 /* MainTitleVIew */ = {
+		90F632982C9D4AF8000B1D99 /* MainTitleView */ = {
 			isa = PBXGroup;
 			children = (
+				90F6329C2C9D4C27000B1D99 /* SettingImage */,
+				90F6329B2C9D4C15000B1D99 /* LogoImage */,
 				90F632992C9D4B0E000B1D99 /* MainTitleView.swift */,
 			);
-			path = MainTitleVIew;
+			path = MainTitleView;
+			sourceTree = "<group>";
+		};
+		90F6329B2C9D4C15000B1D99 /* LogoImage */ = {
+			isa = PBXGroup;
+			children = (
+				90F6329D2C9D4CCA000B1D99 /* LogoImage.swift */,
+			);
+			path = LogoImage;
+			sourceTree = "<group>";
+		};
+		90F6329C2C9D4C27000B1D99 /* SettingImage */ = {
+			isa = PBXGroup;
+			children = (
+				90F6329F2C9D4CD3000B1D99 /* SettingImage.swift */,
+			);
+			path = SettingImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -551,9 +573,11 @@
 				9048AAA52C92B7830073AEFF /* FillStudentNumberViewController.swift in Sources */,
 				9048AA9C2C91D6FE0073AEFF /* KGStepBar.swift in Sources */,
 				90750F7F2C91A1A900B291A6 /* SetPasswordViewModel.swift in Sources */,
+				90F6329E2C9D4CCA000B1D99 /* LogoImage.swift in Sources */,
 				902D5AEA2C8B09850077AAC2 /* KGLabel.swift in Sources */,
 				90374B9A2C85E96700F0F7BC /* SceneDelegate.swift in Sources */,
 				904D88222C871875007EEE16 /* KillerGramFont.swift in Sources */,
+				90F632A02C9D4CD3000B1D99 /* SettingImage.swift in Sources */,
 				90F632912C96CC47000B1D99 /* SetNewPasswordViewModel.swift in Sources */,
 				90F632972C96D24C000B1D99 /* MainViewModel.swift in Sources */,
 			);
