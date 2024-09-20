@@ -11,6 +11,11 @@ class MainViewController: BaseViewController {
         self.navigationItem.hidesBackButton = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     override func addView() {
         [
             titleView
