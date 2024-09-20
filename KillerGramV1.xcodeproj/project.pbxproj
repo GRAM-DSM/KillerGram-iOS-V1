@@ -43,6 +43,8 @@
 		9099ADD02C903A0400FCA3C8 /* UIButton+setUnderLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9099ADCF2C903A0400FCA3C8 /* UIButton+setUnderLine.swift */; };
 		9099ADD32C904CA500FCA3C8 /* SigninCheckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9099ADD22C904CA500FCA3C8 /* SigninCheckViewModel.swift */; };
 		90B527662C89BE48006752AD /* SigninSendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B527652C89BE48006752AD /* SigninSendEmailViewController.swift */; };
+		90BB6C522C9D80010074DC9A /* EverydaySprotsImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BB6C512C9D80010074DC9A /* EverydaySprotsImageView.swift */; };
+		90BB6C542C9D82F30074DC9A /* EverydatSprotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BB6C532C9D82F30074DC9A /* EverydatSprotsView.swift */; };
 		90F632772C9314A7000B1D99 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 90F632762C9314A7000B1D99 /* RxCocoa */; };
 		90F632792C9314A7000B1D99 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 90F632782C9314A7000B1D99 /* RxRelay */; };
 		90F6327B2C9314A7000B1D99 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 90F6327A2C9314A7000B1D99 /* RxSwift */; };
@@ -96,6 +98,8 @@
 		9099ADCF2C903A0400FCA3C8 /* UIButton+setUnderLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+setUnderLine.swift"; sourceTree = "<group>"; };
 		9099ADD22C904CA500FCA3C8 /* SigninCheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninCheckViewModel.swift; sourceTree = "<group>"; };
 		90B527652C89BE48006752AD /* SigninSendEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninSendEmailViewController.swift; sourceTree = "<group>"; };
+		90BB6C512C9D80010074DC9A /* EverydaySprotsImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverydaySprotsImageView.swift; sourceTree = "<group>"; };
+		90BB6C532C9D82F30074DC9A /* EverydatSprotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverydatSprotsView.swift; sourceTree = "<group>"; };
 		90F6327D2C93169F000B1D99 /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
 		90F6327F2C9316A8000B1D99 /* LevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
 		90F632812C931DDF000B1D99 /* FindPasswordCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordCheckViewController.swift; sourceTree = "<group>"; };
@@ -310,7 +314,8 @@
 		9077EBC12C87158A0044ED9E /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
-				90F632AB2C9D5DFA000B1D99 /* MainTodaySprots */,
+				90BB6C502C9D7E200074DC9A /* EverydaySports */,
+				90F632AB2C9D5DFA000B1D99 /* TodaySprots */,
 				90F632982C9D4AF8000B1D99 /* MainTitleView */,
 				9048AA9A2C91D5F70073AEFF /* StepBar */,
 				9099ADCE2C9039EF00FCA3C8 /* Extension */,
@@ -384,6 +389,15 @@
 				9099ADD22C904CA500FCA3C8 /* SigninCheckViewModel.swift */,
 			);
 			path = CheckEmail;
+			sourceTree = "<group>";
+		};
+		90BB6C502C9D7E200074DC9A /* EverydaySports */ = {
+			isa = PBXGroup;
+			children = (
+				90BB6C512C9D80010074DC9A /* EverydaySprotsImageView.swift */,
+				90BB6C532C9D82F30074DC9A /* EverydatSprotsView.swift */,
+			);
+			path = EverydaySports;
 			sourceTree = "<group>";
 		};
 		90F6327C2C931691000B1D99 /* Level */ = {
@@ -463,12 +477,12 @@
 			path = MainTitleView;
 			sourceTree = "<group>";
 		};
-		90F632AB2C9D5DFA000B1D99 /* MainTodaySprots */ = {
+		90F632AB2C9D5DFA000B1D99 /* TodaySprots */ = {
 			isa = PBXGroup;
 			children = (
 				90F632AC2C9D5E1B000B1D99 /* KGTodaySprotsView.swift */,
 			);
-			path = MainTodaySprots;
+			path = TodaySprots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -572,6 +586,8 @@
 				90F6328F2C96CC37000B1D99 /* SetNewPasswordViewController.swift in Sources */,
 				672D80A82C8AD4E9005E7062 /* KGButton.swift in Sources */,
 				9048AAA22C91DBF10073AEFF /* FillNameViewModel.swift in Sources */,
+				90BB6C522C9D80010074DC9A /* EverydaySprotsImageView.swift in Sources */,
+				90BB6C542C9D82F30074DC9A /* EverydatSprotsView.swift in Sources */,
 				90F632842C931DF3000B1D99 /* FindPasswordCheckViewModel.swift in Sources */,
 				9048AAA02C91DBCD0073AEFF /* FillNameViewController.swift in Sources */,
 				90F632AD2C9D5E1B000B1D99 /* KGTodaySprotsView.swift in Sources */,
