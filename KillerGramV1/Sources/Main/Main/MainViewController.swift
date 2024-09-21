@@ -14,6 +14,7 @@ class MainViewController: BaseViewController {
     private let everydaySports = KGEverydatSprotsView()
     
     @objc func pingpongDidTap() {
+        print("success")
         self.navigationController?.pushViewController(PingpongViewController(), animated: true)
     }
     @objc func healthDidTap() {
@@ -26,18 +27,22 @@ class MainViewController: BaseViewController {
         self.navigationController?.pushViewController(SoccerViewController(), animated: true)
     }
     
-    let pingpongEvent = UITapGestureRecognizer(target: self, action: #selector(pingpongDidTap))
-    let healthEvent = UITapGestureRecognizer(target: self, action: #selector(healthDidTap))
-    let baseEvent = UITapGestureRecognizer(target: self, action: #selector(baseballDidTap))
-    let soccerEvent = UITapGestureRecognizer(target: self, action: #selector(soccerDidTap))
+    private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     
     override func attribute() {
         self.navigationItem.hidesBackButton = true
+        backBarButtonItem.tintColor = .WHITE
+        self.navigationItem.backBarButtonItem = backBarButtonItem
         
         everydaySports.pingpongImageView.isUserInteractionEnabled = true
         everydaySports.healthImageView.isUserInteractionEnabled = true
         everydaySports.baseballImageView.isUserInteractionEnabled = true
         everydaySports.soccerImageView.isUserInteractionEnabled = true
+        
+        let pingpongEvent = UITapGestureRecognizer(target: self, action: #selector(pingpongDidTap))
+        let healthEvent = UITapGestureRecognizer(target: self, action: #selector(healthDidTap))
+        let baseEvent = UITapGestureRecognizer(target: self, action: #selector(baseballDidTap))
+        let soccerEvent = UITapGestureRecognizer(target: self, action: #selector(soccerDidTap))
         
         everydaySports.pingpongImageView.addGestureRecognizer(pingpongEvent)
         everydaySports.healthImageView.addGestureRecognizer(healthEvent)
