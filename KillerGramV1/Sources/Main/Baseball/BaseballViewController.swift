@@ -6,5 +6,8 @@ import RxCocoa
 
 class BaseballViewController: BaseViewController {
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
 }
