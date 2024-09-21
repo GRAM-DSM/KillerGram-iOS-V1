@@ -7,7 +7,7 @@ import RxCocoa
 class HealthViewController: BaseViewController {
     
     override func attribute() {
-        self.navigationItem.title = "야구"
+        self.navigationItem.title = "헬스"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.killerGramFont(.semibold, style: .m2), .foregroundColor: UIColor.WHITE]
     }
     
