@@ -8,7 +8,7 @@ class FillNameViewController: BaseViewController {
     
     private let viewModel = FillNameViewModel()
     
-    private let titleLabel = KGLabel(title: "이름을 입력헤 주세요", explain: "원할한 서비스를 위해 이름을 입력해 주세요")
+    private let titleLabel = KGLabel(title: "이름을 입력해 주세요", explain: "원할한 서비스를 위해 이름을 입력해 주세요")
     
     private let nameTextField = KGTextField(explain: "이름", placeholder: "이름을 입력해 주세요")
     
