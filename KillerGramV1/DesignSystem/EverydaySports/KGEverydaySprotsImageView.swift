@@ -10,6 +10,7 @@ class KGEverydaySprotsImageView: UIStackView {
         $0.font = .killerGramFont(.regular, style: .label)
     }
     
+    
     init(image: UIImage, title: String) {
         self.image = image
         self.title = title

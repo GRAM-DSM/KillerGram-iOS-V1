@@ -34,6 +34,11 @@ class MainViewController: BaseViewController {
     override func attribute() {
         self.navigationItem.hidesBackButton = true
         
+        everydaySports.pingpongImageView.isUserInteractionEnabled = true
+        everydaySports.healthImageView.isUserInteractionEnabled = true
+        everydaySports.baseballImageView.isUserInteractionEnabled = true
+        everydaySports.soccerImageView.isUserInteractionEnabled = true
+        
         everydaySports.pingpongImageView.addGestureRecognizer(pingpongEvent)
         everydaySports.healthImageView.addGestureRecognizer(healthEvent)
         everydaySports.baseballImageView.addGestureRecognizer(baseEvent)
