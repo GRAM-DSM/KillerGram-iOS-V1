@@ -13,22 +13,33 @@ class MainViewController: BaseViewController {
     
     private let everydaySports = KGEverydatSprotsView()
     
-    override func attribute() {
-        self.navigationItem.hidesBackButton = true
-    }
-    
     @objc func pingpongDidTap() {
-        
+        self.navigationController?.pushViewController(PingpongViewController(), animated: true)
     }
     @objc func healthDidTap() {
-        
+        self.navigationController?.pushViewController(HealthViewController(), animated: true)
     }
     @objc func baseballDidTap() {
-        
+        self.navigationController?.pushViewController(BaseballViewController(), animated: true)
     }
     @objc func soccerDidTap() {
-        
+        self.navigationController?.pushViewController(SoccerViewController(), animated: true)
     }
+    
+    let pingpongEvent = UITapGestureRecognizer(target: self, action: #selector(pingpongDidTap))
+    let healthEvent = UITapGestureRecognizer(target: self, action: #selector(healthDidTap))
+    let baseEvent = UITapGestureRecognizer(target: self, action: #selector(baseballDidTap))
+    let soccerEvent = UITapGestureRecognizer(target: self, action: #selector(soccerDidTap))
+    
+    override func attribute() {
+        self.navigationItem.hidesBackButton = true
+        
+        everydaySports.pingpongImageView.addGestureRecognizer(pingpongEvent)
+        everydaySports.healthImageView.addGestureRecognizer(healthEvent)
+        everydaySports.baseballImageView.addGestureRecognizer(baseEvent)
+        everydaySports.soccerImageView.addGestureRecognizer(soccerEvent)
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
