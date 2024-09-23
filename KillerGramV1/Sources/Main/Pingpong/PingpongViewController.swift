@@ -25,7 +25,8 @@ class PingpongViewController: BaseViewController {
     
     override func setLayout() {
         ablityView.snp.makeConstraints {
-            
+            $0.top.equalTo(view.safeAreaLayoutGuide).offset(12)
+            $0.leading.trailing.equalToSuperview().inset(24)
         }
     }
 }
