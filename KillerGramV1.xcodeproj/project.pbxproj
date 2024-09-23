@@ -11,6 +11,7 @@
 		672D80A82C8AD4E9005E7062 /* KGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D80A72C8AD4E9005E7062 /* KGButton.swift */; };
 		672D80AA2C8AD58D005E7062 /* KGButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D80A92C8AD58D005E7062 /* KGButtonStyle.swift */; };
 		902B825F2CA18124008C6647 /* KGAbilityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B825E2CA18124008C6647 /* KGAbilityButton.swift */; };
+		902B82612CA1814E008C6647 /* KGMemberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B82602CA1814E008C6647 /* KGMemberButton.swift */; };
 		902D5AEA2C8B09850077AAC2 /* KGLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902D5AE92C8B09850077AAC2 /* KGLabel.swift */; };
 		902D5AED2C8B1DDC0077AAC2 /* SigninCheckEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902D5AEC2C8B1DDC0077AAC2 /* SigninCheckEmailViewController.swift */; };
 		90374B982C85E96700F0F7BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90374B972C85E96700F0F7BC /* AppDelegate.swift */; };
@@ -78,6 +79,7 @@
 		672D80A72C8AD4E9005E7062 /* KGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGButton.swift; sourceTree = "<group>"; };
 		672D80A92C8AD58D005E7062 /* KGButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGButtonStyle.swift; sourceTree = "<group>"; };
 		902B825E2CA18124008C6647 /* KGAbilityButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGAbilityButton.swift; sourceTree = "<group>"; };
+		902B82602CA1814E008C6647 /* KGMemberButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGMemberButton.swift; sourceTree = "<group>"; };
 		902D5AE92C8B09850077AAC2 /* KGLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGLabel.swift; sourceTree = "<group>"; };
 		902D5AEC2C8B1DDC0077AAC2 /* SigninCheckEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninCheckEmailViewController.swift; sourceTree = "<group>"; };
 		90374B942C85E96700F0F7BC /* KillerGramV1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KillerGramV1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +193,7 @@
 		902B825C2CA180EC008C6647 /* Member */ = {
 			isa = PBXGroup;
 			children = (
+				902B82602CA1814E008C6647 /* KGMemberButton.swift */,
 			);
 			path = Member;
 			sourceTree = "<group>";
@@ -686,6 +689,7 @@
 				90F632842C931DF3000B1D99 /* FindPasswordCheckViewModel.swift in Sources */,
 				9048AAA02C91DBCD0073AEFF /* FillNameViewController.swift in Sources */,
 				90F632AD2C9D5E1B000B1D99 /* KGTodaySprotsView.swift in Sources */,
+				902B82612CA1814E008C6647 /* KGMemberButton.swift in Sources */,
 				90BB6C5C2C9D8D290074DC9A /* HealthViewController.swift in Sources */,
 				90374BC82C86810100F0F7BC /* LoginViewController.swift in Sources */,
 				90F632952C96D242000B1D99 /* MainViewController.swift in Sources */,
