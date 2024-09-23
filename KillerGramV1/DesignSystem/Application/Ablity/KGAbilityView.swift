@@ -2,17 +2,32 @@ import UIKit
 import Then
 
 class KGAbilityView: UIStackView {
-    private let myAblitiLabel = UILabel().then {
-        $0.text = "내 실력"
-        $0.textColor = .WHITE
-        $0.font = .killerGramFont(.semibold, style: .m2)
-    }
-    private let showMyAblituLabel = UILabel().then {
+    private let ablityView = KGAbility()
+    
+    private let showMyAblityLabel = UILabel().then {
         $0.text = ""
         $0.textColor = .MAIN
         $0.font = .killerGramFont(.regular, style: .m3)
     }
-    private let changeButotn = UIButton().then {
-        $0.setTitle("변경하기", for: <#T##UIControl.State#>)
+    
+    
+    init() {
+        super.init(frame: .zero)
+        self.axis = .vertical
+        self.spacing = 8
+        self.layoutMargins = .init(top: 16, left: 16, bottom: 16, right: 16)
+        self.isLayoutMarginsRelativeArrangement = true
+        self.backgroundColor = .GRAY_1100
+    }
+    
+    required init(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        [
+            ablityView,
+            showMyAblityLabel
+        ].forEach(self.addArrangedSubview(_:))
     }
 }

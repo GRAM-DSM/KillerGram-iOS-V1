@@ -5,6 +5,7 @@ import RxSwift
 import RxCocoa
 
 class PingpongViewController: BaseViewController {
+    private let ablityView = KGAbilityView()
     
     override func attribute() {
         self.navigationItem.title = "탁구"
@@ -14,5 +15,17 @@ class PingpongViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated) 
+    }
+    
+    override func addView() {
+        [
+            ablityView
+        ].forEach{view.addSubview($0)}
+    }
+    
+    override func setLayout() {
+        ablityView.snp.makeConstraints {
+            
+        }
     }
 }
