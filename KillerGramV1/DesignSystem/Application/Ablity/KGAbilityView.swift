@@ -4,7 +4,7 @@ import Then
 class KGAbilityView: UIStackView {
     private let ablityView = KGAbility()
     
-    private let showMyAblityLabel = UILabel().then {
+    let showMyAblityLabel = UILabel().then {
         $0.text = "상"
         $0.textColor = .MAIN
         $0.font = .killerGramFont(.regular, style: .m3)
@@ -18,6 +18,7 @@ class KGAbilityView: UIStackView {
         self.layoutMargins = .init(top: 16, left: 16, bottom: 16, right: 16)
         self.isLayoutMarginsRelativeArrangement = true
         self.backgroundColor = .GRAY_1100
+        self.layer.cornerRadius = 8
     }
     
     required init(coder: NSCoder) {
