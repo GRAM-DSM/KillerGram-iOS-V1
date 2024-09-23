@@ -10,7 +10,7 @@
 		672D80A52C8AD303005E7062 /* KGTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D80A42C8AD303005E7062 /* KGTextField.swift */; };
 		672D80A82C8AD4E9005E7062 /* KGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D80A72C8AD4E9005E7062 /* KGButton.swift */; };
 		672D80AA2C8AD58D005E7062 /* KGButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D80A92C8AD58D005E7062 /* KGButtonStyle.swift */; };
-		902B825A2CA18091008C6647 /* Ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B82592CA18091008C6647 /* Ability.swift */; };
+		902B825F2CA18124008C6647 /* KGAbilityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B825E2CA18124008C6647 /* KGAbilityButton.swift */; };
 		902D5AEA2C8B09850077AAC2 /* KGLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902D5AE92C8B09850077AAC2 /* KGLabel.swift */; };
 		902D5AED2C8B1DDC0077AAC2 /* SigninCheckEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902D5AEC2C8B1DDC0077AAC2 /* SigninCheckEmailViewController.swift */; };
 		90374B982C85E96700F0F7BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90374B972C85E96700F0F7BC /* AppDelegate.swift */; };
@@ -77,7 +77,7 @@
 		672D80A42C8AD303005E7062 /* KGTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGTextField.swift; sourceTree = "<group>"; };
 		672D80A72C8AD4E9005E7062 /* KGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGButton.swift; sourceTree = "<group>"; };
 		672D80A92C8AD58D005E7062 /* KGButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGButtonStyle.swift; sourceTree = "<group>"; };
-		902B82592CA18091008C6647 /* Ability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ability.swift; sourceTree = "<group>"; };
+		902B825E2CA18124008C6647 /* KGAbilityButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGAbilityButton.swift; sourceTree = "<group>"; };
 		902D5AE92C8B09850077AAC2 /* KGLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGLabel.swift; sourceTree = "<group>"; };
 		902D5AEC2C8B1DDC0077AAC2 /* SigninCheckEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninCheckEmailViewController.swift; sourceTree = "<group>"; };
 		90374B942C85E96700F0F7BC /* KillerGramV1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KillerGramV1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,9 +173,33 @@
 		902B82582CA17FC6008C6647 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				902B82592CA18091008C6647 /* Ability.swift */,
+				902B825D2CA180F3008C6647 /* Time */,
+				902B825C2CA180EC008C6647 /* Member */,
+				902B825B2CA180D3008C6647 /* Ablity */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		902B825B2CA180D3008C6647 /* Ablity */ = {
+			isa = PBXGroup;
+			children = (
+				902B825E2CA18124008C6647 /* KGAbilityButton.swift */,
+			);
+			path = Ablity;
+			sourceTree = "<group>";
+		};
+		902B825C2CA180EC008C6647 /* Member */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Member;
+			sourceTree = "<group>";
+		};
+		902B825D2CA180F3008C6647 /* Time */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Time;
 			sourceTree = "<group>";
 		};
 		902D5AE82C8B09440077AAC2 /* Label */ = {
@@ -669,7 +693,6 @@
 				90374BD42C86FC7C00F0F7BC /* SignupSendViewModel.swift in Sources */,
 				906C9AF42C92C30400E0E9A9 /* GenderViewController.swift in Sources */,
 				9099ADD32C904CA500FCA3C8 /* SigninCheckViewModel.swift in Sources */,
-				902B825A2CA18091008C6647 /* Ability.swift in Sources */,
 				90374B982C85E96700F0F7BC /* AppDelegate.swift in Sources */,
 				908C9CA52C93000B00F4B3BA /* FindPasswordSendEmailViewModel.swift in Sources */,
 				90B527662C89BE48006752AD /* SigninSendEmailViewController.swift in Sources */,
@@ -683,6 +706,7 @@
 				90BB6C632C9D8D6E0074DC9A /* BaseballViewModel.swift in Sources */,
 				672D80A52C8AD303005E7062 /* KGTextField.swift in Sources */,
 				906C9AF62C92C30C00E0E9A9 /* GenderViewModel.swift in Sources */,
+				902B825F2CA18124008C6647 /* KGAbilityButton.swift in Sources */,
 				9048AAA52C92B7830073AEFF /* FillStudentNumberViewController.swift in Sources */,
 				9048AA9C2C91D6FE0073AEFF /* KGStepBar.swift in Sources */,
 				90750F7F2C91A1A900B291A6 /* SetPasswordViewModel.swift in Sources */,
