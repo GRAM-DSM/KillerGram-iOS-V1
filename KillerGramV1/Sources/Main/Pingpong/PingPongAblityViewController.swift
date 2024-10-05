@@ -6,9 +6,7 @@ import RxCocoa
 
 class PingPongAblityViewController: BaseViewController {
     private let ablityView = KGAbilityView()
-    
-    public var level:String = ""
-    
+        
     private let viewModel = LevelViewModel()
     
     private let titleLabel = KGLabel(title: "운동 실력을 알려주세요", explain: "평소 운동을 좋아하고 잘하시는지 알려주세요")
