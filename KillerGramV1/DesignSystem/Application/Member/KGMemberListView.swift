@@ -11,14 +11,13 @@ class KGMemberListView: UIStackView {
         $0.font = .killerGramFont(.semibold, style: .m2)
     }
     
-    private let countMemberLabel = UILabel().then {
+    let countMemberLabel = UILabel().then {
         $0.text = ""
         $0.textColor = .GRAY_800
         $0.font = .killerGramFont(.regular, style: .label)
     }
     
-    init(sumMember: String, countMember: Int) {
-        countMemberLabel.attributedText = NSAttributedString(string: "총 \(sumMember)명 중 \(countMember) 지원")
+    init() {
         super.init(frame: .zero)
         self.axis = .horizontal
         self.spacing = 8
@@ -28,5 +27,12 @@ class KGMemberListView: UIStackView {
     
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        [
+            memberLabel,
+            countMemberLabel
+        ].forEach(self.addArrangedSubview(_:))
     }
 }

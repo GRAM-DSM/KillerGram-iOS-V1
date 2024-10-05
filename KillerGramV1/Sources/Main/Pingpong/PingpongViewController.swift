@@ -7,7 +7,7 @@ import RxCocoa
 class PingpongViewController: BaseViewController {
     private let ablityView = KGAbilityView()
     
-    private let memberView = KGMemberListView(sumMember: "12", countMember: 0)
+    private let memberView = KGMemberView(sumMember: "12", countMember: 0)
     
     private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     
