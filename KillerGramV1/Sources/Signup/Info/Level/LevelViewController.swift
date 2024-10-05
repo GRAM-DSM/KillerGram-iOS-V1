@@ -7,6 +7,7 @@ import RxCocoa
 class LevelViewController: BaseViewController {
     public var level:String = ""
     
+    
     private let viewModel = LevelViewModel()
     
     private let titleLabel = KGLabel(title: "운동 실력을 알려주세요", explain: "평소 운동을 좋아하고 잘하시는지 알려주세요")
@@ -40,6 +41,7 @@ class LevelViewController: BaseViewController {
     
     private let completeButton = KGButton(style: .round, colorStyle: .green).then {
         $0.setText(text: "완료")
+        
     }
     
     private func highButtonDidTap() {
