@@ -8,7 +8,7 @@ class KGAbility: UIStackView {
         $0.font = .killerGramFont(.semibold, style: .m2)
     }
     
-    private let changeButotn = UIButton().then {
+    let changeButton = UIButton().then {
         $0.setTitle("변경하기", for: .normal)
         $0.titleLabel?.textColor = .GRAY_400
         $0.titleLabel?.font = .killerGramFont(.regular, style: .label)
@@ -30,7 +30,7 @@ class KGAbility: UIStackView {
     override func layoutSubviews() {
         [
             myAblitiLabel,
-            changeButotn
+            changeButton
         ].forEach(self.addArrangedSubview(_:))
     }
 }

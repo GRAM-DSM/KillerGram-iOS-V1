@@ -2,7 +2,7 @@ import UIKit
 import Then
 
 class KGAbilityView: UIStackView {
-    private let ablityView = KGAbility()
+    let ablityView = KGAbility()
     
     let showMyAblityLabel = UILabel().then {
         $0.text = "상"

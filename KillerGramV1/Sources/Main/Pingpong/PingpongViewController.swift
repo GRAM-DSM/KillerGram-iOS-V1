@@ -10,6 +10,10 @@ class PingpongViewController: BaseViewController {
     override func attribute() {
         self.navigationItem.title = "탁구"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.killerGramFont(.semibold, style: .m2), .foregroundColor: UIColor.WHITE]
+        
+        self.ablityView.ablityView.changeButton.rx.tap.subscribe(onNext: {
+            self.navigationController?.pushViewController(LevelViewController(), animated: true)
+        }).disposed(by: disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
