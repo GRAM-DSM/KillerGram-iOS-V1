@@ -45,13 +45,12 @@ class PingPongAblityViewController: BaseViewController {
     }
     
     private func highButtonDidTap() {
-        DispatchQueue.main.async {
-            self.highButton.layer.borderColor = UIColor.MAIN.cgColor
-            self.middleButton.layer.borderColor = UIColor.GRAY_1100.cgColor
-            self.lowButton.layer.borderColor = UIColor.GRAY_1100.cgColor
-            self.ablityView.showMyAblityLabel.text = "상"
-            self.ablityView.layoutIfNeeded()
-        }
+        highButton.layer.borderColor = UIColor.MAIN.cgColor
+        middleButton.layer.borderColor = UIColor.GRAY_1100.cgColor
+        lowButton.layer.borderColor = UIColor.GRAY_1100.cgColor
+        ablityView.showMyAblityLabel.text = "상"
+        ablityView.layoutIfNeeded()
+        ablityView.showMyAblityLabel.setNeedsDisplay()
     }
     private func middleButtonDidTap() {
         middleButton.layer.borderColor = UIColor.MAIN.cgColor
@@ -79,6 +78,7 @@ class PingPongAblityViewController: BaseViewController {
         
         
         self.highButton.rx.tap.subscribe(onNext: {
+            print("잘 되고 있는디?")
             self.highButtonDidTap()
         }).disposed(by: disposeBag)
         
