@@ -9,6 +9,8 @@ class PingpongViewController: BaseViewController {
     
     private let memberView = KGMemberView(sumMember: "12", countMember: 1)
     
+    private let timeView = KGTimeView()
+    
     private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     
     override func attribute() {
@@ -31,7 +33,8 @@ class PingpongViewController: BaseViewController {
     override func addView() {
         [
             ablityView,
-            memberView
+            memberView,
+            timeView
         ].forEach{view.addSubview($0)}
     }
     
@@ -42,6 +45,10 @@ class PingpongViewController: BaseViewController {
         }
         memberView.snp.makeConstraints {
             $0.top.equalTo(ablityView.snp.bottom).offset(16)
+            $0.leading.trailing.equalToSuperview().inset(24)
+        }
+        timeView.snp.makeConstraints {
+            $0.top.equalTo(memberView.snp.bottom).offset(16)
             $0.leading.trailing.equalToSuperview().inset(24)
         }
     }
