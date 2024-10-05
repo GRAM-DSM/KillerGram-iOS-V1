@@ -6,8 +6,8 @@ class KGAbilityView: UIStackView {
     
     let ablityView = KGAbility()
     
-    let showMyAblityLabel = UILabel().then {
-        $0.text = "상"
+    var showMyAblityLabel = UILabel().then {
+        $0.text = LevelViewController().level
         $0.textColor = .MAIN
         $0.font = .killerGramFont(.regular, style: .m3)
     }

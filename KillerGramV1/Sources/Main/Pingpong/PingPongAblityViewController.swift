@@ -102,6 +102,7 @@ class PingPongAblityViewController: BaseViewController {
             completeButton
         ].forEach{view.addSubview($0)}
     }
+    
     override func setLayout() {
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
