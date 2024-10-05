@@ -7,6 +7,8 @@ import RxCocoa
 class PingpongViewController: BaseViewController {
     private let ablityView = KGAbilityView()
     
+    private let memberView = KGMemberListView(sumMember: "12", countMember: 0)
+    
     private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     
     override func attribute() {
@@ -28,7 +30,8 @@ class PingpongViewController: BaseViewController {
     
     override func addView() {
         [
-            ablityView
+            ablityView,
+            memberView
         ].forEach{view.addSubview($0)}
     }
     
@@ -37,5 +40,6 @@ class PingpongViewController: BaseViewController {
             $0.top.equalTo(view.safeAreaLayoutGuide).offset(12)
             $0.leading.trailing.equalToSuperview().inset(24)
         }
+        
     }
 }
