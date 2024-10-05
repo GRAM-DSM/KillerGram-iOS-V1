@@ -41,7 +41,7 @@ class PingpongViewController: BaseViewController {
             $0.leading.trailing.equalToSuperview().inset(24)
         }
         memberView.snp.makeConstraints {
-            $0.top.equalTo(ablityView.snp.top).offset(16)
+            $0.top.equalTo(ablityView.snp.bottom).offset(16)
             $0.leading.trailing.equalToSuperview().inset(24)
         }
     }
