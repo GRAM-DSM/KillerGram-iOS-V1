@@ -125,7 +125,7 @@ class PingPongAblityViewController: BaseViewController {
             $0.bottom.equalToSuperview().inset(60)
             $0.leading.trailing.equalToSuperview().inset(24)
             $0.width.equalTo(342)
-            $0.height.equalTo(70)
+            $0.height.equalTo(56)
         }
     }
 }
