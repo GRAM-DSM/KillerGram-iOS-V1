@@ -17,7 +17,7 @@ class PingpongViewController: BaseViewController {
         self.navigationItem.backBarButtonItem = backBarButtonItem
         
         self.ablityView.ablityView.changeButton.rx.tap.subscribe(onNext: {
-            self.navigationController?.pushViewController(LevelViewController(), animated: true)
+            self.navigationController?.pushViewController(PingPongAblityViewController(), animated: true)
         }).disposed(by: disposeBag)
     }
     
