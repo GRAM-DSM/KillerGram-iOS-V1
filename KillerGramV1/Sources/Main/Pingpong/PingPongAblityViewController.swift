@@ -11,6 +11,8 @@ class PingPongAblityViewController: BaseViewController {
     
     private let titleLabel = KGLabel(title: "운동 실력을 알려주세요", explain: "평소 운동을 좋아하고 잘하시는지 알려주세요")
     
+    private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+    
     let highButton = UIButton().then {
         $0.layer.cornerRadius = 8
         $0.backgroundColor = .GRAY_1100
@@ -65,6 +67,8 @@ class PingPongAblityViewController: BaseViewController {
         self.navigationItem.title = "정보입력"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.killerGramFont(.semibold, style: .m2), .foregroundColor: UIColor.WHITE]
         
+        backBarButtonItem.tintColor = .WHITE
+        self.navigationItem.backBarButtonItem = backBarButtonItem
         
         highButton.setAttributedTitle(viewModel.highAttributedstr, for: .normal)
         middleButton.setAttributedTitle(viewModel.middleAttributedstr, for: .normal)
@@ -84,7 +88,7 @@ class PingPongAblityViewController: BaseViewController {
         }).disposed(by: disposeBag)
         
         self.completeButton.rx.tap.subscribe(onNext: {
-            self.navigationController?.pushViewController(PingpongViewController(), animated: true)
+            self.navigationController?.popViewController(animated: true)
         }).disposed(by: disposeBag)
     }
     
