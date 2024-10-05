@@ -45,10 +45,13 @@ class PingPongAblityViewController: BaseViewController {
     }
     
     private func highButtonDidTap() {
-        highButton.layer.borderColor = UIColor.MAIN.cgColor
-        middleButton.layer.borderColor = UIColor.GRAY_1100.cgColor
-        lowButton.layer.borderColor = UIColor.GRAY_1100.cgColor
-        ablityView.showMyAblityLabel.text = "상"
+        DispatchQueue.main.async {
+            self.highButton.layer.borderColor = UIColor.MAIN.cgColor
+            self.middleButton.layer.borderColor = UIColor.GRAY_1100.cgColor
+            self.lowButton.layer.borderColor = UIColor.GRAY_1100.cgColor
+            self.ablityView.showMyAblityLabel.text = "상"
+            self.ablityView.layoutIfNeeded()
+        }
     }
     private func middleButtonDidTap() {
         middleButton.layer.borderColor = UIColor.MAIN.cgColor
