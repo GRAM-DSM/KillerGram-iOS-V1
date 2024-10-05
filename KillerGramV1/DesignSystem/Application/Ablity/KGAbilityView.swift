@@ -2,6 +2,8 @@ import UIKit
 import Then
 
 class KGAbilityView: UIStackView {
+    
+    
     let ablityView = KGAbility()
     
     let showMyAblityLabel = UILabel().then {
