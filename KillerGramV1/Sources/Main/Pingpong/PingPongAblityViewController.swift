@@ -86,7 +86,7 @@ class PingPongAblityViewController: BaseViewController {
         }).disposed(by: disposeBag)
         
         self.completeButton.rx.tap.subscribe(onNext: {
-            self.navigationController?.pushViewController(LoginViewController(), animated: true)
+            self.navigationController?.pushViewController(PingpongViewController(), animated: true)
         }).disposed(by: disposeBag)
     }
     
