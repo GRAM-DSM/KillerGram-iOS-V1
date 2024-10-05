@@ -7,7 +7,6 @@ import RxCocoa
 class LevelViewController: BaseViewController {
     public var level:String = ""
     
-    
     private let viewModel = LevelViewModel()
     
     private let titleLabel = KGLabel(title: "운동 실력을 알려주세요", explain: "평소 운동을 좋아하고 잘하시는지 알려주세요")
@@ -41,26 +40,25 @@ class LevelViewController: BaseViewController {
     
     private let completeButton = KGButton(style: .round, colorStyle: .green).then {
         $0.setText(text: "완료")
-        
     }
     
     private func highButtonDidTap() {
         highButton.layer.borderColor = UIColor.MAIN.cgColor
         middleButton.layer.borderColor = UIColor.GRAY_1100.cgColor
         lowButton.layer.borderColor = UIColor.GRAY_1100.cgColor
-        level = "상"
+        KGAbilityView().showMyAblityLabel.text = "상"
     }
     private func middleButtonDidTap() {
         middleButton.layer.borderColor = UIColor.MAIN.cgColor
         highButton.layer.borderColor = UIColor.GRAY_1100.cgColor
         lowButton.layer.borderColor = UIColor.GRAY_1100.cgColor
-        level = "중"
+        KGAbilityView().showMyAblityLabel.text = "중"
     }
     private func lowButtonDidTap() {
         lowButton.layer.borderColor = UIColor.MAIN.cgColor
         highButton.layer.borderColor = UIColor.GRAY_1100.cgColor
         middleButton.layer.borderColor = UIColor.GRAY_1100.cgColor
-        level = "하"
+        KGAbilityView().showMyAblityLabel.text = "하"
     }
     
     override func attribute() {
