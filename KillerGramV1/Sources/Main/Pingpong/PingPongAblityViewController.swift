@@ -5,6 +5,8 @@ import RxSwift
 import RxCocoa
 
 class PingPongAblityViewController: BaseViewController {
+    private let ablityView = KGAbilityView()
+    
     public var level:String = ""
     
     private let viewModel = LevelViewModel()
@@ -46,19 +48,19 @@ class PingPongAblityViewController: BaseViewController {
         highButton.layer.borderColor = UIColor.MAIN.cgColor
         middleButton.layer.borderColor = UIColor.GRAY_1100.cgColor
         lowButton.layer.borderColor = UIColor.GRAY_1100.cgColor
-        KGAbilityView().showMyAblityLabel.text = "상"
+        ablityView.showMyAblityLabel.text = "상"
     }
     private func middleButtonDidTap() {
         middleButton.layer.borderColor = UIColor.MAIN.cgColor
         highButton.layer.borderColor = UIColor.GRAY_1100.cgColor
         lowButton.layer.borderColor = UIColor.GRAY_1100.cgColor
-        KGAbilityView().showMyAblityLabel.text = "중"
+        ablityView.showMyAblityLabel.text = "중"
     }
     private func lowButtonDidTap() {
         lowButton.layer.borderColor = UIColor.MAIN.cgColor
         highButton.layer.borderColor = UIColor.GRAY_1100.cgColor
         middleButton.layer.borderColor = UIColor.GRAY_1100.cgColor
-        KGAbilityView().showMyAblityLabel.text = "하"
+        ablityView.showMyAblityLabel.text = "하"
     }
     
     override func attribute() {
