@@ -7,6 +7,8 @@ class KGCalendarView: UIStackView {
         $0.text = "달력 준비중입니다"
         $0.font = .killerGramFont(.semibold, style: .m3)
         $0.textColor = .WHITE
+        $0.textAlignment = .center
+        $0.backgroundColor = .GRAY_1100
     }
     
     init() {
