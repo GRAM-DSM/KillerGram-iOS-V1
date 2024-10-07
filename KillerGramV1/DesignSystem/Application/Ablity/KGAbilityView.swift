@@ -9,7 +9,7 @@ class KGAbilityView: UIStackView {
     var showMyAblityLabel = UILabel().then {
         $0.text = "상"
         $0.textColor = .MAIN
-        $0.font = .killerGramFont(.semibold, style: .m3)
+        $0.font = .killerGramFont(.regular, style: .m3)
     }
     
     

@@ -5,7 +5,7 @@ import Then
 class KGCalendarView: UIStackView {
     private let sorryLabel = UILabel().then {
         $0.text = "달력 준비중입니다"
-        $0.font = .killerGramFont(.regular, style: .m2)
+        $0.font = .killerGramFont(.semibold, style: .m3)
         $0.textColor = .WHITE
     }
     
