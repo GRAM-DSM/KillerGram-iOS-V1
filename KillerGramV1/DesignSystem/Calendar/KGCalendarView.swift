@@ -19,5 +19,9 @@ class KGCalendarView: UIStackView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
+    override func layoutSubviews() {
+        [
+            sorryLabel
+        ].forEach(self.addArrangedSubview(_:))
+    }
 }

@@ -13,6 +13,8 @@ class MainViewController: BaseViewController {
     
     private let everydaySports = KGEverydatSprotsView()
     
+    private let sorryView = KGCalendarView()
+    
     @objc func pingpongDidTap() {
         self.navigationController?.pushViewController(PingpongViewController(), animated: true)
     }
@@ -59,7 +61,8 @@ class MainViewController: BaseViewController {
         [
             titleView,
             todaySprotsView,
-            everydaySports
+            everydaySports,
+            sorryView
         ].forEach{view.addSubview($0)}
     }
     
@@ -75,6 +78,10 @@ class MainViewController: BaseViewController {
         everydaySports.snp.makeConstraints {
             $0.top.equalTo(todaySprotsView.snp.bottom)
             $0.leading.trailing.equalToSuperview()
+        }
+        sorryView.snp.makeConstraints {
+            $0.top.equalTo(everydaySports.snp.bottom).offset(32)
+            $0.leading.trailing.equalToSuperview().inset(24)
         }
     }
 }
