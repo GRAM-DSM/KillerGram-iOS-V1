@@ -14,7 +14,6 @@ class MainViewController: BaseViewController {
     private let everydaySports = KGEverydatSprotsView()
     
     @objc func pingpongDidTap() {
-        print("success")
         self.navigationController?.pushViewController(PingpongViewController(), animated: true)
     }
     @objc func healthDidTap() {
