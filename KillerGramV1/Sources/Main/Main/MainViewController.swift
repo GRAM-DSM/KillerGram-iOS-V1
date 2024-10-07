@@ -82,6 +82,7 @@ class MainViewController: BaseViewController {
         sorryView.snp.makeConstraints {
             $0.top.equalTo(everydaySports.snp.bottom).offset(32)
             $0.leading.trailing.equalToSuperview().inset(24)
+            $0.height.equalTo(58)
         }
     }
 }
