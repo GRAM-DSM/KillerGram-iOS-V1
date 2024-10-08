@@ -3,7 +3,7 @@ import Then
 import SnapKit
 
 class StateView: UIStackView {
-    private let stateLabel = UILabel().then {
+    let stateLabel = UILabel().then {
         $0.font = .killerGramFont(.regular, style: .m3)
         $0.textColor = .MAIN
     }

@@ -6,19 +6,17 @@ import Then
 
 class MemberView: UIStackView {
     
-    private let sportsLabel = UILabel().then {
+    let sportsLabel = UILabel().then {
         $0.font = .killerGramFont(.semibold, style: .m1)
         $0.textColor = .WHITE
     }
     
-    private let memberLabel = UILabel().then {
+    let memberLabel = UILabel().then {
         $0.font = .killerGramFont(.regular, style: .label)
         $0.textColor = .MAIN
     }
         
-    init(sports: String, maxMember: String, nowMember: Int) {
-        sportsLabel.attributedText = NSAttributedString(string: sports)
-        memberLabel.attributedText = NSAttributedString(string: "\(maxMember)명 중 \(nowMember)명 참여")
+    init() {
         super.init(frame: .zero)
         self.axis = .vertical
         self.spacing = 7
