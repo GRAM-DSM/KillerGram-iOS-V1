@@ -18,6 +18,7 @@
 		902B82692CB112DF008C6647 /* PingPongAblityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B82682CB112DF008C6647 /* PingPongAblityViewController.swift */; };
 		902B826D2CB414C9008C6647 /* KGCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B826C2CB414C9008C6647 /* KGCalendarView.swift */; };
 		902B82702CB51AE6008C6647 /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B826F2CB51AE6008C6647 /* StateView.swift */; };
+		902B82722CB51C85008C6647 /* KGStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B82712CB51C85008C6647 /* KGStateView.swift */; };
 		902D5AEA2C8B09850077AAC2 /* KGLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902D5AE92C8B09850077AAC2 /* KGLabel.swift */; };
 		902D5AED2C8B1DDC0077AAC2 /* SigninCheckEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902D5AEC2C8B1DDC0077AAC2 /* SigninCheckEmailViewController.swift */; };
 		90374B982C85E96700F0F7BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90374B972C85E96700F0F7BC /* AppDelegate.swift */; };
@@ -92,6 +93,7 @@
 		902B82682CB112DF008C6647 /* PingPongAblityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingPongAblityViewController.swift; sourceTree = "<group>"; };
 		902B826C2CB414C9008C6647 /* KGCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGCalendarView.swift; sourceTree = "<group>"; };
 		902B826F2CB51AE6008C6647 /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
+		902B82712CB51C85008C6647 /* KGStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGStateView.swift; sourceTree = "<group>"; };
 		902D5AE92C8B09850077AAC2 /* KGLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGLabel.swift; sourceTree = "<group>"; };
 		902D5AEC2C8B1DDC0077AAC2 /* SigninCheckEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninCheckEmailViewController.swift; sourceTree = "<group>"; };
 		90374B942C85E96700F0F7BC /* KillerGramV1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KillerGramV1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				902B826F2CB51AE6008C6647 /* StateView.swift */,
+				902B82712CB51C85008C6647 /* KGStateView.swift */,
 			);
 			path = SportsState;
 			sourceTree = "<group>";
@@ -714,6 +717,7 @@
 				90BB6C592C9D8D060074DC9A /* PingpongViewModel.swift in Sources */,
 				904D88242C871A71007EEE16 /* KillerGramFontStyle.swift in Sources */,
 				908C9CA32C93000000F4B3BA /* FindPasswordSendEmailViewController.swift in Sources */,
+				902B82722CB51C85008C6647 /* KGStateView.swift in Sources */,
 				90F6328F2C96CC37000B1D99 /* SetNewPasswordViewController.swift in Sources */,
 				902B826D2CB414C9008C6647 /* KGCalendarView.swift in Sources */,
 				672D80A82C8AD4E9005E7062 /* KGButton.swift in Sources */,
