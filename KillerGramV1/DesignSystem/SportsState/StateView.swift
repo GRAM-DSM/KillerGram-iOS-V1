@@ -4,7 +4,7 @@ import SnapKit
 
 class StateView: UIStackView {
     private let stateLabel = UILabel().then {
-        $0.text = "완료"
+        $0.text = "진행 중"
         $0.font = .killerGramFont(.regular, style: .m3)
         $0.textColor = .GRAY_600
     }
