@@ -16,7 +16,7 @@ class KGStateView: UIStackView {
     
     private let stateLabel = StateView()
     
-    init(sports: KGSports, maxMember: String, nowMember: Int) {
+    init(sports: KGSports, maxMember: , nowMember: Int) {
         
     }
     
@@ -25,25 +25,4 @@ class KGStateView: UIStackView {
     }
 }
 
-extension KGSports {
-    func maxMember() -> String {
-        switch self {
-        case .soccer:
-            return "16"
-        case .basketball:
-            return "14"
-        case .vallyball:
-            return "9"
-        case.pingpong:
-            return "10"
-        case.badminton:
-            return "16"
-        case.women:
-            return "20"
-        case.baseball:
-            return "20"
-        case.health:
-            return "15"
-        }
-    }
-}
+
