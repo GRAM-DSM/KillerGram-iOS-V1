@@ -16,8 +16,8 @@ class KGStateView: UIStackView {
     
     private let stateLabel = StateView()
     
-    init(sports: String, maxMember: String, nowMember: Int) {
-        sportsLabel.
+    init(sports: KGSports, maxMember: String, nowMember: Int) {
+        
     }
     
     required init(coder: NSCoder) {
