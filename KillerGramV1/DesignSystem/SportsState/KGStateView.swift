@@ -12,4 +12,6 @@ class KGStateView: UIStackView {
         $0.font = .killerGramFont(.regular, style: .label)
         $0.textColor = .MAIN
     }
+    
+    private let stateLabel = StateView
 }
