@@ -16,6 +16,8 @@ class KGStateView: UIStackView {
         self.axis = .horizontal
         self.spacing = 163
         self.backgroundColor = .GRAY_1100
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.MAIN.cgColor
         self.layer.cornerRadius = 8
         self.layoutMargins = .init(top: 16, left: 16, bottom: 16, right: 16)
         self.isLayoutMarginsRelativeArrangement = true
