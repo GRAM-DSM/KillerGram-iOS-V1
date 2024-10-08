@@ -13,5 +13,5 @@ class KGStateView: UIStackView {
         $0.textColor = .MAIN
     }
     
-    private let stateLabel = StateView
+    private let stateLabel = StateView()
 }
