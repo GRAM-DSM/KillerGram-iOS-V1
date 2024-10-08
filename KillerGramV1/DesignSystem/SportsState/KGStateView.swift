@@ -39,11 +39,11 @@ extension KGSports {
         case.badminton:
             return "16"
         case.women:
-            
+            return "20"
         case.baseball:
-            
+            return "20"
         case.health:
-            
+            return "15"
         }
     }
 }
