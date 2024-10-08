@@ -24,3 +24,26 @@ class KGStateView: UIStackView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+extension KGSports {
+    func maxMember() -> String {
+        switch self {
+        case .soccer:
+            return "16"
+        case .basketball:
+            return "14"
+        case .vallyball:
+            return "9"
+        case.pingpong:
+            return "10"
+        case.badminton:
+            return "16"
+        case.women:
+            
+        case.baseball:
+            
+        case.health:
+            
+        }
+    }
+}
