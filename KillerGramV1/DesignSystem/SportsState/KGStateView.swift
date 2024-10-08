@@ -8,4 +8,8 @@ class KGStateView: UIStackView {
         $0.textColor = .WHITE
     }
     
+    private let memberLabel = UILabel().then {
+        $0.font = .killerGramFont(.regular, style: .label)
+        $0.textColor = .MAIN
+    }
 }
