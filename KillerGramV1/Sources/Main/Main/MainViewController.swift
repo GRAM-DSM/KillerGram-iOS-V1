@@ -15,6 +15,8 @@ class MainViewController: BaseViewController {
     
     private let sorryView = KGCalendarView()
     
+    private let stateView = KGStateView(sports: "축구", maxMember: "16", nowMember: 1, state: "진행 중")
+    
     @objc func pingpongDidTap() {
         self.navigationController?.pushViewController(PingpongViewController(), animated: true)
     }
@@ -62,7 +64,8 @@ class MainViewController: BaseViewController {
             titleView,
             todaySprotsView,
             everydaySports,
-            sorryView
+            sorryView,
+            stateView
         ].forEach{view.addSubview($0)}
     }
     
@@ -83,6 +86,11 @@ class MainViewController: BaseViewController {
             $0.top.equalTo(everydaySports.snp.bottom).offset(32)
             $0.leading.trailing.equalToSuperview().inset(24)
             $0.height.equalTo(58)
+        }
+        
+        stateView.snp.makeConstraints {
+            $0.top.equalTo(sorryView.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(24)
         }
     }
 }
