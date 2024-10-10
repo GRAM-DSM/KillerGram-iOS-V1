@@ -13,7 +13,7 @@ class MainViewController: BaseViewController {
     
     private let everydaySports = KGEverydatSprotsView()
     
-    private let sorryView = KGCalendarView()
+    private let calenderView = KGCalendarView()
     
     private let stateView = KGStateView(sports: "축구", maxMember: "16", nowMember: 1, state: "진행 중")
     
@@ -34,6 +34,10 @@ class MainViewController: BaseViewController {
         self.navigationController?.pushViewController(SoccerViewController(), animated: true)
     }
     
+    @objc func todaySportsDidTap() {
+        self.navigationController?.pushViewController(BadmintonViewController(), animated: true)
+    }
+    
     private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     
     override func attribute() {
@@ -45,18 +49,21 @@ class MainViewController: BaseViewController {
         everydaySports.healthImageView.isUserInteractionEnabled = true
         everydaySports.baseballImageView.isUserInteractionEnabled = true
         everydaySports.soccerImageView.isUserInteractionEnabled = true
+        everydaySports.todayImageView.isUserInteractionEnabled = true
         
+        
+        let todayEvent = UITapGestureRecognizer(target: self, action: #selector(todaySportsDidTap))
         let pingpongEvent = UITapGestureRecognizer(target: self, action: #selector(pingpongDidTap))
         let healthEvent = UITapGestureRecognizer(target: self, action: #selector(healthDidTap))
         let baseEvent = UITapGestureRecognizer(target: self, action: #selector(baseballDidTap))
         let soccerEvent = UITapGestureRecognizer(target: self, action: #selector(soccerDidTap))
-        
         let stateEvent = UITapGestureRecognizer(target: self, action: #selector(stateViewDidTap))
         
         everydaySports.pingpongImageView.addGestureRecognizer(pingpongEvent)
         everydaySports.healthImageView.addGestureRecognizer(healthEvent)
         everydaySports.baseballImageView.addGestureRecognizer(baseEvent)
         everydaySports.soccerImageView.addGestureRecognizer(soccerEvent)
+        everydaySports.todayImageView.addGestureRecognizer(todayEvent)
         
         stateView.addGestureRecognizer(stateEvent)
     }
@@ -72,7 +79,7 @@ class MainViewController: BaseViewController {
             titleView,
             todaySprotsView,
             everydaySports,
-            sorryView,
+            calenderView,
             stateView
         ].forEach{view.addSubview($0)}
     }
@@ -90,15 +97,17 @@ class MainViewController: BaseViewController {
             $0.top.equalTo(todaySprotsView.snp.bottom)
             $0.leading.trailing.equalToSuperview()
         }
-        sorryView.snp.makeConstraints {
-            $0.top.equalTo(everydaySports.snp.bottom).offset(32)
+        calenderView.snp.makeConstraints {
+            $0.top.equalTo(everydaySports.snp.bottom).offset(10)
             $0.leading.trailing.equalToSuperview().inset(24)
-            $0.height.equalTo(58)
+            $0.width.equalTo(286)
+            $0.height.equalTo(200)
         }
-        
         stateView.snp.makeConstraints {
-            $0.top.equalTo(sorryView.snp.bottom).offset(20)
+            $0.top.equalTo(calenderView.snp.bottom).offset(20)
             $0.leading.trailing.equalToSuperview().inset(24)
         }
     }
-}
+
+    }
+

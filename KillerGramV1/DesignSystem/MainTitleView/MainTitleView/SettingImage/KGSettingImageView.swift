@@ -5,6 +5,7 @@ import SnapKit
 class KGSettingImageView: UIStackView {
     private let settingImage = UIImageView(frame: .zero).then {
         $0.image = .setting
+
     }
     
     init() {

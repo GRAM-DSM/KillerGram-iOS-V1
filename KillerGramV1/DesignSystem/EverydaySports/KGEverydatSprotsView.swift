@@ -11,6 +11,8 @@ class KGEverydatSprotsView: UIStackView {
     
     let soccerImageView = KGEverydaySprotsImageView(image: .soccer, title: "축구")
     
+    let todayImageView = KGEverydaySprotsImageView(image: .todaySportsBadminton, title: "배드민턴")
+    
     init() {
         super.init(frame: .zero)
         self.axis = .horizontal
@@ -28,7 +30,8 @@ class KGEverydatSprotsView: UIStackView {
             pingpongImageView,
             healthImageView,
             baseballImageView,
-            soccerImageView
+            soccerImageView,
+            todayImageView
         ].forEach(self.addArrangedSubview(_:))
     }
 }

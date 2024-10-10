@@ -10,6 +10,10 @@
 		672D80A52C8AD303005E7062 /* KGTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D80A42C8AD303005E7062 /* KGTextField.swift */; };
 		672D80A82C8AD4E9005E7062 /* KGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D80A72C8AD4E9005E7062 /* KGButton.swift */; };
 		672D80AA2C8AD58D005E7062 /* KGButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D80A92C8AD58D005E7062 /* KGButtonStyle.swift */; };
+		6F280C152CB7AD9000C57E60 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 6F280C142CB7AD9000C57E60 /* FSCalendar */; };
+		6F280C182CB7E4BF00C57E60 /* BadmintonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F280C172CB7E4B200C57E60 /* BadmintonViewController.swift */; };
+		6F280C1A2CB7E4CC00C57E60 /* BadmintonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F280C192CB7E4C300C57E60 /* BadmintonViewModel.swift */; };
+		6F280C1C2CB7E4E900C57E60 /* BadmintonAblityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F280C1B2CB7E4D100C57E60 /* BadmintonAblityViewController.swift */; };
 		902B825F2CA18124008C6647 /* KGAbilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B825E2CA18124008C6647 /* KGAbilityView.swift */; };
 		902B82612CA1814E008C6647 /* KGMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B82602CA1814E008C6647 /* KGMemberView.swift */; };
 		902B82632CA181D2008C6647 /* KGTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902B82622CA181D2008C6647 /* KGTimeView.swift */; };
@@ -91,6 +95,9 @@
 		672D80A42C8AD303005E7062 /* KGTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGTextField.swift; sourceTree = "<group>"; };
 		672D80A72C8AD4E9005E7062 /* KGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGButton.swift; sourceTree = "<group>"; };
 		672D80A92C8AD58D005E7062 /* KGButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGButtonStyle.swift; sourceTree = "<group>"; };
+		6F280C172CB7E4B200C57E60 /* BadmintonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadmintonViewController.swift; sourceTree = "<group>"; };
+		6F280C192CB7E4C300C57E60 /* BadmintonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadmintonViewModel.swift; sourceTree = "<group>"; };
+		6F280C1B2CB7E4D100C57E60 /* BadmintonAblityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadmintonAblityViewController.swift; sourceTree = "<group>"; };
 		902B825E2CA18124008C6647 /* KGAbilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGAbilityView.swift; sourceTree = "<group>"; };
 		902B82602CA1814E008C6647 /* KGMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGMemberView.swift; sourceTree = "<group>"; };
 		902B82622CA181D2008C6647 /* KGTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGTimeView.swift; sourceTree = "<group>"; };
@@ -169,6 +176,7 @@
 				90F632792C9314A7000B1D99 /* RxRelay in Frameworks */,
 				90F6327B2C9314A7000B1D99 /* RxSwift in Frameworks */,
 				90374BB22C85E99300F0F7BC /* Then in Frameworks */,
+				6F280C152CB7AD9000C57E60 /* FSCalendar in Frameworks */,
 				90374BB52C85F34400F0F7BC /* CombineMoya in Frameworks */,
 				90374BB72C85F34400F0F7BC /* Moya in Frameworks */,
 				90374BBB2C85F34400F0F7BC /* RxMoya in Frameworks */,
@@ -196,6 +204,16 @@
 				672D80A92C8AD58D005E7062 /* KGButtonStyle.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		6F280C162CB7E49C00C57E60 /* Badminton */ = {
+			isa = PBXGroup;
+			children = (
+				6F280C172CB7E4B200C57E60 /* BadmintonViewController.swift */,
+				6F280C192CB7E4C300C57E60 /* BadmintonViewModel.swift */,
+				6F280C1B2CB7E4D100C57E60 /* BadmintonAblityViewController.swift */,
+			);
+			path = Badminton;
 			sourceTree = "<group>";
 		};
 		902B82582CA17FC6008C6647 /* Application */ = {
@@ -590,6 +608,7 @@
 		90F632922C96D210000B1D99 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				6F280C162CB7E49C00C57E60 /* Badminton */,
 				90BB6C642C9D8D830074DC9A /* Soccer */,
 				90BB6C5F2C9D8D430074DC9A /* Baseball */,
 				90BB6C5A2C9D8D1C0074DC9A /* Health */,
@@ -676,6 +695,7 @@
 				90F632782C9314A7000B1D99 /* RxRelay */,
 				90F6327A2C9314A7000B1D99 /* RxSwift */,
 				90F632862C932743000B1D99 /* SnapKit */,
+				6F280C142CB7AD9000C57E60 /* FSCalendar */,
 			);
 			productName = KillerGramV1;
 			productReference = 90374B942C85E96700F0F7BC /* KillerGramV1.app */;
@@ -710,6 +730,7 @@
 				90374BB32C85F34400F0F7BC /* XCRemoteSwiftPackageReference "Moya" */,
 				90F632752C9314A7000B1D99 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				90F632852C932743000B1D99 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				6F280C132CB7AD9000C57E60 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = 90374B952C85E96700F0F7BC /* Products */;
 			projectDirPath = "";
@@ -751,6 +772,7 @@
 				90BB6C592C9D8D060074DC9A /* PingpongViewModel.swift in Sources */,
 				904D88242C871A71007EEE16 /* KillerGramFontStyle.swift in Sources */,
 				908C9CA32C93000000F4B3BA /* FindPasswordSendEmailViewController.swift in Sources */,
+				6F280C1A2CB7E4CC00C57E60 /* BadmintonViewModel.swift in Sources */,
 				902B82872CB7737F008C6647 /* SportsViewController.swift in Sources */,
 				902B82722CB51C85008C6647 /* KGStateView.swift in Sources */,
 				90F6328F2C96CC37000B1D99 /* SetNewPasswordViewController.swift in Sources */,
@@ -776,6 +798,7 @@
 				90F632952C96D242000B1D99 /* MainViewController.swift in Sources */,
 				90F6328A2C9328FD000B1D99 /* BaseViewController.swift in Sources */,
 				90374BD42C86FC7C00F0F7BC /* SignupSendViewModel.swift in Sources */,
+				6F280C182CB7E4BF00C57E60 /* BadmintonViewController.swift in Sources */,
 				906C9AF42C92C30400E0E9A9 /* GenderViewController.swift in Sources */,
 				9099ADD32C904CA500FCA3C8 /* SigninCheckViewModel.swift in Sources */,
 				90374B982C85E96700F0F7BC /* AppDelegate.swift in Sources */,
@@ -783,6 +806,7 @@
 				90B527662C89BE48006752AD /* SigninSendEmailViewController.swift in Sources */,
 				90F632A72C9D54B8000B1D99 /* KGLogoImageView.swift in Sources */,
 				9048AAA72C92B7950073AEFF /* FillStudentNumberViewModel.swift in Sources */,
+				6F280C1C2CB7E4E900C57E60 /* BadmintonAblityViewController.swift in Sources */,
 				902B82702CB51AE6008C6647 /* StateView.swift in Sources */,
 				90750F7D2C91A19B00B291A6 /* SetPasswordViewController.swift in Sources */,
 				902D5AED2C8B1DDC0077AAC2 /* SigninCheckEmailViewController.swift in Sources */,
@@ -1022,6 +1046,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6F280C132CB7AD9000C57E60 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
 		90374BB02C85E99300F0F7BC /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then";
@@ -1057,6 +1089,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6F280C142CB7AD9000C57E60 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6F280C132CB7AD9000C57E60 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
 		90374BB12C85E99300F0F7BC /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 90374BB02C85E99300F0F7BC /* XCRemoteSwiftPackageReference "Then" */;

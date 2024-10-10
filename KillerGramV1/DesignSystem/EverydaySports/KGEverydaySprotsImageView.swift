@@ -23,6 +23,8 @@ class KGEverydaySprotsImageView: UIStackView {
         self.spacing = 4
         self.layoutMargins = .init(top: 0, left: 0, bottom: 0, right: 0)
         self.isLayoutMarginsRelativeArrangement = true
+        self.sportsTitle.textColor = .GRAY_400
+        self.sportsTitle.textAlignment = .center
     }
     
     required init(coder: NSCoder) {
