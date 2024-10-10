@@ -17,6 +17,7 @@ class MainViewController: BaseViewController {
     
     private let stateView = KGStateView(sports: "축구", maxMember: "16", nowMember: 1, state: "진행 중")
     
+    
     @objc func pingpongDidTap() {
         self.navigationController?.pushViewController(PingpongViewController(), animated: true)
     }
@@ -27,6 +28,9 @@ class MainViewController: BaseViewController {
         self.navigationController?.pushViewController(BaseballViewController(), animated: true)
     }
     @objc func soccerDidTap() {
+        self.navigationController?.pushViewController(SoccerViewController(), animated: true)
+    }
+    @objc func stateViewDidTap() {
         self.navigationController?.pushViewController(SoccerViewController(), animated: true)
     }
     
@@ -47,10 +51,14 @@ class MainViewController: BaseViewController {
         let baseEvent = UITapGestureRecognizer(target: self, action: #selector(baseballDidTap))
         let soccerEvent = UITapGestureRecognizer(target: self, action: #selector(soccerDidTap))
         
+        let stateEvent = UITapGestureRecognizer(target: self, action: #selector(stateViewDidTap))
+        
         everydaySports.pingpongImageView.addGestureRecognizer(pingpongEvent)
         everydaySports.healthImageView.addGestureRecognizer(healthEvent)
         everydaySports.baseballImageView.addGestureRecognizer(baseEvent)
         everydaySports.soccerImageView.addGestureRecognizer(soccerEvent)
+        
+        stateView.addGestureRecognizer(stateEvent)
     }
     
     
