@@ -4,7 +4,7 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class SoccerAblityViewController: BaseViewController {
+class AblityViewController: BaseViewController {
     private let ablityView = KGAbilityView()
         
     private let viewModel = LevelViewModel()
