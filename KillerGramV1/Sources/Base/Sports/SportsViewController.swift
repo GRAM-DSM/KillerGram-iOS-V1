@@ -7,7 +7,7 @@ import RxCocoa
 class SportsViewController: BaseViewController {
     let ablityView = KGAbilityView()
     
-    var memberView = KGMemberView(sumMember: "12", countMember: 1)
+    var memberView = KGMemberView(sumMember: "", countMember: 0)
     
     private let timeView = KGTimeView()
     
