@@ -17,7 +17,7 @@ class BaseballViewController: SportsViewController {
         self.memberView = KGMemberView(sumMember: "16", countMember: 1)
         
         self.ablityView.ablityView.changeButton.rx.tap.subscribe(onNext: {
-            self.navigationController?.pushViewController(BaseViewController(), animated: true)
+            self.navigationController?.pushViewController(BaseballAblityViewController(), animated: true)
         }).disposed(by: disposeBag)
     }
 }
