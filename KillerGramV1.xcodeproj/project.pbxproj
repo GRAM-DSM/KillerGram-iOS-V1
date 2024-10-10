@@ -571,9 +571,9 @@
 		90F632882C9328E4000B1D99 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				90F632892C9328FD000B1D99 /* BaseViewController.swift */,
 				902B82852CB7736F008C6647 /* Sports */,
 				902B82822CB77169008C6647 /* Ablity */,
-				90F632892C9328FD000B1D99 /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
