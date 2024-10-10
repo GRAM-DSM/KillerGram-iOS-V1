@@ -1,8 +1,23 @@
-//
-//  SportsViewController.swift
-//  KillerGramV1
-//
-//  Created by 현석의 맥북 on 10/10/24.
-//
+import UIKit
+import Then
+import SnapKit
+import RxSwift
+import RxCocoa
 
-import Foundation
+class SportsViewController: BaseViewController {
+    
+    
+    let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+    
+    override func attribute() {
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.killerGramFont(.semibold, style: .m2), .foregroundColor: UIColor.WHITE]
+        
+        backBarButtonItem.tintColor = .WHITE
+        self.navigationItem.backBarButtonItem = backBarButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+}

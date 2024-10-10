@@ -4,30 +4,19 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class PingpongViewController: BaseViewController {
-    private let ablityView = KGAbilityView()
+class PingpongViewController: SportsViewController {
+    let ablityView = KGAbilityView()
     
     private let memberView = KGMemberView(sumMember: "12", countMember: 1)
     
     private let timeView = KGTimeView()
     
-    private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
-    
     override func attribute() {
         self.navigationItem.title = "탁구"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.killerGramFont(.semibold, style: .m2), .foregroundColor: UIColor.WHITE]
-        
-        backBarButtonItem.tintColor = .WHITE
-        self.navigationItem.backBarButtonItem = backBarButtonItem
         
         self.ablityView.ablityView.changeButton.rx.tap.subscribe(onNext: {
             self.navigationController?.pushViewController(PingPongAblityViewController(), animated: true)
         }).disposed(by: disposeBag)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated) 
     }
     
     override func addView() {
