@@ -87,6 +87,8 @@
 		90F632AD2C9D5E1B000B1D99 /* KGTodaySprotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632AC2C9D5E1B000B1D99 /* KGTodaySprotsView.swift */; };
 		90F9D7402CB8FCED0022A1FA /* BadmintonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9D73F2CB8FCED0022A1FA /* BadmintonViewController.swift */; };
 		90F9D7422CB8FCFC0022A1FA /* BadmintonAblityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9D7412CB8FCFC0022A1FA /* BadmintonAblityViewController.swift */; };
+		90F9D7452CB90FA80022A1FA /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 90F9D7442CB90FA80022A1FA /* FSCalendar */; };
+		90F9D7472CB915E70022A1FA /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9D7462CB915E70022A1FA /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -163,6 +165,7 @@
 		90F632AC2C9D5E1B000B1D99 /* KGTodaySprotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGTodaySprotsView.swift; sourceTree = "<group>"; };
 		90F9D73F2CB8FCED0022A1FA /* BadmintonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadmintonViewController.swift; sourceTree = "<group>"; };
 		90F9D7412CB8FCFC0022A1FA /* BadmintonAblityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadmintonAblityViewController.swift; sourceTree = "<group>"; };
+		90F9D7462CB915E70022A1FA /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +176,7 @@
 				90F632792C9314A7000B1D99 /* RxRelay in Frameworks */,
 				90F6327B2C9314A7000B1D99 /* RxSwift in Frameworks */,
 				90374BB22C85E99300F0F7BC /* Then in Frameworks */,
+				90F9D7452CB90FA80022A1FA /* FSCalendar in Frameworks */,
 				90374BB52C85F34400F0F7BC /* CombineMoya in Frameworks */,
 				90374BB72C85F34400F0F7BC /* Moya in Frameworks */,
 				90374BBB2C85F34400F0F7BC /* RxMoya in Frameworks */,
@@ -242,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				902B826C2CB414C9008C6647 /* KGCalendarView.swift */,
+				90F9D7462CB915E70022A1FA /* CustomCell.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -690,6 +695,7 @@
 				90F632782C9314A7000B1D99 /* RxRelay */,
 				90F6327A2C9314A7000B1D99 /* RxSwift */,
 				90F632862C932743000B1D99 /* SnapKit */,
+				90F9D7442CB90FA80022A1FA /* FSCalendar */,
 			);
 			productName = KillerGramV1;
 			productReference = 90374B942C85E96700F0F7BC /* KillerGramV1.app */;
@@ -724,6 +730,7 @@
 				90374BB32C85F34400F0F7BC /* XCRemoteSwiftPackageReference "Moya" */,
 				90F632752C9314A7000B1D99 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				90F632852C932743000B1D99 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				90F9D7432CB90FA80022A1FA /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = 90374B952C85E96700F0F7BC /* Products */;
 			projectDirPath = "";
@@ -755,6 +762,7 @@
 			files = (
 				9099ADD02C903A0400FCA3C8 /* UIButton+setUnderLine.swift in Sources */,
 				90F6329A2C9D4B0E000B1D99 /* KGMainTitleView.swift in Sources */,
+				90F9D7472CB915E70022A1FA /* CustomCell.swift in Sources */,
 				90F632802C9316A8000B1D99 /* LevelViewModel.swift in Sources */,
 				904D88202C871817007EEE16 /* PretendardFontStyle.swift in Sources */,
 				90BB6C572C9D8CF90074DC9A /* PingpongViewController.swift in Sources */,
@@ -1070,6 +1078,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		90F9D7432CB90FA80022A1FA /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1117,6 +1133,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 90F632852C932743000B1D99 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		90F9D7442CB90FA80022A1FA /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90F9D7432CB90FA80022A1FA /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
