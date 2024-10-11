@@ -17,7 +17,9 @@ class MainViewController: BaseViewController {
     
     private let stateView = KGStateView(sports: "축구", maxMember: "16", nowMember: 1, state: "진행 중")
     
-    
+    @objc func todaySportsDidTap() {
+        self.navigationController?.pushViewController(BadmintonViewController(), animated: true)
+    }
     @objc func pingpongDidTap() {
         self.navigationController?.pushViewController(PingpongViewController(), animated: true)
     }
@@ -41,10 +43,8 @@ class MainViewController: BaseViewController {
         backBarButtonItem.tintColor = .WHITE
         self.navigationItem.backBarButtonItem = backBarButtonItem
         
-        everydaySports.pingpongImageView.isUserInteractionEnabled = true
-        everydaySports.healthImageView.isUserInteractionEnabled = true
-        everydaySports.baseballImageView.isUserInteractionEnabled = true
-        everydaySports.soccerImageView.isUserInteractionEnabled = true
+        
+        let todaySportsEvent = UITapGestureRecognizer(target: self, action: #selector(todaySportsDidTap))
         
         let pingpongEvent = UITapGestureRecognizer(target: self, action: #selector(pingpongDidTap))
         let healthEvent = UITapGestureRecognizer(target: self, action: #selector(healthDidTap))
@@ -52,6 +52,8 @@ class MainViewController: BaseViewController {
         let soccerEvent = UITapGestureRecognizer(target: self, action: #selector(soccerDidTap))
         
         let stateEvent = UITapGestureRecognizer(target: self, action: #selector(stateViewDidTap))
+        
+        todaySprotsView.addGestureRecognizer(todaySportsEvent)
         
         everydaySports.pingpongImageView.addGestureRecognizer(pingpongEvent)
         everydaySports.healthImageView.addGestureRecognizer(healthEvent)
@@ -84,10 +86,10 @@ class MainViewController: BaseViewController {
         }
         todaySprotsView.snp.makeConstraints {
             $0.top.equalTo(titleView.snp.bottom)
-            $0.leading.trailing.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(24)
         }
         everydaySports.snp.makeConstraints {
-            $0.top.equalTo(todaySprotsView.snp.bottom)
+            $0.top.equalTo(todaySprotsView.snp.bottom).offset(16)
             $0.leading.trailing.equalToSuperview()
         }
         sorryView.snp.makeConstraints {

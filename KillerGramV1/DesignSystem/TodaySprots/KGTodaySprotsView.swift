@@ -7,7 +7,9 @@ class KGTodaySprotsView: UIStackView {
     
     init() {
         super.init(frame: .zero)
-        self.layoutMargins = .init(top: 8, left: 24, bottom: 16, right: 24)
+        todaySpotsImage.isUserInteractionEnabled = true
+        
+        self.layoutMargins = .init(top: 0, left: 0, bottom: 0, right: 0)
         self.isLayoutMarginsRelativeArrangement = true
     }
     

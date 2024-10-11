@@ -85,6 +85,8 @@
 		90F632A52C9D54AA000B1D99 /* KGSettingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632A42C9D54AA000B1D99 /* KGSettingImageView.swift */; };
 		90F632A72C9D54B8000B1D99 /* KGLogoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632A62C9D54B8000B1D99 /* KGLogoImageView.swift */; };
 		90F632AD2C9D5E1B000B1D99 /* KGTodaySprotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F632AC2C9D5E1B000B1D99 /* KGTodaySprotsView.swift */; };
+		90F9D7402CB8FCED0022A1FA /* BadmintonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9D73F2CB8FCED0022A1FA /* BadmintonViewController.swift */; };
+		90F9D7422CB8FCFC0022A1FA /* BadmintonAblityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9D7412CB8FCFC0022A1FA /* BadmintonAblityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,6 +161,8 @@
 		90F632A42C9D54AA000B1D99 /* KGSettingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGSettingImageView.swift; sourceTree = "<group>"; };
 		90F632A62C9D54B8000B1D99 /* KGLogoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGLogoImageView.swift; sourceTree = "<group>"; };
 		90F632AC2C9D5E1B000B1D99 /* KGTodaySprotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGTodaySprotsView.swift; sourceTree = "<group>"; };
+		90F9D73F2CB8FCED0022A1FA /* BadmintonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadmintonViewController.swift; sourceTree = "<group>"; };
+		90F9D7412CB8FCFC0022A1FA /* BadmintonAblityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadmintonAblityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -590,6 +594,7 @@
 		90F632922C96D210000B1D99 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				90F9D73E2CB8FCD90022A1FA /* Badminton */,
 				90BB6C642C9D8D830074DC9A /* Soccer */,
 				90BB6C5F2C9D8D430074DC9A /* Baseball */,
 				90BB6C5A2C9D8D1C0074DC9A /* Health */,
@@ -648,6 +653,15 @@
 				90F632AC2C9D5E1B000B1D99 /* KGTodaySprotsView.swift */,
 			);
 			path = TodaySprots;
+			sourceTree = "<group>";
+		};
+		90F9D73E2CB8FCD90022A1FA /* Badminton */ = {
+			isa = PBXGroup;
+			children = (
+				90F9D73F2CB8FCED0022A1FA /* BadmintonViewController.swift */,
+				90F9D7412CB8FCFC0022A1FA /* BadmintonAblityViewController.swift */,
+			);
+			path = Badminton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -760,6 +774,7 @@
 				90BB6C662C9D8D910074DC9A /* SoccerViewController.swift in Sources */,
 				902B827B2CB53BCE008C6647 /* MemberView.swift in Sources */,
 				9048AAA22C91DBF10073AEFF /* FillNameViewModel.swift in Sources */,
+				90F9D7422CB8FCFC0022A1FA /* BadmintonAblityViewController.swift in Sources */,
 				90BB6C522C9D80010074DC9A /* KGEverydaySprotsImageView.swift in Sources */,
 				902B82672CA29BFC008C6647 /* KGMemberListView.swift in Sources */,
 				90BB6C542C9D82F30074DC9A /* KGEverydatSprotsView.swift in Sources */,
@@ -776,6 +791,7 @@
 				90F632952C96D242000B1D99 /* MainViewController.swift in Sources */,
 				90F6328A2C9328FD000B1D99 /* BaseViewController.swift in Sources */,
 				90374BD42C86FC7C00F0F7BC /* SignupSendViewModel.swift in Sources */,
+				90F9D7402CB8FCED0022A1FA /* BadmintonViewController.swift in Sources */,
 				906C9AF42C92C30400E0E9A9 /* GenderViewController.swift in Sources */,
 				9099ADD32C904CA500FCA3C8 /* SigninCheckViewModel.swift in Sources */,
 				90374B982C85E96700F0F7BC /* AppDelegate.swift in Sources */,

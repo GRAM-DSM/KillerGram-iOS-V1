@@ -19,6 +19,8 @@ class KGEverydaySprotsImageView: UIStackView {
         sportsImage.image = image
         sportsTitle.attributedText = NSAttributedString(string: title)
         
+        self.sportsTitle.textColor = .GRAY_400
+        self.sportsTitle.textAlignment = .center
         self.axis = .vertical
         self.spacing = 4
         self.layoutMargins = .init(top: 0, left: 0, bottom: 0, right: 0)

@@ -11,8 +11,15 @@ class KGEverydatSprotsView: UIStackView {
     
     let soccerImageView = KGEverydaySprotsImageView(image: .soccer, title: "축구")
     
+    
+    
     init() {
         super.init(frame: .zero)
+        pingpongImageView.isUserInteractionEnabled = true
+        healthImageView.isUserInteractionEnabled = true
+        baseballImageView.isUserInteractionEnabled = true
+        soccerImageView.isUserInteractionEnabled = true
+        
         self.axis = .horizontal
         self.spacing = 12.67
         self.layoutMargins = .init(top: 0, left: 24, bottom: 0, right: 24)
