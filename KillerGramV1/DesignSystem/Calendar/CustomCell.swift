@@ -24,7 +24,7 @@ class CustomCell: UICollectionViewCell {
     
     // 셀 설정
     func setupView() {
-        backgroundColor = .darkGray
+        backgroundColor = .clear
         contentView.addSubview(dayLabel)
         
         dayLabel.snp.makeConstraints { make in
