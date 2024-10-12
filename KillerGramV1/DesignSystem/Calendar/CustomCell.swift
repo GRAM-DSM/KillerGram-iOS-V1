@@ -7,7 +7,7 @@ class CustomCell: UICollectionViewCell {
     
     // 요일을 표시할 레이블
     private let dayLabel = UILabel().then {
-        $0.textColor = .white
+        $0.textColor = .GRAY_800 
         $0.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         $0.textAlignment = .center
     }
