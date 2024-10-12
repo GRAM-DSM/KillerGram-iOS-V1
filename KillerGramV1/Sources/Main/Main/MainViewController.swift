@@ -15,7 +15,11 @@ class MainViewController: BaseViewController {
     
     private let calendarView = KGCalendarView()
     
+    private let stateScrollView = UIScrollView()
+    
     private let stateView = KGStateView(sports: "축구", maxMember: "16", nowMember: 1, state: "진행 중")
+    
+    private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     
     @objc func todaySportsDidTap() {
         self.navigationController?.pushViewController(BadmintonViewController(), animated: true)
@@ -35,8 +39,6 @@ class MainViewController: BaseViewController {
     @objc func stateViewDidTap() {
         self.navigationController?.pushViewController(SoccerViewController(), animated: true)
     }
-    
-    private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     
     override func attribute() {
         self.navigationItem.hidesBackButton = true
@@ -75,6 +77,7 @@ class MainViewController: BaseViewController {
             todaySprotsView,
             everydaySports,
             calendarView,
+            stateScrollView,
             stateView
         ].forEach{view.addSubview($0)}
     }
@@ -97,10 +100,17 @@ class MainViewController: BaseViewController {
             $0.leading.trailing.equalToSuperview().inset(24)
             $0.height.equalTo(58)
         }
-        
-        stateView.snp.makeConstraints {
+        stateScrollView.snp.makeConstraints {
             $0.top.equalTo(calendarView.snp.bottom).offset(20)
             $0.leading.trailing.equalToSuperview().inset(24)
+            $0.bottom.equalToSuperview().inset(64)
+        }
+        
+        stateView.snp.makeConstraints {
+            $0.top.equalTo(stateScrollView.snp.top).inset(24)
+            $0.leading.equalTo(stateScrollView.snp.leading)
+            $0.trailing.equalTo(stateScrollView.snp.trailing)
+            $0.width.equalTo(stateScrollView.snp.width)
         }
     }
 }

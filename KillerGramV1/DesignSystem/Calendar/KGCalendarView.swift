@@ -28,11 +28,11 @@ class KGCalendarView: UIView, UICollectionViewDelegate, UICollectionViewDataSour
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - UI 설정
+    
     private func setupView() {
         addSubview(collectionView)
         
-        // 컬렉션 뷰 레이아웃 설정
+        
         collectionView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(8)
             make.top.bottom.equalToSuperview()
@@ -41,19 +41,19 @@ class KGCalendarView: UIView, UICollectionViewDelegate, UICollectionViewDataSour
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return daysOfWeek.count + datesInMonth.count // 요일과 날짜 개수 합산
+        return daysOfWeek.count + datesInMonth.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.item < daysOfWeek.count { // 요일 셀
+        if indexPath.item < daysOfWeek.count {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomDayCell.identifier, for: indexPath) as! CustomDayCell
-            cell.configure(with: daysOfWeek[indexPath.item]) // 요일 설정
+            cell.configure(with: daysOfWeek[indexPath.item])
             return cell
-        } else { // 날짜 셀
+        } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomDateCell.identifier, for: indexPath) as! CustomDateCell
             let dateIndex = indexPath.item - daysOfWeek.count
             if dateIndex < datesInMonth.count {
-                cell.configure(with: datesInMonth[dateIndex]) // 날짜 설정
+                cell.configure(with: datesInMonth[dateIndex])
             }
             return cell
         }
@@ -61,7 +61,7 @@ class KGCalendarView: UIView, UICollectionViewDelegate, UICollectionViewDataSour
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (collectionView.frame.width - (4 * CGFloat(daysOfWeek.count - 1))) / CGFloat(daysOfWeek.count) // 셀 간격 조정
+        let width = (collectionView.frame.width - (4 * CGFloat(daysOfWeek.count - 1))) / CGFloat(daysOfWeek.count) 
         return CGSize(width: width, height: width)
     }
     

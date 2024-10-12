@@ -1,7 +1,6 @@
 import UIKit
 import Then
 import SnapKit
-
 // MARK: - CustomDateCell (날짜 셀)
 class CustomDateCell: UICollectionViewCell {
     static let identifier = "CustomDateCell"

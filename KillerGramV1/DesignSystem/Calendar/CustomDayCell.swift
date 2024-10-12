@@ -2,7 +2,7 @@ import UIKit
 import Then
 import SnapKit
 
-// MARK: - CustomDayCell (요일 셀)
+
 class CustomDayCell: UICollectionViewCell {
     static let identifier = "CustomDayCell"
     
