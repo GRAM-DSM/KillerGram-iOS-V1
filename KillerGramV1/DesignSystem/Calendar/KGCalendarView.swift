@@ -6,12 +6,14 @@ class KGCalendarView: UIView {
     
     let weekDays = ["월", "화", "수", "목", "금"]
     var currentWeek: [Int] = []
+    var currentMonth: Int = Calendar.current.component(.month, from: Date())
+    var currentYear: Int = Calendar.current.component(.year, from: Date())
     
     private let weekStackView = UIStackView().then {
         $0.axis = .horizontal
         $0.distribution = .fillEqually
         $0.alignment = .center
-        $0.spacing = 4 // 버튼과 날짜 간의 기본 간격
+        $0.spacing = 4
     }
     
     private let previousButton = UIButton().then {
@@ -25,7 +27,8 @@ class KGCalendarView: UIView {
     }
     
     private var dateLabels: [UILabel] = []
-    
+    private var selectedDateIndex: Int? // 선택된 날짜의 인덱스
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -41,11 +44,11 @@ class KGCalendarView: UIView {
 
         weekStackView.addArrangedSubview(previousButton)
 
-        for weekDay in weekDays {
+        for (index, weekDay) in weekDays.enumerated() {
             let dayStackView = UIStackView().then {
-                $0.axis = .vertical // 수직 스택으로 변경
+                $0.axis = .vertical
                 $0.alignment = .center
-                $0.spacing = 4 // 요일과 날짜 간격을 4로 설정
+                $0.spacing = 4
             }
             
             let label = UILabel().then {
@@ -58,7 +61,13 @@ class KGCalendarView: UIView {
                 $0.textAlignment = .center
                 $0.textColor = .WHITE
                 $0.numberOfLines = 1
+                $0.isUserInteractionEnabled = true // 사용자 상호작용 가능하게 설정
             }
+            
+            // Tap Gesture 추가
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dateLabelTapped(_:)))
+            dateLabel.addGestureRecognizer(tapGesture)
+            dateLabel.tag = index // 인덱스를 태그에 저장
             
             dayStackView.addArrangedSubview(label)
             dayStackView.addArrangedSubview(dateLabel)
@@ -68,12 +77,10 @@ class KGCalendarView: UIView {
 
         weekStackView.addArrangedSubview(nextButton)
         
-        // SnapKit을 사용한 오토레이아웃 설정
-        weekStackView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+        weekStackView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
         }
         
-        // 버튼 액션 설정
         previousButton.addTarget(self, action: #selector(previousWeek), for: .touchUpInside)
         nextButton.addTarget(self, action: #selector(nextWeek), for: .touchUpInside)
     }
@@ -81,8 +88,6 @@ class KGCalendarView: UIView {
     private func setupCurrentWeek() {
         let calendar = Calendar.current
         let today = Date()
-        
-        // 오늘의 주의 첫날(월요일) 계산
         let startOfWeek = calendar.date(byAdding: .day, value: -calendar.component(.weekday, from: today) + 2, to: today)!
         
         currentWeek = (0..<weekDays.count).map { dayOffset in
@@ -98,14 +103,69 @@ class KGCalendarView: UIView {
     }
 
     @objc private func nextWeek() {
-        currentWeek = currentWeek.map { $0 + 7 }
+        let lastDateInWeek = currentWeek.last ?? 1
+        let daysInCurrentMonth = getDaysInMonth(month: currentMonth, year: currentYear)
+        
+        if lastDateInWeek >= daysInCurrentMonth {
+            if currentMonth == 12 {
+                currentMonth = 1
+                currentYear += 1
+            } else {
+                currentMonth += 1
+            }
+            currentWeek = getFirstWeekInMonth(month: currentMonth, year: currentYear)
+        } else {
+            currentWeek = currentWeek.map { $0 + 7 }
+        }
+        
         updateWeek()
+    }
+
+    @objc private func dateLabelTapped(_ sender: UITapGestureRecognizer) {
+        guard let tappedLabel = sender.view as? UILabel else { return }
+        
+        // 이전에 선택된 레이블의 색상을 원래 색으로 복원
+        if let selectedIndex = selectedDateIndex {
+            dateLabels[selectedIndex].textColor = .WHITE // 기본 색상으로 변경
+        }
+        
+        // 현재 클릭된 레이블 색상 변경
+        tappedLabel.textColor = .MAIN // 클릭 시 색상 변경
+        
+        // 선택된 인덱스 업데이트
+        selectedDateIndex = tappedLabel.tag
     }
 
     private func updateWeek() {
         for (index, dateLabel) in dateLabels.enumerated() {
-            let dateText = "\(currentWeek[index])" // 날짜를 올바르게 설정
-            dateLabel.text = dateText // 날짜를 레이블에 할당
+            let dateText = "\(currentWeek[index])"
+            dateLabel.text = dateText
         }
+    }
+    
+    private func getDaysInMonth(month: Int, year: Int) -> Int {
+        let calendar = Calendar.current
+        let dateComponents = DateComponents(year: year, month: month)
+        let date = calendar.date(from: dateComponents)!
+        let range = calendar.range(of: .day, in: .month, for: date)!
+        return range.count
+    }
+    
+    private func getFirstWeekInMonth(month: Int, year: Int) -> [Int] {
+        let calendar = Calendar.current
+        var week: [Int] = []
+        
+        let firstDateComponents = DateComponents(year: year, month: month, day: 1)
+        guard let firstDate = calendar.date(from: firstDateComponents) else { return week }
+        
+        let weekday = calendar.component(.weekday, from: firstDate)
+        let daysInMonth = getDaysInMonth(month: month, year: year)
+        
+        for day in 1...daysInMonth {
+            week.append(day)
+            if week.count == 5 { break }
+        }
+        
+        return week
     }
 }
