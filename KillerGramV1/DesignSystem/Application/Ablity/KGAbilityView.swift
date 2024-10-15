@@ -21,7 +21,9 @@ class KGAbilityView: UIStackView {
         self.isLayoutMarginsRelativeArrangement = true
         self.backgroundColor = .GRAY_1100
         self.layer.cornerRadius = 8
+        
     }
+
     
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

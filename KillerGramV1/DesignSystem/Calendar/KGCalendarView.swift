@@ -17,12 +17,12 @@ class KGCalendarView: UIView {
     }
     
     private let previousButton = UIButton().then {
-        $0.setTitle("◀︎", for: .normal)
+        $0.setTitle("❮", for: .normal)
         $0.setTitleColor(.white, for: .normal)
     }
     
     private let nextButton = UIButton().then {
-        $0.setTitle("▶︎", for: .normal)
+        $0.setTitle("❯", for: .normal)
         $0.setTitleColor(.white, for: .normal)
     }
     

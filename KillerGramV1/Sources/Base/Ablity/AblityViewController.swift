@@ -5,6 +5,8 @@ import RxSwift
 import RxCocoa
 
 class AblityViewController: BaseViewController {
+    var ablity: String = ""
+    
     private let ablityView = KGAbilityView()
         
     private let viewModel = LevelViewModel()
@@ -48,20 +50,22 @@ class AblityViewController: BaseViewController {
         highButton.layer.borderColor = UIColor.MAIN.cgColor
         middleButton.layer.borderColor = UIColor.GRAY_1100.cgColor
         lowButton.layer.borderColor = UIColor.GRAY_1100.cgColor
-        ablityView.showMyAblityLabel.text = "상"
+        ablity = "상"
         ablityView.showMyAblityLabel.setNeedsDisplay()
     }
     private func middleButtonDidTap() {
         middleButton.layer.borderColor = UIColor.MAIN.cgColor
         highButton.layer.borderColor = UIColor.GRAY_1100.cgColor
         lowButton.layer.borderColor = UIColor.GRAY_1100.cgColor
-        ablityView.showMyAblityLabel.text = "중"
+        ablity = "중"
+        ablityView.showMyAblityLabel.setNeedsDisplay()
     }
+
     private func lowButtonDidTap() {
         lowButton.layer.borderColor = UIColor.MAIN.cgColor
         highButton.layer.borderColor = UIColor.GRAY_1100.cgColor
         middleButton.layer.borderColor = UIColor.GRAY_1100.cgColor
-        ablityView.showMyAblityLabel.text = "하"
+        ablity = "하"
     }
     
     override func attribute() {
@@ -89,6 +93,8 @@ class AblityViewController: BaseViewController {
         }).disposed(by: disposeBag)
         
         self.completeButton.rx.tap.subscribe(onNext: {
+            self.ablityView.showMyAblityLabel.text = self.ablity
+            self.ablityView.showMyAblityLabel.setNeedsDisplay()
             self.navigationController?.popViewController(animated: true)
         }).disposed(by: disposeBag)
     }
