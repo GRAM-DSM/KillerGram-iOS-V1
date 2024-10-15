@@ -2,70 +2,110 @@ import UIKit
 import SnapKit
 import Then
 
-class KGCalendarView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class KGCalendarView: UIView {
     
-    private let daysOfWeek = ["월", "화", "수", "목", "금"]
-    private let datesInMonth = ["1", "2", "3", "4", "5"]
+    let weekDays = ["월", "화", "수", "목", "금"]
+    var currentWeek: [Int] = []
     
-    private lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.delegate = self
-        cv.dataSource = self
-        cv.register(CustomDayCell.self, forCellWithReuseIdentifier: CustomDayCell.identifier)
-        cv.register(CustomDateCell.self, forCellWithReuseIdentifier: CustomDateCell.identifier)
-        cv.backgroundColor = .clear
-        return cv
-    }()
+    private let weekStackView = UIStackView().then {
+        $0.axis = .horizontal
+        $0.distribution = .fillEqually
+        $0.alignment = .center
+        $0.spacing = 4 // 버튼과 날짜 간의 기본 간격
+    }
+    
+    private let previousButton = UIButton().then {
+        $0.setTitle("◀︎", for: .normal)
+        $0.setTitleColor(.white, for: .normal)
+    }
+    
+    private let nextButton = UIButton().then {
+        $0.setTitle("▶︎", for: .normal)
+        $0.setTitleColor(.white, for: .normal)
+    }
+    
+    private var dateLabels: [UILabel] = []
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
+        setupCurrentWeek()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
+
     private func setupView() {
-        addSubview(collectionView)
-        
-        
-        collectionView.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(8)
-            make.top.bottom.equalToSuperview()
-        }
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return daysOfWeek.count + datesInMonth.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.item < daysOfWeek.count {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomDayCell.identifier, for: indexPath) as! CustomDayCell
-            cell.configure(with: daysOfWeek[indexPath.item])
-            return cell
-        } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomDateCell.identifier, for: indexPath) as! CustomDateCell
-            let dateIndex = indexPath.item - daysOfWeek.count
-            if dateIndex < datesInMonth.count {
-                cell.configure(with: datesInMonth[dateIndex])
+        addSubview(weekStackView)
+
+        weekStackView.addArrangedSubview(previousButton)
+
+        for weekDay in weekDays {
+            let dayStackView = UIStackView().then {
+                $0.axis = .vertical // 수직 스택으로 변경
+                $0.alignment = .center
+                $0.spacing = 4 // 요일과 날짜 간격을 4로 설정
             }
-            return cell
+            
+            let label = UILabel().then {
+                $0.textAlignment = .center
+                $0.textColor = .GRAY_800
+                $0.text = weekDay
+            }
+            
+            let dateLabel = UILabel().then {
+                $0.textAlignment = .center
+                $0.textColor = .WHITE
+                $0.numberOfLines = 1
+            }
+            
+            dayStackView.addArrangedSubview(label)
+            dayStackView.addArrangedSubview(dateLabel)
+            weekStackView.addArrangedSubview(dayStackView)
+            dateLabels.append(dateLabel)
         }
+
+        weekStackView.addArrangedSubview(nextButton)
+        
+        // SnapKit을 사용한 오토레이아웃 설정
+        weekStackView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        
+        // 버튼 액션 설정
+        previousButton.addTarget(self, action: #selector(previousWeek), for: .touchUpInside)
+        nextButton.addTarget(self, action: #selector(nextWeek), for: .touchUpInside)
     }
     
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (collectionView.frame.width - (4 * CGFloat(daysOfWeek.count - 1))) / CGFloat(daysOfWeek.count) 
-        return CGSize(width: width, height: width)
+    private func setupCurrentWeek() {
+        let calendar = Calendar.current
+        let today = Date()
+        
+        // 오늘의 주의 첫날(월요일) 계산
+        let startOfWeek = calendar.date(byAdding: .day, value: -calendar.component(.weekday, from: today) + 2, to: today)!
+        
+        currentWeek = (0..<weekDays.count).map { dayOffset in
+            calendar.component(.day, from: calendar.date(byAdding: .day, value: dayOffset, to: startOfWeek)!)
+        }
+        
+        updateWeek()
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 4
+
+    @objc private func previousWeek() {
+        currentWeek = currentWeek.map { $0 - 7 }
+        updateWeek()
+    }
+
+    @objc private func nextWeek() {
+        currentWeek = currentWeek.map { $0 + 7 }
+        updateWeek()
+    }
+
+    private func updateWeek() {
+        for (index, dateLabel) in dateLabels.enumerated() {
+            let dateText = "\(currentWeek[index])" // 날짜를 올바르게 설정
+            dateLabel.text = dateText // 날짜를 레이블에 할당
+        }
     }
 }

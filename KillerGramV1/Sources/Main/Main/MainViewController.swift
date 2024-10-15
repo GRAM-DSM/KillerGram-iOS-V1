@@ -62,6 +62,8 @@ class MainViewController: BaseViewController {
         everydaySports.baseballImageView.addGestureRecognizer(baseEvent)
         everydaySports.soccerImageView.addGestureRecognizer(soccerEvent)
         
+        calendarView.translatesAutoresizingMaskIntoConstraints = false
+        
         stateView.addGestureRecognizer(stateEvent)
     }
     
@@ -105,9 +107,8 @@ class MainViewController: BaseViewController {
             $0.leading.trailing.equalToSuperview().inset(24)
             $0.bottom.equalToSuperview().inset(64)
         }
-        
         stateView.snp.makeConstraints {
-            $0.top.equalTo(stateScrollView.snp.top).inset(24)
+            $0.top.equalTo(stateScrollView.snp.top)
             $0.leading.equalTo(stateScrollView.snp.leading)
             $0.trailing.equalTo(stateScrollView.snp.trailing)
             $0.width.equalTo(stateScrollView.snp.width)

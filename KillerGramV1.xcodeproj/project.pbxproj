@@ -88,8 +88,6 @@
 		90F9D7402CB8FCED0022A1FA /* BadmintonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9D73F2CB8FCED0022A1FA /* BadmintonViewController.swift */; };
 		90F9D7422CB8FCFC0022A1FA /* BadmintonAblityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9D7412CB8FCFC0022A1FA /* BadmintonAblityViewController.swift */; };
 		90F9D7452CB90FA80022A1FA /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 90F9D7442CB90FA80022A1FA /* FSCalendar */; };
-		90F9D7472CB915E70022A1FA /* CustomDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9D7462CB915E70022A1FA /* CustomDayCell.swift */; };
-		90F9D7492CBAB6090022A1FA /* CustomDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9D7482CBAB6090022A1FA /* CustomDateCell.swift */; };
 		90F9D74B2CBAD2970022A1FA /* KGStateScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9D74A2CBAD2970022A1FA /* KGStateScrollView.swift */; };
 /* End PBXBuildFile section */
 
@@ -167,8 +165,6 @@
 		90F632AC2C9D5E1B000B1D99 /* KGTodaySprotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGTodaySprotsView.swift; sourceTree = "<group>"; };
 		90F9D73F2CB8FCED0022A1FA /* BadmintonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadmintonViewController.swift; sourceTree = "<group>"; };
 		90F9D7412CB8FCFC0022A1FA /* BadmintonAblityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadmintonAblityViewController.swift; sourceTree = "<group>"; };
-		90F9D7462CB915E70022A1FA /* CustomDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDayCell.swift; sourceTree = "<group>"; };
-		90F9D7482CBAB6090022A1FA /* CustomDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDateCell.swift; sourceTree = "<group>"; };
 		90F9D74A2CBAD2970022A1FA /* KGStateScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGStateScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -250,8 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				902B826C2CB414C9008C6647 /* KGCalendarView.swift */,
-				90F9D7462CB915E70022A1FA /* CustomDayCell.swift */,
-				90F9D7482CBAB6090022A1FA /* CustomDateCell.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -768,7 +762,6 @@
 			files = (
 				9099ADD02C903A0400FCA3C8 /* UIButton+setUnderLine.swift in Sources */,
 				90F6329A2C9D4B0E000B1D99 /* KGMainTitleView.swift in Sources */,
-				90F9D7472CB915E70022A1FA /* CustomDayCell.swift in Sources */,
 				90F632802C9316A8000B1D99 /* LevelViewModel.swift in Sources */,
 				904D88202C871817007EEE16 /* PretendardFontStyle.swift in Sources */,
 				90BB6C572C9D8CF90074DC9A /* PingpongViewController.swift in Sources */,
@@ -804,7 +797,6 @@
 				902B827D2CB77075008C6647 /* HealthAblityViewController.swift in Sources */,
 				90374BC82C86810100F0F7BC /* LoginViewController.swift in Sources */,
 				90F632952C96D242000B1D99 /* MainViewController.swift in Sources */,
-				90F9D7492CBAB6090022A1FA /* CustomDateCell.swift in Sources */,
 				90F6328A2C9328FD000B1D99 /* BaseViewController.swift in Sources */,
 				90374BD42C86FC7C00F0F7BC /* SignupSendViewModel.swift in Sources */,
 				90F9D7402CB8FCED0022A1FA /* BadmintonViewController.swift in Sources */,
