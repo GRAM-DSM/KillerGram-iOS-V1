@@ -69,7 +69,6 @@ class AblityViewController: BaseViewController {
     }
     
     override func attribute() {
-        self.navigationItem.title = "정보입력"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.killerGramFont(.semibold, style: .m2), .foregroundColor: UIColor.WHITE]
         
         backBarButtonItem.tintColor = .WHITE
