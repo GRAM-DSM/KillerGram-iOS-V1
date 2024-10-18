@@ -89,6 +89,7 @@
 		90F9D7422CB8FCFC0022A1FA /* BadmintonAblityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9D7412CB8FCFC0022A1FA /* BadmintonAblityViewController.swift */; };
 		90F9D7452CB90FA80022A1FA /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 90F9D7442CB90FA80022A1FA /* FSCalendar */; };
 		90F9D74B2CBAD2970022A1FA /* KGStateScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9D74A2CBAD2970022A1FA /* KGStateScrollView.swift */; };
+		90F9D7502CC25DB50022A1FA /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9D74F2CC25DB50022A1FA /* settingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +167,7 @@
 		90F9D73F2CB8FCED0022A1FA /* BadmintonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadmintonViewController.swift; sourceTree = "<group>"; };
 		90F9D7412CB8FCFC0022A1FA /* BadmintonAblityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadmintonAblityViewController.swift; sourceTree = "<group>"; };
 		90F9D74A2CBAD2970022A1FA /* KGStateScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGStateScrollView.swift; sourceTree = "<group>"; };
+		90F9D74F2CC25DB50022A1FA /* settingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -599,6 +601,7 @@
 		90F632922C96D210000B1D99 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				90F9D74E2CC25DA80022A1FA /* setting */,
 				90F9D73E2CB8FCD90022A1FA /* Badminton */,
 				90BB6C642C9D8D830074DC9A /* Soccer */,
 				90BB6C5F2C9D8D430074DC9A /* Baseball */,
@@ -667,6 +670,14 @@
 				90F9D7412CB8FCFC0022A1FA /* BadmintonAblityViewController.swift */,
 			);
 			path = Badminton;
+			sourceTree = "<group>";
+		};
+		90F9D74E2CC25DA80022A1FA /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				90F9D74F2CC25DB50022A1FA /* settingViewController.swift */,
+			);
+			path = setting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -810,6 +821,7 @@
 				902B82702CB51AE6008C6647 /* StateView.swift in Sources */,
 				90750F7D2C91A19B00B291A6 /* SetPasswordViewController.swift in Sources */,
 				902D5AED2C8B1DDC0077AAC2 /* SigninCheckEmailViewController.swift in Sources */,
+				90F9D7502CC25DB50022A1FA /* settingViewController.swift in Sources */,
 				90374BD12C86FC4400F0F7BC /* LoginViewModel.swift in Sources */,
 				90BB6C5E2C9D8D320074DC9A /* HealthViewModel.swift in Sources */,
 				90BB6C612C9D8D570074DC9A /* BaseballViewController.swift in Sources */,
