@@ -21,6 +21,19 @@ class MainViewController: BaseViewController {
     
     private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     
+    @objc func imageDidTap() {
+        let settings = UIAction(title: "설정") { _ in
+        }
+        let logout = UIAction(title: "로그아웃", attributes: .destructive) { _ in
+        }
+        let deleteAccount = UIAction(title: "회원 탈퇴", attributes: .destructive) { _ in
+        }
+
+        let menu = UIMenu(title: "", children: [settings, logout, deleteAccount])
+        
+        titleView.settingImageView.settingButton.menu = menu
+        titleView.settingImageView.settingButton.showsMenuAsPrimaryAction = true
+    }
     @objc func todaySportsDidTap() {
         self.navigationController?.pushViewController(BadmintonViewController(), animated: true)
     }
@@ -44,6 +57,8 @@ class MainViewController: BaseViewController {
         self.navigationItem.hidesBackButton = true
         backBarButtonItem.tintColor = .WHITE
         self.navigationItem.backBarButtonItem = backBarButtonItem
+        
+        titleView.settingImageView.settingButton.addTarget(self, action: #selector(imageDidTap), for: .touchUpInside)
         
         
         let todaySportsEvent = UITapGestureRecognizer(target: self, action: #selector(todaySportsDidTap))

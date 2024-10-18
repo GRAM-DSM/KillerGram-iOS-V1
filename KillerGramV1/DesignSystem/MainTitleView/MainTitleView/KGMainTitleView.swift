@@ -4,7 +4,7 @@ import Then
 class KGMainTitleView: UIStackView {
     private let logoImageView = KGLogoImageView()
     
-    private let settingImageView = KGSettingImageView()
+    let settingImageView = KGSettingImageView()
     
     
     
