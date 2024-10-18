@@ -5,7 +5,6 @@ import SnapKit
 class StateView: UIStackView {
     let stateLabel = UILabel().then {
         $0.font = .killerGramFont(.regular, style: .m3)
-        $0.textColor = .MAIN
     }
     
     init() {

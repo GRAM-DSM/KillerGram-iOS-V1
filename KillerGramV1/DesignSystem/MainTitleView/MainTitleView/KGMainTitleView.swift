@@ -6,6 +6,8 @@ class KGMainTitleView: UIStackView {
     
     private let settingImageView = KGSettingImageView()
     
+    
+    
     init() {
         super.init(frame: .zero)
         self.axis = .horizontal

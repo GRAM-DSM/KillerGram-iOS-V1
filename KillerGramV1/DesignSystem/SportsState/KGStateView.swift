@@ -8,10 +8,10 @@ class KGStateView: UIStackView {
     
     private let stateLabel = StateView()
     
-    init(sports: String, maxMember: String, nowMember: Int, state: String) {
+    init(sports: String, maxMember: String, nowMember: Int) {
         memberView.sportsLabel.attributedText = NSAttributedString(string: sports)
         memberView.memberLabel.attributedText = NSAttributedString(string: "\(maxMember)명 중 \(nowMember)명 참여")
-        stateLabel.stateLabel.attributedText = NSAttributedString(string: state)
+        stateLabel.stateLabel.text = "진행 중"
         super.init(frame: .zero)
         self.axis = .horizontal
         self.spacing = 163
@@ -21,6 +21,7 @@ class KGStateView: UIStackView {
         self.layer.cornerRadius = 8
         self.layoutMargins = .init(top: 16, left: 16, bottom: 16, right: 16)
         self.isLayoutMarginsRelativeArrangement = true
+        stateLabel.stateLabel.textColor = .MAIN
     }
     
     required init(coder: NSCoder) {

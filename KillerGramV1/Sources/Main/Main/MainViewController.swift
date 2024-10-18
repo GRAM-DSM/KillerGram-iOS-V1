@@ -17,7 +17,7 @@ class MainViewController: BaseViewController {
     
     private let stateScrollView = UIScrollView()
     
-    private let stateView = KGStateView(sports: "축구", maxMember: "16", nowMember: 1, state: "진행 중")
+    private let stateView = KGStateView(sports: "축구", maxMember: "16", nowMember: 1)
     
     private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     
