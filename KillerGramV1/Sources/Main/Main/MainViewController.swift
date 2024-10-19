@@ -22,8 +22,8 @@ class MainViewController: BaseViewController {
     private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     
     @objc func imageDidTap() {
-        let settings = UIAction(title: "설정") {
-            self.navigationController?.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
+        let settings = UIAction(title: "설정") { _ in
+            self.navigationController?.pushViewController(settingViewController(), animated: true)
         }
         let logout = UIAction(title: "로그아웃", attributes: .destructive) { _ in
         }

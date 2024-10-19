@@ -1,5 +1,5 @@
 import UIKit
 
-class settongViewController: BaseballViewModel {
+class settingViewController: BaseViewController {
     
 }
