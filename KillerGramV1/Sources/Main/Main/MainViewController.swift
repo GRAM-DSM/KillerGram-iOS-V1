@@ -42,8 +42,8 @@ class MainViewController: BaseViewController {
         
         let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         
-        let confirmAction = UIAlertAction(title: "확인", style: .destructive, handler: { _ in
-            print("회원 탈퇴를 진행합니다.")
+        let confirmAction = UIAlertAction(title: "확인", style: .destructive, handler: {_ in
+            self.navigationController?.popViewController(animated: true)
         })
         
         alertController.addAction(cancelAction)
