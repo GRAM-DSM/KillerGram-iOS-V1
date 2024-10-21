@@ -21,19 +21,34 @@ class MainViewController: BaseViewController {
     
     private let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     
-    @objc func imageDidTap() {
+    @objc func settingImageDidTap() {
         let settings = UIAction(title: "설정") { _ in
             self.navigationController?.pushViewController(settingViewController(), animated: true)
         }
         let logout = UIAction(title: "로그아웃", attributes: .destructive) { _ in
+            self.logoutAlert()
         }
         let deleteAccount = UIAction(title: "회원 탈퇴", attributes: .destructive) { _ in
         }
-
+        
         let menu = UIMenu(title: "", children: [settings, logout, deleteAccount])
         
         titleView.settingImageView.settingButton.menu = menu
         titleView.settingImageView.settingButton.showsMenuAsPrimaryAction = true
+    }
+    @objc func logoutAlert() {
+        let alertController = UIAlertController(title: nil, message: "로그아웃 하시겠습니까?", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        let confirmAction = UIAlertAction(title: "확인", style: .destructive, handler: { _ in
+            print("회원 탈퇴를 진행합니다.")
+        })
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(confirmAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
     @objc func todaySportsDidTap() {
         self.navigationController?.pushViewController(BadmintonViewController(), animated: true)
@@ -59,7 +74,7 @@ class MainViewController: BaseViewController {
         backBarButtonItem.tintColor = .WHITE
         self.navigationItem.backBarButtonItem = backBarButtonItem
         
-        titleView.settingImageView.settingButton.addTarget(self, action: #selector(imageDidTap), for: .touchUpInside)
+        titleView.settingImageView.settingButton.addTarget(self, action: #selector(settingImageDidTap), for: .touchUpInside)
         
         
         let todaySportsEvent = UITapGestureRecognizer(target: self, action: #selector(todaySportsDidTap))
