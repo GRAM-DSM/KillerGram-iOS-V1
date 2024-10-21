@@ -90,6 +90,7 @@
 		90F9D7452CB90FA80022A1FA /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 90F9D7442CB90FA80022A1FA /* FSCalendar */; };
 		90F9D74B2CBAD2970022A1FA /* KGStateScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9D74A2CBAD2970022A1FA /* KGStateScrollView.swift */; };
 		90F9D7502CC25DB50022A1FA /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9D74F2CC25DB50022A1FA /* settingViewController.swift */; };
+		90F9D7532CC644C10022A1FA /* KGAlarmSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F9D7522CC644C10022A1FA /* KGAlarmSelectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +169,7 @@
 		90F9D7412CB8FCFC0022A1FA /* BadmintonAblityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadmintonAblityViewController.swift; sourceTree = "<group>"; };
 		90F9D74A2CBAD2970022A1FA /* KGStateScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGStateScrollView.swift; sourceTree = "<group>"; };
 		90F9D74F2CC25DB50022A1FA /* settingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
+		90F9D7522CC644C10022A1FA /* KGAlarmSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGAlarmSelectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -441,6 +443,7 @@
 		9077EBC12C87158A0044ED9E /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				90F9D7512CC63C390022A1FA /* alarm */,
 				902B826E2CB41B71008C6647 /* SportsState */,
 				902B826A2CB17436008C6647 /* Calendar */,
 				902B82582CA17FC6008C6647 /* Application */,
@@ -680,6 +683,14 @@
 			path = setting;
 			sourceTree = "<group>";
 		};
+		90F9D7512CC63C390022A1FA /* alarm */ = {
+			isa = PBXGroup;
+			children = (
+				90F9D7522CC644C10022A1FA /* KGAlarmSelectView.swift */,
+			);
+			path = alarm;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -799,6 +810,7 @@
 				90BB6C542C9D82F30074DC9A /* KGEverydatSprotsView.swift in Sources */,
 				90F632842C931DF3000B1D99 /* FindPasswordCheckViewModel.swift in Sources */,
 				9048AAA02C91DBCD0073AEFF /* FillNameViewController.swift in Sources */,
+				90F9D7532CC644C10022A1FA /* KGAlarmSelectView.swift in Sources */,
 				902B82842CB7717A008C6647 /* AblityViewController.swift in Sources */,
 				90F632AD2C9D5E1B000B1D99 /* KGTodaySprotsView.swift in Sources */,
 				902B82692CB112DF008C6647 /* PingPongAblityViewController.swift in Sources */,
