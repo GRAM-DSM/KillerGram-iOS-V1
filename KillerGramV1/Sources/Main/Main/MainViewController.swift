@@ -29,6 +29,7 @@ class MainViewController: BaseViewController {
             self.logoutAlert()
         }
         let deleteAccount = UIAction(title: "회원 탈퇴", attributes: .destructive) { _ in
+            self.userExitAlert()
         }
         
         let menu = UIMenu(title: "", children: [settings, logout, deleteAccount])
@@ -38,6 +39,20 @@ class MainViewController: BaseViewController {
     }
     @objc func logoutAlert() {
         let alertController = UIAlertController(title: nil, message: "로그아웃 하시겠습니까?", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        let confirmAction = UIAlertAction(title: "확인", style: .destructive, handler: { _ in
+            print("회원 탈퇴를 진행합니다.")
+        })
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(confirmAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    @objc func userExitAlert() {
+        let alertController = UIAlertController(title: nil, message: "회원 탈퇴하시겠습니까?", preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         
