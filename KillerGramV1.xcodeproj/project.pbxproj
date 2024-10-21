@@ -443,7 +443,7 @@
 		9077EBC12C87158A0044ED9E /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
-				90F9D7512CC63C390022A1FA /* alarm */,
+				90F9D7542CC66B890022A1FA /* Setting */,
 				902B826E2CB41B71008C6647 /* SportsState */,
 				902B826A2CB17436008C6647 /* Calendar */,
 				902B82582CA17FC6008C6647 /* Application */,
@@ -683,12 +683,28 @@
 			path = setting;
 			sourceTree = "<group>";
 		};
-		90F9D7512CC63C390022A1FA /* alarm */ = {
+		90F9D7512CC63C390022A1FA /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
 				90F9D7522CC644C10022A1FA /* KGAlarmSelectView.swift */,
 			);
-			path = alarm;
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		90F9D7542CC66B890022A1FA /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				90F9D7552CC66BB30022A1FA /* Logout */,
+				90F9D7512CC63C390022A1FA /* Alarm */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		90F9D7552CC66BB30022A1FA /* Logout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
