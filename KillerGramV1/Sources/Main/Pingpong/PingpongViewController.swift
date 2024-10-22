@@ -14,6 +14,8 @@ class PingpongViewController: SportsViewController {
         backBarButtonItem.tintColor = .WHITE
         self.navigationItem.backBarButtonItem = backBarButtonItem
         
+        
+        
         self.memberView = KGMemberView(sumMember: "12", countMember: 1)
         
         self.ablityView.ablityView.changeButton.rx.tap.subscribe(onNext: {

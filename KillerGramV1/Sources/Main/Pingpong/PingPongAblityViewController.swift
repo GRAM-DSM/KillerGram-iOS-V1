@@ -26,7 +26,8 @@ class PingPongAblityViewController: AblityViewController {
         }).disposed(by: disposeBag)
         
         self.completeButton.rx.tap.subscribe(onNext: {
-            self.ablityView.showMyAblityLabel.text = self.ablity
+            self.ablityView.showMyAblityLabel.text = "\(self.ablity)"
+            print("\(self.ablity)")
             self.ablityView.showMyAblityLabel.setNeedsDisplay()
             self.navigationController?.popViewController(animated: true)
         }).disposed(by: disposeBag)

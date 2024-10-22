@@ -46,31 +46,27 @@ class AblityViewController: BaseViewController {
         $0.setText(text: "확인")
     }
     
-    func highButtonDidTap() {
+    @objc func highButtonDidTap() {
         highButton.layer.borderColor = UIColor.MAIN.cgColor
         middleButton.layer.borderColor = UIColor.GRAY_1100.cgColor
         lowButton.layer.borderColor = UIColor.GRAY_1100.cgColor
         ablity = "상"
-        ablityView.showMyAblityLabel.setNeedsDisplay()
     }
-    func middleButtonDidTap() {
+    @objc func middleButtonDidTap() {
         middleButton.layer.borderColor = UIColor.MAIN.cgColor
         highButton.layer.borderColor = UIColor.GRAY_1100.cgColor
         lowButton.layer.borderColor = UIColor.GRAY_1100.cgColor
         ablity = "중"
-        ablityView.showMyAblityLabel.setNeedsDisplay()
     }
 
-    func lowButtonDidTap() {
+    @objc func lowButtonDidTap() {
         lowButton.layer.borderColor = UIColor.MAIN.cgColor
         highButton.layer.borderColor = UIColor.GRAY_1100.cgColor
         middleButton.layer.borderColor = UIColor.GRAY_1100.cgColor
         ablity = "하"
     }
-    
-    override func attribute() {
         
-    }
+    
     
     
     override func addView() {
