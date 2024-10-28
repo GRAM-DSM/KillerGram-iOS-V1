@@ -1,6 +1,8 @@
 import UIKit
 
 class LevelViewModel {
+    public var ablity:String = ""
+    
     let highAttributedstr = NSMutableAttributedString(string: "상  운동을 평소에 즐겨하며 잘 하는 편이에요")
     let middleAttributedstr = NSMutableAttributedString(string: "중  운동을 즐기진 않지만 못하지는 않아요")
     let lowAttributedstr = NSMutableAttributedString(string: "하  운동을 별로 좋아하지 않아요")

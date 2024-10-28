@@ -27,7 +27,7 @@ class KGCalendarView: UIView {
     }
     
     private var dateLabels: [UILabel] = []
-    private var selectedDateIndex: Int? // 선택된 날짜의 인덱스
+    private var selectedDateIndex: Int? 
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -61,13 +61,13 @@ class KGCalendarView: UIView {
                 $0.textAlignment = .center
                 $0.textColor = .WHITE
                 $0.numberOfLines = 1
-                $0.isUserInteractionEnabled = true // 사용자 상호작용 가능하게 설정
+                $0.isUserInteractionEnabled = true
             }
             
             // Tap Gesture 추가
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dateLabelTapped(_:)))
             dateLabel.addGestureRecognizer(tapGesture)
-            dateLabel.tag = index // 인덱스를 태그에 저장
+            dateLabel.tag = index
             
             dayStackView.addArrangedSubview(label)
             dayStackView.addArrangedSubview(dateLabel)
@@ -124,15 +124,15 @@ class KGCalendarView: UIView {
     @objc private func dateLabelTapped(_ sender: UITapGestureRecognizer) {
         guard let tappedLabel = sender.view as? UILabel else { return }
         
-        // 이전에 선택된 레이블의 색상을 원래 색으로 복원
+        
         if let selectedIndex = selectedDateIndex {
-            dateLabels[selectedIndex].textColor = .WHITE // 기본 색상으로 변경
+            dateLabels[selectedIndex].textColor = .WHITE
         }
         
-        // 현재 클릭된 레이블 색상 변경
-        tappedLabel.textColor = .MAIN // 클릭 시 색상 변경
         
-        // 선택된 인덱스 업데이트
+        tappedLabel.textColor = .MAIN
+        
+        
         selectedDateIndex = tappedLabel.tag
     }
 

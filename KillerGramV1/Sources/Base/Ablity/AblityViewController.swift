@@ -65,8 +65,6 @@ class AblityViewController: BaseViewController {
         middleButton.layer.borderColor = UIColor.GRAY_1100.cgColor
         ablity = "하"
     }
-        
-    
     
     
     override func addView() {
