@@ -43,7 +43,7 @@ class MainViewController: BaseViewController {
         let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         
         let confirmAction = UIAlertAction(title: "확인", style: .destructive, handler: {_ in
-            self.navigationController?.popViewController(animated: true)
+            self.navigationController?.pushViewController(LoginViewController(), animated: true)
         })
         
         alertController.addAction(cancelAction)
@@ -57,7 +57,7 @@ class MainViewController: BaseViewController {
         let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         
         let confirmAction = UIAlertAction(title: "확인", style: .destructive, handler: { _ in
-            self.navigationController?.popViewController(animated: true)
+            self.navigationController?.pushViewController(LoginViewController(), animated: true)
         })
         
         alertController.addAction(cancelAction)
