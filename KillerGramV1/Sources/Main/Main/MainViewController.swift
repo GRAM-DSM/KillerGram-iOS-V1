@@ -1,4 +1,5 @@
 import UIKit
+import FSCalendar
 import SnapKit
 import Then
 import RxSwift
@@ -108,7 +109,6 @@ class MainViewController: BaseViewController {
         everydaySports.baseballImageView.addGestureRecognizer(baseEvent)
         everydaySports.soccerImageView.addGestureRecognizer(soccerEvent)
         
-        calendarView.translatesAutoresizingMaskIntoConstraints = false
         
         stateView.addGestureRecognizer(stateEvent)
     }

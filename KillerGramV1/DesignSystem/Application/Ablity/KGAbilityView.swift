@@ -21,7 +21,6 @@ class KGAbilityView: UIStackView {
         self.isLayoutMarginsRelativeArrangement = true
         self.backgroundColor = .GRAY_1100
         self.layer.cornerRadius = 8
-        
     }
 
     
