@@ -1,45 +1,109 @@
 import Foundation
 import UIKit
+import Moya
+
+// Moya의 TargetType 정의
+enum SignupAPI {
+    case createAccount(email: String)
+}
 
 final class SignupSendViewModel {
     private var emailerrorheight: NSLayoutConstraint!
-    
     private var passworderrorheight: NSLayoutConstraint!
     
+    private let provider = MoyaProvider<SignupAPI>()
+    
     func nextButtonDidTap(email: String, result: @escaping (String) -> Void) {
-        
+        // 이메일 유효성 검사
         if self.isValidEmail(testStr: email) {
-            result("email check ok")
-            print("email check")
+            sendSignupData(email: email) { response in
+                result(response)
+            }
         } else {
+            // 이메일이 유효하지 않음
             if email.isEmpty {
                 print("email is empty")
                 result("email is empty")
-            }
-            else {
+            } else {
                 print("email is error")
                 result("email error")
             }
-    }
-}
-    private func isValidEmail(testStr: String?) -> Bool {
-        
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: testStr)
+        }
     }
     
-    private func isValidPassword(pw: String?) -> Bool{
-        if let hasPassword = pw{
-            if hasPassword.count < 8 || hasPassword.count > 16{
-                return false
+    private func sendSignupData(email: String, completion: @escaping (String) -> Void) {
+        provider.request(.createAccount(email: email)) { result in
+            switch result {
+            case .success(let response):
+                // 상태 코드가 204(No Content)일 경우 데이터를 비워둠
+                if response.statusCode == 200 || response.data.isEmpty {
+                    print("Signup successful with no content")
+                    print(response.statusCode)
+                    completion("Signup successful with no content")
+                    return
+                }
+
+                // 데이터가 있을 경우에만 JSON 파싱 시도
+                do {
+                    let json = try JSONSerialization.jsonObject(with: response.data, options: [])
+                    print("Success:", json)
+                    completion("Signup successful")
+                } catch {
+                    print("Failed to parse JSON:", error)
+                    print(response.statusCode)
+                    completion("Response parsing error")
+                }
+                
+            case .failure(let error):
+                print("Request failed with error:", error)
+                completion("Request failed")
             }
         }
-        
-        return true
     }
+
+
     
+    private func isValidEmail(testStr: String?) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: testStr)
+    }
 }
 
-
+extension SignupAPI: TargetType {
+    var baseURL: URL {
+        return URL(string: "http://10.10.10.100:8080")! // 실제 API의 URL로 변경
+    }
+    
+    var path: String {
+        switch self {
+        case .createAccount:
+            return "/users/send-verification" // 엔드포인트에 맞게 변경
+        }
+    }
+    
+    var method: Moya.Method {
+        switch self {
+        case .createAccount:
+            return .post
+        }
+    }
+    
+    var task: Task {
+        switch self {
+        case .createAccount(let email):
+            let parameters: [String: Any] = [
+                "account_id": email // 이메일을 account_id로 보낸다고 가정
+            ]
+            return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
+        }
+    }
+    
+    var headers: [String: String]? {
+        return ["Content-Type": "application/json"]
+    }
+    
+    var sampleData: Data {
+        return Data()
+    }
+}
