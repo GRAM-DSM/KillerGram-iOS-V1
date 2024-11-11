@@ -72,7 +72,7 @@ final class SignupSendViewModel {
 
 extension SignupAPI: TargetType {
     var baseURL: URL {
-        return URL(string: "http://10.10.10.100:8080")! // 실제 API의 URL로 변경
+        return URL(string: "https://japan-8911-deploynow.ncloud.sbs/")! // 실제 API의 URL로 변경
     }
     
     var path: String {
