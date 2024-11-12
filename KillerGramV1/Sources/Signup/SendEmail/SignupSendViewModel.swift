@@ -72,13 +72,13 @@ final class SignupSendViewModel {
 
 extension SignupAPI: TargetType {
     var baseURL: URL {
-        return URL(string: "https://japan-8911-deploynow.ncloud.sbs/")! // 실제 API의 URL로 변경
+        return URL(string: "https://japan-8911-deploynow.ncloud.sbs")! // 실제 API의 URL로 변경
     }
     
     var path: String {
         switch self {
         case .createAccount:
-            return "/users/send-verification" // 엔드포인트에 맞게 변경
+            return "/users/send-verification"
         }
     }
     
@@ -93,7 +93,7 @@ extension SignupAPI: TargetType {
         switch self {
         case .createAccount(let email):
             let parameters: [String: Any] = [
-                "account_id": email // 이메일을 account_id로 보낸다고 가정
+                "email": email
             ]
             return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
         }
