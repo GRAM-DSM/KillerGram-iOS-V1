@@ -2,7 +2,6 @@ import Foundation
 import UIKit
 import Moya
 
-// Moya의 TargetType 정의
 enum SignupAPI {
     case createAccount(email: String)
 }
@@ -14,13 +13,11 @@ final class SignupSendViewModel {
     private let provider = MoyaProvider<SignupAPI>()
     
     func nextButtonDidTap(email: String, result: @escaping (String) -> Void) {
-        // 이메일 유효성 검사
         if self.isValidEmail(testStr: email) {
             sendSignupData(email: email) { response in
                 result(response)
             }
         } else {
-            // 이메일이 유효하지 않음
             if email.isEmpty {
                 print("email is empty")
                 result("email is empty")
@@ -35,15 +32,13 @@ final class SignupSendViewModel {
         provider.request(.createAccount(email: email)) { result in
             switch result {
             case .success(let response):
-                // 상태 코드가 204(No Content)일 경우 데이터를 비워둠
                 if response.statusCode == 200 || response.data.isEmpty {
                     print("Signup successful with no content")
                     print(response.statusCode)
-                    completion("Signup successful with no content")
+                    completion("email check ok")
                     return
                 }
 
-                // 데이터가 있을 경우에만 JSON 파싱 시도
                 do {
                     let json = try JSONSerialization.jsonObject(with: response.data, options: [])
                     print("Success:", json)
@@ -72,7 +67,7 @@ final class SignupSendViewModel {
 
 extension SignupAPI: TargetType {
     var baseURL: URL {
-        return URL(string: "https://japan-8911-deploynow.ncloud.sbs")! // 실제 API의 URL로 변경
+        return URL(string: "https://japan-8911-deploynow.ncloud.sbs")!
     }
     
     var path: String {
