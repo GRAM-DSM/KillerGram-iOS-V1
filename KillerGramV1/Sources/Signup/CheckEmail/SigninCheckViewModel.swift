@@ -1,11 +1,13 @@
-import Foundation
+import UIKit
 import RxRelay
+import Moya
 
 
 final class SigninCheckViewModel {
     let timerText = BehaviorRelay<String>(value: "5:00")
     private var limitTime: Int = 300
     private var timer: Timer?
+    
     
     func startTimer() {
         
@@ -49,7 +51,6 @@ final class SigninCheckViewModel {
                 return false
             }
         }
-        
         return true
     }
 }

@@ -4,6 +4,10 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
+enum checkAPI {
+    check(email: userEmail)
+}
+
 class SigninCheckEmailViewController: BaseViewController {
     private let viewModel = SigninCheckViewModel()
     
@@ -110,5 +114,3 @@ class SigninCheckEmailViewController: BaseViewController {
         }
     }
 }
-
-

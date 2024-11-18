@@ -7,6 +7,8 @@ enum SignupAPI {
 }
 
 final class SignupSendViewModel {
+    public var userEmail: String = ""
+    
     private var emailerrorheight: NSLayoutConstraint!
     private var passworderrorheight: NSLayoutConstraint!
     
@@ -33,6 +35,7 @@ final class SignupSendViewModel {
             switch result {
             case .success(let response):
                 if response.statusCode == 200 || response.data.isEmpty {
+                    self.userEmail = email
                     print("Signup successful with no content")
                     print(response.statusCode)
                     completion("email check ok")
